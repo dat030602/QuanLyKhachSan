@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class fBuggageTransport : Form
+    public partial class fLuggageTransportList : Form
     {
-        public fBuggageTransport()
+        public fLuggageTransportList()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
