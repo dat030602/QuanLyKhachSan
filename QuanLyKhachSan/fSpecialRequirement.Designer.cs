@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -42,41 +40,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel5.SuspendLayout();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnBackToReservationList = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(37, 6);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(150, 48);
-            this.panel5.TabIndex = 7;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(24, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 25);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "< Quay lại";
             // 
             // label8
             // 
@@ -212,30 +190,6 @@
             this.panel2.Size = new System.Drawing.Size(1240, 76);
             this.panel2.TabIndex = 4;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.panel17);
-            this.panel3.Location = new System.Drawing.Point(11, 614);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1243, 60);
-            this.panel3.TabIndex = 5;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(11, 98);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1243, 510);
-            this.panel1.TabIndex = 3;
-            // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -272,17 +226,29 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Mã khách hàng:";
             // 
-            // label21
+            // panel3
             // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(37, 26);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(150, 25);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "Tên khách hàng";
+            this.panel3.Controls.Add(this.btnBackToReservationList);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.panel17);
+            this.panel3.Location = new System.Drawing.Point(11, 614);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1243, 60);
+            this.panel3.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Location = new System.Drawing.Point(11, 98);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1243, 510);
+            this.panel1.TabIndex = 3;
             // 
             // label16
             // 
@@ -305,6 +271,30 @@
             this.textBox2.Size = new System.Drawing.Size(975, 407);
             this.textBox2.TabIndex = 22;
             // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(37, 26);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(150, 25);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "Tên khách hàng";
+            // 
+            // btnBackToReservationList
+            // 
+            this.btnBackToReservationList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBackToReservationList.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBackToReservationList.Location = new System.Drawing.Point(37, 9);
+            this.btnBackToReservationList.Name = "btnBackToReservationList";
+            this.btnBackToReservationList.Size = new System.Drawing.Size(152, 48);
+            this.btnBackToReservationList.TabIndex = 8;
+            this.btnBackToReservationList.Text = "< Quay lại";
+            this.btnBackToReservationList.UseVisualStyleBackColor = false;
+            this.btnBackToReservationList.Click += new System.EventHandler(this.btnBackToReservationList_Click);
+            // 
             // fSpecialRequirement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -316,8 +306,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "fSpecialRequirement";
             this.Text = "fSpecialRequirement";
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel17.ResumeLayout(false);
@@ -332,9 +320,6 @@
         }
 
         #endregion
-
-        private Panel panel5;
-        private Label label11;
         private Label label8;
         private Label label6;
         private Panel panel4;
@@ -355,5 +340,6 @@
         private Label label21;
         private Label label16;
         private TextBox textBox2;
+        private Button btnBackToReservationList;
     }
 }

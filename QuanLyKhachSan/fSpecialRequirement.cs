@@ -16,5 +16,12 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
         }
+
+        private void btnBackToReservationList_Click(object sender, EventArgs e)
+        {
+            fReservationTickerList f = new fReservationTickerList();
+            f.Show();
+            this.Hide();
+        }
     }
 }
