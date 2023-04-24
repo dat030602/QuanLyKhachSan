@@ -59,8 +59,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -76,7 +74,6 @@
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
             this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -394,30 +391,9 @@
             this.panel16.Size = new System.Drawing.Size(980, 543);
             this.panel16.TabIndex = 1;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(13, 12);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 25);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Phân công";
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel17.Controls.Add(this.label12);
-            this.panel17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel17.Location = new System.Drawing.Point(826, 619);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(123, 48);
-            this.panel17.TabIndex = 2;
-            // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.Transparent;
-            this.panel13.Controls.Add(this.panel17);
             this.panel13.Controls.Add(this.panel16);
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Location = new System.Drawing.Point(277, 1);
@@ -461,8 +437,6 @@
             this.panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel16.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -501,8 +475,6 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridView dataGridView1;
         private Panel panel16;
-        private Label label12;
-        private Panel panel17;
         private Panel panel13;
     }
 }

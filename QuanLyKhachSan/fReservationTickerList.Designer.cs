@@ -36,7 +36,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.btnAddReservationTicker = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -138,7 +137,6 @@
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.label11);
             this.panel14.Controls.Add(this.btnAddReservationTicker);
             this.panel14.Controls.Add(this.panel15);
             this.panel14.Controls.Add(this.textBoxSearch);
@@ -146,16 +144,6 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(980, 60);
             this.panel14.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(489, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 15);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "label11";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // btnAddReservationTicker
             // 
@@ -491,6 +479,5 @@
         private Button btnDevideRoom;
         private Button btnAddReservationTicker;
         private TextBox textBoxSearch;
-        private Label label11;
     }
 }
