@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             this.panel13 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.btnDevideRoom = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnAddReservationTicker = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -63,11 +62,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel13.SuspendLayout();
-            this.panel17.SuspendLayout();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel14.SuspendLayout();
-            this.panel18.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -83,7 +80,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.Transparent;
-            this.panel13.Controls.Add(this.panel17);
+            this.panel13.Controls.Add(this.btnDevideRoom);
             this.panel13.Controls.Add(this.panel16);
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Location = new System.Drawing.Point(277, 1);
@@ -91,25 +88,17 @@
             this.panel13.Size = new System.Drawing.Size(986, 678);
             this.panel13.TabIndex = 4;
             // 
-            // panel17
+            // btnDevideRoom
             // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel17.Controls.Add(this.label12);
-            this.panel17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel17.Location = new System.Drawing.Point(826, 619);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(123, 48);
-            this.panel17.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(13, 12);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 25);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Phân công";
+            this.btnDevideRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDevideRoom.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDevideRoom.Location = new System.Drawing.Point(826, 615);
+            this.btnDevideRoom.Name = "btnDevideRoom";
+            this.btnDevideRoom.Size = new System.Drawing.Size(123, 56);
+            this.btnDevideRoom.TabIndex = 3;
+            this.btnDevideRoom.Text = "Phân phòng";
+            this.btnDevideRoom.UseVisualStyleBackColor = false;
+            this.btnDevideRoom.Click += new System.EventHandler(this.btnDevideRoom_Click);
             // 
             // panel16
             // 
@@ -149,33 +138,36 @@
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.panel18);
+            this.panel14.Controls.Add(this.label11);
+            this.panel14.Controls.Add(this.btnAddReservationTicker);
             this.panel14.Controls.Add(this.panel15);
-            this.panel14.Controls.Add(this.textBox1);
+            this.panel14.Controls.Add(this.textBoxSearch);
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(980, 60);
             this.panel14.TabIndex = 0;
             // 
-            // panel18
+            // label11
             // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panel18.Controls.Add(this.label13);
-            this.panel18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel18.Location = new System.Drawing.Point(892, 12);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(51, 38);
-            this.panel18.TabIndex = 3;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(489, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 15);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "label11";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // label13
+            // btnAddReservationTicker
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(6, -7);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 46);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "+";
+            this.btnAddReservationTicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddReservationTicker.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddReservationTicker.Location = new System.Drawing.Point(884, 3);
+            this.btnAddReservationTicker.Name = "btnAddReservationTicker";
+            this.btnAddReservationTicker.Size = new System.Drawing.Size(62, 51);
+            this.btnAddReservationTicker.TabIndex = 4;
+            this.btnAddReservationTicker.Text = "+";
+            this.btnAddReservationTicker.UseVisualStyleBackColor = false;
+            this.btnAddReservationTicker.Click += new System.EventHandler(this.btnAddReservationTicker_Click);
             // 
             // panel15
             // 
@@ -196,13 +188,13 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "";
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(85, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(333, 32);
-            this.textBox1.TabIndex = 0;
+            this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSearch.Location = new System.Drawing.Point(85, 12);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(333, 32);
+            this.textBoxSearch.TabIndex = 0;
             // 
             // panel2
             // 
@@ -435,15 +427,12 @@
             this.Controls.Add(this.panel2);
             this.Name = "fReservationTickerList";
             this.Text = "fReservationTickerList";
+            this.Load += new System.EventHandler(this.fReservationTickerList_Load);
             this.panel13.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
             this.panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -471,19 +460,14 @@
         #endregion
 
         private Panel panel13;
-        private Panel panel17;
-        private Label label12;
         private Panel panel16;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private Panel panel14;
-        private Panel panel18;
-        private Label label13;
         private Panel panel15;
         private Label label10;
-        private TextBox textBox1;
         private Panel panel2;
         private Panel panel11;
         private Panel panel7;
@@ -504,5 +488,9 @@
         private Label label2;
         private Panel panel1;
         private Label label1;
+        private Button btnDevideRoom;
+        private Button btnAddReservationTicker;
+        private TextBox textBoxSearch;
+        private Label label11;
     }
 }
