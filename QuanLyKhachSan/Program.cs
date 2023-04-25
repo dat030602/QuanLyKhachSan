@@ -20,7 +20,7 @@ namespace QuanLyKhachSan
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //ApplicationConfiguration.Initialize();
-            Application.Run(new fCreateCustomer());  
+            Application.Run(new fCustomerList());  
         }
     }
 }

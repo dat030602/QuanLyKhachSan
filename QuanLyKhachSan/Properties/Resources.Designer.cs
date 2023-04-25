@@ -63,9 +63,39 @@ namespace QuanLyKhachSan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3917132 {
+            get {
+                object obj = ResourceManager.GetObject("3917132", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_icon_black_2 {
+            get {
+                object obj = ResourceManager.GetObject("plus-icon-black-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap R {
             get {
                 object obj = ResourceManager.GetObject("R", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_icon_set_magnifying_symbol_collection_eps10_stock_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("search-icon-set-magnifying-symbol-collection-eps10-stock-free-vector", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

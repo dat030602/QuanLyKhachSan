@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class fLuggageTransportList : Form
+    public partial class fDepositInvoice : Form
     {
-        public fLuggageTransportList()
+        public fDepositInvoice()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class fScheduleService : Form
+    public partial class fCreateDetailsReservationTicket : Form
     {
-        public fScheduleService()
+        public fCreateDetailsReservationTicket()
         {
             InitializeComponent();
         }

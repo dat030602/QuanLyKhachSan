@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class fManager : Form
+    public partial class fDetailsRevervationTicker : Form
     {
-        public fManager()
+        public fDetailsRevervationTicker()
         {
             InitializeComponent();
-        }
-
-        private void CustomerItem_Click(object sender, EventArgs e)
-        {
-            fCreateCustomer f = new fCreateCustomer();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
         }
     }
 }
