@@ -426,6 +426,7 @@
             this.label1.Size = new System.Drawing.Size(152, 47);
             this.label1.TabIndex = 2;
             this.label1.Text = "Trang chủ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // fDevideRoom
             // 

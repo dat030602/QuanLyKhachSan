@@ -35,6 +35,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.maphieu = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_submit = new System.Windows.Forms.Button();
-            this.maphieu = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -131,6 +131,30 @@
             this.panel2.Size = new System.Drawing.Size(1240, 76);
             this.panel2.TabIndex = 4;
             // 
+            // maphieu
+            // 
+            this.maphieu.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.maphieu.AutoSize = true;
+            this.maphieu.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.maphieu.ForeColor = System.Drawing.Color.Black;
+            this.maphieu.Location = new System.Drawing.Point(1116, 20);
+            this.maphieu.Name = "maphieu";
+            this.maphieu.Size = new System.Drawing.Size(49, 30);
+            this.maphieu.TabIndex = 14;
+            this.maphieu.Text = "035";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(1009, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 30);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Mã phiếu:";
+            // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -211,6 +235,7 @@
             this.btn_back.TabIndex = 10;
             this.btn_back.Text = "< Quay lại";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_submit
             // 
@@ -224,30 +249,6 @@
             this.btn_submit.TabIndex = 9;
             this.btn_submit.Text = "Lưu";
             this.btn_submit.UseVisualStyleBackColor = false;
-            // 
-            // maphieu
-            // 
-            this.maphieu.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.maphieu.AutoSize = true;
-            this.maphieu.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.maphieu.ForeColor = System.Drawing.Color.Black;
-            this.maphieu.Location = new System.Drawing.Point(1116, 20);
-            this.maphieu.Name = "maphieu";
-            this.maphieu.Size = new System.Drawing.Size(49, 30);
-            this.maphieu.TabIndex = 14;
-            this.maphieu.Text = "035";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(1009, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 30);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Mã phiếu:";
             // 
             // fSpecialRequirement
             // 

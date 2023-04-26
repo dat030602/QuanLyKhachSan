@@ -16,5 +16,15 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_submit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(textTenKhachHang.Text + textDienThoai.Text + textCMND.Text + textGioiTinh.Text + textNgaySinh.Text + textSofax.Text);
+        }
     }
 }

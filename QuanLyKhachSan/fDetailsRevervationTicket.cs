@@ -4,23 +4,24 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class fSpecialRequirement : Form
+    public partial class fDetailsRevervationTicket : Form
     {
-        private string maphieudatphong = "";
-        public fSpecialRequirement()
+        private string maPDP = "";
+        public fDetailsRevervationTicket()
         {
             InitializeComponent();
         }
-        public fSpecialRequirement(string Message) : this()
+        public fDetailsRevervationTicket(string Message) : this()
         {
-            maphieudatphong = Message;
-            maphieu.Text = maphieudatphong;
+            maPDP = Message;
+            labelPhieuPDP.Text = maPDP;
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -28,4 +29,5 @@ namespace QuanLyKhachSan
             this.Close();
         }
     }
+
 }

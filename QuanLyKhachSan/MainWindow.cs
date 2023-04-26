@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class fTour : Form
+    public partial class MainWindow : Form
     {
-
-        public fTour()
+        public MainWindow()
         {
             InitializeComponent();
         }
@@ -36,7 +35,7 @@ namespace QuanLyKhachSan
 
         private void btn_link_khachhangchodat_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_link_thongtinphong_Click(object sender, EventArgs e)
@@ -51,6 +50,14 @@ namespace QuanLyKhachSan
         {
             this.Hide();
             fServiceProvided form = new fServiceProvided();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_link_tour_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fTour form = new fTour();
             form.ShowDialog();
             this.Close();
         }
@@ -71,12 +78,15 @@ namespace QuanLyKhachSan
             this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Hide();
-            MainWindow form = new MainWindow();
-            form.ShowDialog();
-            this.Close();
+            timeCur.Text = DateTime.Now.ToString("HH : mm : ss");
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            timeCur.Text = DateTime.Now.ToString("HH : mm : ss");
+            dayCur.Text = DateTime.Now.ToString("dd - MM - yyyy");
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan
 {
-    partial class fRevervationTicker
+    partial class fRevervationTicket
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,18 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.labelKh = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.labelphieu = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_detail = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -60,12 +63,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_DatCoc = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_submit = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.btn_DatCoc = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,10 +75,10 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label21);
-            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.labelKh);
             this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.label19);
+            this.panel2.Controls.Add(this.labelphieu);
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.label4);
@@ -99,17 +100,17 @@
             this.label21.TabIndex = 14;
             this.label21.Text = "Phiếu đặt phòng";
             // 
-            // label22
+            // labelKh
             // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(876, 27);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(32, 25);
-            this.label22.TabIndex = 13;
-            this.label22.Text = "35";
+            this.labelKh.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelKh.AutoSize = true;
+            this.labelKh.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.labelKh.ForeColor = System.Drawing.Color.Black;
+            this.labelKh.Location = new System.Drawing.Point(876, 27);
+            this.labelKh.Name = "labelKh";
+            this.labelKh.Size = new System.Drawing.Size(32, 25);
+            this.labelKh.TabIndex = 13;
+            this.labelKh.Text = "35";
             // 
             // label23
             // 
@@ -135,17 +136,17 @@
             this.label18.TabIndex = 11;
             this.label18.Text = "Phiếu đặt phòng";
             // 
-            // label19
+            // labelphieu
             // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(1092, 27);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(32, 25);
-            this.label19.TabIndex = 10;
-            this.label19.Text = "35";
+            this.labelphieu.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelphieu.AutoSize = true;
+            this.labelphieu.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.labelphieu.ForeColor = System.Drawing.Color.Black;
+            this.labelphieu.Location = new System.Drawing.Point(1092, 27);
+            this.labelphieu.Name = "labelphieu";
+            this.labelphieu.Size = new System.Drawing.Size(32, 25);
+            this.labelphieu.TabIndex = 10;
+            this.labelphieu.Text = "35";
             // 
             // label20
             // 
@@ -197,6 +198,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_detail);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.label25);
@@ -223,6 +225,41 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1243, 499);
             this.panel1.TabIndex = 6;
+            // 
+            // btn_detail
+            // 
+            this.btn_detail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
+            this.btn_detail.FlatAppearance.BorderSize = 0;
+            this.btn_detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_detail.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_detail.Location = new System.Drawing.Point(1052, 196);
+            this.btn_detail.Name = "btn_detail";
+            this.btn_detail.Size = new System.Drawing.Size(143, 48);
+            this.btn_detail.TabIndex = 45;
+            this.btn_detail.Text = "Chi tiết";
+            this.btn_detail.UseVisualStyleBackColor = false;
+            this.btn_detail.Click += new System.EventHandler(this.btn_detail_Click);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(130, 140);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 25);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Tổng tiền";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox8.Location = new System.Drawing.Point(235, 140);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(351, 32);
+            this.textBox8.TabIndex = 43;
             // 
             // label25
             // 
@@ -256,7 +293,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(94, 25);
             this.label15.TabIndex = 40;
-            this.label15.Text = "Số lượng";
+            this.label15.Text = "Tên đoàn";
             // 
             // textBox5
             // 
@@ -266,6 +303,7 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(393, 32);
             this.textBox5.TabIndex = 39;
+            this.textBox5.Text = " ";
             // 
             // label24
             // 
@@ -455,6 +493,20 @@
             this.panel3.Size = new System.Drawing.Size(1243, 60);
             this.panel3.TabIndex = 8;
             // 
+            // btn_DatCoc
+            // 
+            this.btn_DatCoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(0)))));
+            this.btn_DatCoc.FlatAppearance.BorderSize = 0;
+            this.btn_DatCoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DatCoc.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_DatCoc.Location = new System.Drawing.Point(802, 6);
+            this.btn_DatCoc.Name = "btn_DatCoc";
+            this.btn_DatCoc.Size = new System.Drawing.Size(107, 48);
+            this.btn_DatCoc.TabIndex = 11;
+            this.btn_DatCoc.Text = "Đặt cọc";
+            this.btn_DatCoc.UseVisualStyleBackColor = false;
+            this.btn_DatCoc.Click += new System.EventHandler(this.btn_DatCoc_Click);
+            // 
             // btn_back
             // 
             this.btn_back.BackColor = System.Drawing.Color.Transparent;
@@ -467,6 +519,7 @@
             this.btn_back.TabIndex = 10;
             this.btn_back.Text = "< Quay lại";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_submit
             // 
@@ -494,41 +547,7 @@
             this.btn_edit.Text = "Sửa";
             this.btn_edit.UseVisualStyleBackColor = false;
             // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(130, 140);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 25);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "Tổng tiền";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox8.Location = new System.Drawing.Point(235, 140);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(351, 32);
-            this.textBox8.TabIndex = 43;
-            // 
-            // btn_DatCoc
-            // 
-            this.btn_DatCoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(0)))));
-            this.btn_DatCoc.FlatAppearance.BorderSize = 0;
-            this.btn_DatCoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DatCoc.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_DatCoc.Location = new System.Drawing.Point(802, 6);
-            this.btn_DatCoc.Name = "btn_DatCoc";
-            this.btn_DatCoc.Size = new System.Drawing.Size(107, 48);
-            this.btn_DatCoc.TabIndex = 11;
-            this.btn_DatCoc.Text = "Đặt cọc";
-            this.btn_DatCoc.UseVisualStyleBackColor = false;
-            // 
-            // fRevervationTicker
+            // fRevervationTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -537,7 +556,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "fRevervationTicker";
+            this.Name = "fRevervationTicket";
             this.Text = "fRevervationTicker";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -563,15 +582,13 @@
         private Label label5;
         private TextBox textBox1;
         private Label label21;
-        private Label label22;
+        private Label labelKh;
         private Label label23;
         private Label label18;
-        private Label label19;
+        private Label labelphieu;
         private Label label20;
         private Label label25;
         private TextBox textBox7;
-        private Label label15;
-        private TextBox textBox5;
         private Label label24;
         private TextBox textBox6;
         private Label label9;
@@ -587,5 +604,8 @@
         private Button btn_back;
         private Button btn_submit;
         private Button btn_edit;
+        private Button btn_detail;
+        private Label label15;
+        private TextBox textBox5;
     }
 }

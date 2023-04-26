@@ -15,7 +15,7 @@ namespace QuanLyKhachSan
     
     public partial class fReservationTickerList : Form
     {
-        fRevervationTicker f = new fRevervationTicker();
+        fRevervationTicket f = new fRevervationTicket();
         fDevideRoom f2 = new fDevideRoom();
         public fReservationTickerList()
         {
@@ -45,7 +45,12 @@ namespace QuanLyKhachSan
 
         private void fReservationTickerList_Load(object sender, EventArgs e)
         {
-
+            tableGrid.Rows.Add(1, "PDP2023", "KH003", "21/4/2023", "30/4/2023");
+            tableGrid.Rows.Add(2, "PDP2023", "KH003", "21/4/2023", "30/4/2023");
+            tableGrid.Rows.Add(3, "PDP2023", "KH003", "21/4/2023", "30/4/2023");
+            tableGrid.Rows.Add(4, "PDP2023", "KH003", "21/4/2023", "30/4/2023");
+            tableGrid.Rows.Add(4, "PDP2023", "KH003", "21/4/2023", "30/4/2023");
+            tableGrid.Rows.Add(6, "PDP2023", "KH003", "21/4/2023", "30/4/2023");
         }
         private void btnAddReservationTicker_Click(object sender, EventArgs e)
         {
@@ -105,6 +110,24 @@ namespace QuanLyKhachSan
             fCheckMinibar form = new fCheckMinibar();
             form.ShowDialog();
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainWindow form = new MainWindow();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void tableGrid_DoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string maPDH = tableGrid[1, rowIndex: e.RowIndex].Value.ToString();
+            string maKH = tableGrid[2, rowIndex: e.RowIndex].Value.ToString();
+            this.Hide();
+            fRevervationTicket form = new fRevervationTicket(maPDH, maKH);
+            form.ShowDialog();
+            this.Show();
         }
     }
 }

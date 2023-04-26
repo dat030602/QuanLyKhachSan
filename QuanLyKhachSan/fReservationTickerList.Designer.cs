@@ -28,27 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btn_submit = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.tableGrid = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhieuDatPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.btnAddReservationTicker = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_link_vanchuyenhanhly = new System.Windows.Forms.Button();
             this.btn_link_kiemtraminibar = new System.Windows.Forms.Button();
@@ -63,11 +59,12 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.InputText = new System.Windows.Forms.TextBox();
             this.panel13.SuspendLayout();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).BeginInit();
             this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,137 +102,97 @@
             // 
             // tableGrid
             // 
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tableGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tableGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tableGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.tableGrid.ColumnHeadersHeight = 32;
             this.tableGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.MaPhieuDatPhong,
             this.MaKH,
-            this.CMND,
-            this.HoTen,
-            this.DiaChi,
-            this.SoFax});
+            this.NgayDat,
+            this.NgayTra});
             this.tableGrid.Location = new System.Drawing.Point(36, 7);
             this.tableGrid.Margin = new System.Windows.Forms.Padding(0);
             this.tableGrid.MultiSelect = false;
             this.tableGrid.Name = "tableGrid";
             this.tableGrid.ReadOnly = true;
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle49.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle49.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.tableGrid.RowTemplate.Height = 32;
             this.tableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableGrid.Size = new System.Drawing.Size(909, 529);
             this.tableGrid.TabIndex = 1;
+            this.tableGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableGrid_DoubleClick);
+            // 
+            // STT
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.STT.DefaultCellStyle = dataGridViewCellStyle2;
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            this.STT.Width = 115;
+            // 
+            // MaPhieuDatPhong
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MaPhieuDatPhong.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaPhieuDatPhong.HeaderText = "Mã phiếu đặt phòng";
+            this.MaPhieuDatPhong.Name = "MaPhieuDatPhong";
+            this.MaPhieuDatPhong.ReadOnly = true;
+            this.MaPhieuDatPhong.Width = 150;
             // 
             // MaKH
             // 
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MaKH.DefaultCellStyle = dataGridViewCellStyle44;
-            this.MaKH.HeaderText = "Mã Khách hàng";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaKH.DefaultCellStyle = dataGridViewCellStyle4;
+            this.MaKH.HeaderText = "Mã khách hàng";
             this.MaKH.Name = "MaKH";
             this.MaKH.ReadOnly = true;
-            this.MaKH.Width = 115;
+            this.MaKH.Width = 200;
             // 
-            // CMND
+            // NgayDat
             // 
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CMND.DefaultCellStyle = dataGridViewCellStyle45;
-            this.CMND.HeaderText = "CMND";
-            this.CMND.Name = "CMND";
-            this.CMND.ReadOnly = true;
-            this.CMND.Width = 150;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.NgayDat.DefaultCellStyle = dataGridViewCellStyle5;
+            this.NgayDat.HeaderText = "Ngày đặt";
+            this.NgayDat.Name = "NgayDat";
+            this.NgayDat.ReadOnly = true;
+            this.NgayDat.Width = 245;
             // 
-            // HoTen
+            // NgayTra
             // 
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.HoTen.DefaultCellStyle = dataGridViewCellStyle46;
-            this.HoTen.HeaderText = "Họ và tên";
-            this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
-            this.HoTen.Width = 200;
-            // 
-            // DiaChi
-            // 
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle47;
-            this.DiaChi.HeaderText = "Địa chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            this.DiaChi.Width = 245;
-            // 
-            // SoFax
-            // 
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SoFax.DefaultCellStyle = dataGridViewCellStyle48;
-            this.SoFax.HeaderText = "Số Fax";
-            this.SoFax.Name = "SoFax";
-            this.SoFax.ReadOnly = true;
-            this.SoFax.Width = 150;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NgayTra.DefaultCellStyle = dataGridViewCellStyle6;
+            this.NgayTra.HeaderText = "Ngày trả";
+            this.NgayTra.Name = "NgayTra";
+            this.NgayTra.ReadOnly = true;
+            this.NgayTra.Width = 150;
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.btnAddReservationTicker);
-            this.panel14.Controls.Add(this.panel15);
-            this.panel14.Controls.Add(this.textBoxSearch);
+            this.panel14.Controls.Add(this.btn_search);
+            this.panel14.Controls.Add(this.InputText);
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(980, 60);
             this.panel14.TabIndex = 0;
-            // 
-            // btnAddReservationTicker
-            // 
-            this.btnAddReservationTicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAddReservationTicker.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.plus_icon_black_2;
-            this.btnAddReservationTicker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddReservationTicker.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddReservationTicker.Location = new System.Drawing.Point(900, 12);
-            this.btnAddReservationTicker.Name = "btnAddReservationTicker";
-            this.btnAddReservationTicker.Size = new System.Drawing.Size(45, 42);
-            this.btnAddReservationTicker.TabIndex = 4;
-            this.btnAddReservationTicker.UseVisualStyleBackColor = false;
-            this.btnAddReservationTicker.Click += new System.EventHandler(this.btnAddReservationTicker_Click);
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.Controls.Add(this.label10);
-            this.panel15.Location = new System.Drawing.Point(417, 13);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(36, 30);
-            this.panel15.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(-6, -11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 46);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "";
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSearch.Location = new System.Drawing.Point(85, 12);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(333, 32);
-            this.textBoxSearch.TabIndex = 0;
             // 
             // panel2
             // 
@@ -468,6 +425,35 @@
             this.label1.Size = new System.Drawing.Size(152, 47);
             this.label1.TabIndex = 2;
             this.label1.Text = "Trang chủ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btn_search
+            // 
+            this.btn_search.BackColor = System.Drawing.Color.White;
+            this.btn_search.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.search_icon_set_magnifying_symbol_collection_eps10_stock_free_vector;
+            this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_search.FlatAppearance.BorderSize = 0;
+            this.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_search.Location = new System.Drawing.Point(368, 12);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Padding = new System.Windows.Forms.Padding(10);
+            this.btn_search.Size = new System.Drawing.Size(29, 30);
+            this.btn_search.TabIndex = 14;
+            this.btn_search.UseVisualStyleBackColor = false;
+            // 
+            // InputText
+            // 
+            this.InputText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.InputText.Location = new System.Drawing.Point(36, 11);
+            this.InputText.Name = "InputText";
+            this.InputText.Size = new System.Drawing.Size(333, 32);
+            this.InputText.TabIndex = 13;
             // 
             // fReservationTickerList
             // 
@@ -485,8 +471,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -498,16 +482,7 @@
         private Panel panel13;
         private Panel panel16;
         private Panel panel14;
-        private Panel panel15;
-        private Label label10;
-        private Button btnAddReservationTicker;
-        private TextBox textBoxSearch;
         private DataGridView tableGrid;
-        private DataGridViewTextBoxColumn MaKH;
-        private DataGridViewTextBoxColumn CMND;
-        private DataGridViewTextBoxColumn HoTen;
-        private DataGridViewTextBoxColumn DiaChi;
-        private DataGridViewTextBoxColumn SoFax;
         private Button btn_submit;
         private Panel panel2;
         private Button btn_link_vanchuyenhanhly;
@@ -523,5 +498,12 @@
         private Panel panel11;
         private Panel panel1;
         private Label label1;
+        private DataGridViewTextBoxColumn STT;
+        private DataGridViewTextBoxColumn MaPhieuDatPhong;
+        private DataGridViewTextBoxColumn MaKH;
+        private DataGridViewTextBoxColumn NgayDat;
+        private DataGridViewTextBoxColumn NgayTra;
+        private Button btn_search;
+        private TextBox InputText;
     }
 }

@@ -12,10 +12,48 @@ namespace QuanLyKhachSan
 {
     public partial class fCustomerList : Form
     {
-        
+        private string maKH = "";
+
+
         public fCustomerList()
         {
             InitializeComponent();
+            add_data_datagridview();
+        }
+
+        void add_data_datagridview()
+        {
+            this.tableGrid.Rows.Add("KH001","072202003355","Nguyễn Văn Đạt","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH002", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            this.tableGrid.Rows.Add("KH004", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
         }
 
         private void btn_link_datphong_Click(object sender, EventArgs e)
@@ -66,6 +104,46 @@ namespace QuanLyKhachSan
         {
             this.Hide();
             fCheckMinibar form = new fCheckMinibar();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fCreateCustomer form = new fCreateCustomer();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void onClick_DataGrid_Row(object sender, DataGridViewCellEventArgs e)
+        {
+            maKH = tableGrid[0, rowIndex: e.RowIndex].Value.ToString();
+        }
+
+        private void btn_submit_Click(object sender, EventArgs e)
+        {
+            if (maKH != "")
+            {
+                this.Hide();
+                fCreateReservationTicket form = new fCreateReservationTicket(maKH);
+                form.ShowDialog();
+                this.Show();
+            }
+            else
+                MessageBox.Show("Chưa chọn khách hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            string stringSearch = InputText.Text;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainWindow form = new MainWindow();
             form.ShowDialog();
             this.Close();
         }

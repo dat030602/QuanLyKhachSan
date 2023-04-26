@@ -421,6 +421,7 @@
             this.label1.Size = new System.Drawing.Size(152, 47);
             this.label1.TabIndex = 2;
             this.label1.Text = "Trang chủ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // fTour
             // 
@@ -430,6 +431,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel13);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "fTour";
             this.Text = "fTour";
             this.panel15.ResumeLayout(false);

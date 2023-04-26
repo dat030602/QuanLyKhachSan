@@ -70,5 +70,13 @@ namespace QuanLyKhachSan
             form.ShowDialog();
             this.Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainWindow form = new MainWindow();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

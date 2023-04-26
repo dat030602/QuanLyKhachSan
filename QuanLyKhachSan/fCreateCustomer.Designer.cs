@@ -77,7 +77,9 @@
             // 
             // textNgaySinh
             // 
+            this.textNgaySinh.CustomFormat = "dd/MM/yyyy";
             this.textNgaySinh.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.textNgaySinh.Location = new System.Drawing.Point(193, 167);
             this.textNgaySinh.Name = "textNgaySinh";
             this.textNgaySinh.Size = new System.Drawing.Size(393, 32);
@@ -277,6 +279,7 @@
             this.btn_back.TabIndex = 10;
             this.btn_back.Text = "< Quay lại";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_submit
             // 
@@ -290,6 +293,7 @@
             this.btn_submit.TabIndex = 9;
             this.btn_submit.Text = "Lưu";
             this.btn_submit.UseVisualStyleBackColor = false;
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // btn_edit
             // 
