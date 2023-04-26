@@ -106,9 +106,9 @@
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(1, 2);
+            this.panel2.Location = new System.Drawing.Point(1, -3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(273, 678);
+            this.panel2.Size = new System.Drawing.Size(273, 687);
             this.panel2.TabIndex = 1;
             // 
             // btn_link_vanchuyenhanhly
@@ -146,6 +146,7 @@
             this.btn_link_kiemtraminibar.Text = "Kiểm tra minibar";
             this.btn_link_kiemtraminibar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_kiemtraminibar.UseVisualStyleBackColor = false;
+            this.btn_link_kiemtraminibar.Click += new System.EventHandler(this.btn_link_kiemtraminibar_Click);
             // 
             // btn_link_kiemtraphong
             // 
@@ -164,6 +165,7 @@
             this.btn_link_kiemtraphong.Text = "Kiểm tra phòng";
             this.btn_link_kiemtraphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_kiemtraphong.UseVisualStyleBackColor = false;
+            this.btn_link_kiemtraphong.Click += new System.EventHandler(this.btn_link_kiemtraphong_Click);
             // 
             // btn_link_tour
             // 
@@ -182,6 +184,7 @@
             this.btn_link_tour.Text = "Tour";
             this.btn_link_tour.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_tour.UseVisualStyleBackColor = false;
+            this.btn_link_tour.Click += new System.EventHandler(this.btn_link_tour_Click);
             // 
             // btn_link_dichvucungcap
             // 
@@ -200,6 +203,7 @@
             this.btn_link_dichvucungcap.Text = "Dịch vụ cung cấp";
             this.btn_link_dichvucungcap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_dichvucungcap.UseVisualStyleBackColor = false;
+            this.btn_link_dichvucungcap.Click += new System.EventHandler(this.btn_link_dichvucungcap_Click);
             // 
             // btn_link_sanphan_dichvu
             // 
@@ -236,6 +240,7 @@
             this.btn_link_thongtinphong.Text = "Thông tin phòng";
             this.btn_link_thongtinphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_thongtinphong.UseVisualStyleBackColor = false;
+            this.btn_link_thongtinphong.Click += new System.EventHandler(this.btn_link_thongtinphong_Click);
             // 
             // btn_link_khachhangchodat
             // 
@@ -254,6 +259,7 @@
             this.btn_link_khachhangchodat.Text = "Khách hàng chờ đặt";
             this.btn_link_khachhangchodat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_khachhangchodat.UseVisualStyleBackColor = false;
+            this.btn_link_khachhangchodat.Click += new System.EventHandler(this.btn_link_khachhangchodat_Click);
             // 
             // btn_link_datphong
             // 
@@ -272,6 +278,7 @@
             this.btn_link_datphong.Text = "Phiếu đặt phòng";
             this.btn_link_datphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_datphong.UseVisualStyleBackColor = false;
+            this.btn_link_datphong.Click += new System.EventHandler(this.btn_link_datphong_Click);
             // 
             // btn_link_khachhang
             // 

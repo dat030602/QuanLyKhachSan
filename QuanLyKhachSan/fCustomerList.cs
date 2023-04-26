@@ -12,9 +12,62 @@ namespace QuanLyKhachSan
 {
     public partial class fCustomerList : Form
     {
+        
         public fCustomerList()
         {
             InitializeComponent();
+        }
+
+        private void btn_link_datphong_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fReservationTickerList form = new fReservationTickerList();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_link_khachhangchodat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_link_thongtinphong_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fInfoRoom form = new fInfoRoom();
+            form.ShowDialog();
+            this.Close();
+        }
+        private void btn_link_dichvucungcap_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fServiceProvided form = new fServiceProvided();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_link_tour_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fTour form = new fTour();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_link_kiemtraphong_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fCheckRoom form = new fCheckRoom();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_link_kiemtraminibar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fCheckMinibar form = new fCheckMinibar();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }
