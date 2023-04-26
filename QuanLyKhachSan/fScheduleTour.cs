@@ -17,41 +17,6 @@ namespace QuanLyKhachSan
             InitializeComponent();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_back_Click(object sender, EventArgs e)
         {
 
@@ -62,6 +27,11 @@ namespace QuanLyKhachSan
             this.Hide();
             fRegisteredTours form = new fRegisteredTours();
             form.ShowDialog();
+        }
+
+        private void comboBoxTour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -253,7 +253,6 @@
             label5.Size = new Size(228, 32);
             label5.TabIndex = 19;
             label5.Text = "Thời gian khởi hành";
-            label5.Click += label5_Click;
             // 
             // label4
             // 
@@ -264,7 +263,6 @@
             label4.Size = new Size(188, 32);
             label4.TabIndex = 18;
             label4.Text = "Yêu cầu đặc biệt";
-            label4.Click += label4_Click;
             // 
             // label2
             // 
@@ -285,7 +283,6 @@
             label1.Size = new Size(61, 32);
             label1.TabIndex = 0;
             label1.Text = "Tour";
-            label1.Click += label1_Click;
             // 
             // label18
             // 
@@ -308,6 +305,7 @@
             comboBoxTour.Name = "comboBoxTour";
             comboBoxTour.Size = new Size(373, 39);
             comboBoxTour.TabIndex = 15;
+            comboBoxTour.SelectedIndexChanged += comboBoxTour_SelectedIndexChanged;
             // 
             // textBoxYcdb
             // 
@@ -317,7 +315,6 @@
             textBoxYcdb.Name = "textBoxYcdb";
             textBoxYcdb.Size = new Size(373, 39);
             textBoxYcdb.TabIndex = 13;
-            textBoxYcdb.TextChanged += textBox3_TextChanged;
             // 
             // textBoxMaKH
             // 
@@ -327,7 +324,6 @@
             textBoxMaKH.Name = "textBoxMaKH";
             textBoxMaKH.Size = new Size(211, 39);
             textBoxMaKH.TabIndex = 9;
-            textBoxMaKH.TextChanged += textBox1_TextChanged;
             // 
             // panel18
             // 
