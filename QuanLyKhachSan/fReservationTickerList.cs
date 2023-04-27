@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static QuanLyKhachSan.fDevideRoom;
@@ -65,6 +66,22 @@ namespace QuanLyKhachSan
                 dt.Load(reader);
                 tableGrid.DataSource = dt;
             }
+            tableGrid.RowHeaderMouseDoubleClick += (s, e) =>
+            {
+                foreach (DataGridViewRow r in tableGrid.SelectedRows)
+                {
+                    string maPDP = (tableGrid[0, r.Index].Value.ToString());
+                    string maKH = (tableGrid[1, r.Index].Value.ToString());
+             
+                    this.Hide();
+                    fRevervationTicket form = new fRevervationTicket(maPDP, maKH, true);
+                    form.ShowDialog();
+                    this.Show();
+
+                }
+            };
+            
+
         }
         private void fReservationTickerList_Load(object sender, EventArgs e)
         {
