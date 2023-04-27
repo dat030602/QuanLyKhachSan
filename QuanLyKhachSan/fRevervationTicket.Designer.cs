@@ -263,7 +263,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(73, 219);
+            this.label25.Location = new System.Drawing.Point(68, 262);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(155, 25);
             this.label25.TabIndex = 42;
@@ -272,7 +272,7 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(235, 216);
+            this.textBox7.Location = new System.Drawing.Point(230, 259);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;

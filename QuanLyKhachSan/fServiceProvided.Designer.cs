@@ -123,6 +123,7 @@
             this.LoaiPhong});
             this.tableGrid.Location = new System.Drawing.Point(157, 7);
             this.tableGrid.Margin = new System.Windows.Forms.Padding(0);
+            this.tableGrid.MultiSelect = false;
             this.tableGrid.Name = "tableGrid";
             this.tableGrid.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;

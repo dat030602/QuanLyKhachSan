@@ -37,7 +37,7 @@ namespace QuanLyKhachSan
         private void btn_DatCoc_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fDepositInvoice form = new fDepositInvoice(maKHfromList);
+            fDepositInvoice form = new fDepositInvoice("PD0001", maKHfromList, "Tràn Anh Ngọc", "Đặt cọc", "30000000");
             form.ShowDialog();
             this.Show();
         }

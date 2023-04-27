@@ -18,7 +18,7 @@ namespace QuanLyKhachSan
         private List<string[]> listService= new List<string[]>();
         private int sizeListSerive = 0;
 
-        private List<string[]> listServiceSelect = new List<string[]>();
+        //private List<string[]> listServiceSelect = new List<string[]>();
 
         public fServiceProvided()
         {
@@ -118,14 +118,35 @@ namespace QuanLyKhachSan
 
         private void tableGrid_Rows_Click(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < sizeListSerive)
-            {
-                //tableGrid.Rows[e.RowIndex].Selected =true;
-                //tableGrid[0, rowIndex: e.RowIndex].Selected =true;
-                //tenKH = tableGrid[2, rowIndex: e.RowIndex].Value.ToString();
-            }
-            MessageBox.Show((tableGrid.Rows[0].Selected).ToString() + (tableGrid.Rows[1].Selected).ToString()+
-                (tableGrid.Rows[2].Selected).ToString());
+            //if (e.RowIndex < sizeListSerive)
+            //{
+            //    bool isExist = false;
+            //    foreach (var item in listServiceSelect)
+            //    {
+            //        if (tableGrid[0, e.RowIndex].Value.ToString() == item[0] &&
+            //        tableGrid[1, e.RowIndex].Value.ToString() == item[1])
+            //        {
+            //            listServiceSelect.Remove(item);
+            //            isExist = true;
+            //            break;
+            //        }
+            //    }
+            //    if (isExist)
+            //        tableGrid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
+            //    else
+            //    {
+            //        string[] numb;
+            //        numb = new string[3];
+            //        numb[0] = tableGrid[0, e.RowIndex].Value.ToString();
+            //        numb[1] = tableGrid[1, e.RowIndex].Value.ToString();
+            //        numb[2] = tableGrid[2, e.RowIndex].Value.ToString();
+
+            //        tableGrid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.YellowGreen;
+
+            //        listServiceSelect.Add(numb);
+            //    }
+
+            //}
         }
     }
 }
