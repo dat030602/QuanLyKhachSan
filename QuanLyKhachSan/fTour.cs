@@ -78,5 +78,17 @@ namespace QuanLyKhachSan
             form.ShowDialog();
             this.Close();
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fScheduleTour form = new fScheduleTour();
+            form.ShowDialog();
+        }
     }
 }

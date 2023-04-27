@@ -16,5 +16,22 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_complete_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fRegisteredTours form = new fRegisteredTours();
+            form.ShowDialog();
+        }
+
+        private void comboBoxTour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
