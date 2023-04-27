@@ -29,22 +29,14 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btn_submit = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.tableGrid = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhieuDatPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayDat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.InputText = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_link_vanchuyenhanhly = new System.Windows.Forms.Button();
             this.btn_link_kiemtraminibar = new System.Windows.Forms.Button();
@@ -59,8 +51,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_search = new System.Windows.Forms.Button();
-            this.InputText = new System.Windows.Forms.TextBox();
             this.panel13.SuspendLayout();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).BeginInit();
@@ -91,6 +81,7 @@
             this.btn_submit.TabIndex = 4;
             this.btn_submit.Text = "Phân công";
             this.btn_submit.UseVisualStyleBackColor = false;
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // panel16
             // 
@@ -103,87 +94,29 @@
             // tableGrid
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tableGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tableGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.tableGrid.ColumnHeadersHeight = 32;
-            this.tableGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.MaPhieuDatPhong,
-            this.MaKH,
-            this.NgayDat,
-            this.NgayTra});
             this.tableGrid.Location = new System.Drawing.Point(36, 7);
             this.tableGrid.Margin = new System.Windows.Forms.Padding(0);
             this.tableGrid.MultiSelect = false;
             this.tableGrid.Name = "tableGrid";
             this.tableGrid.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tableGrid.RowTemplate.Height = 32;
             this.tableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableGrid.Size = new System.Drawing.Size(909, 529);
             this.tableGrid.TabIndex = 1;
-            this.tableGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableGrid_DoubleClick);
-            // 
-            // STT
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.STT.DefaultCellStyle = dataGridViewCellStyle2;
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            this.STT.Width = 115;
-            // 
-            // MaPhieuDatPhong
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MaPhieuDatPhong.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MaPhieuDatPhong.HeaderText = "Mã phiếu đặt phòng";
-            this.MaPhieuDatPhong.Name = "MaPhieuDatPhong";
-            this.MaPhieuDatPhong.ReadOnly = true;
-            this.MaPhieuDatPhong.Width = 150;
-            // 
-            // MaKH
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaKH.DefaultCellStyle = dataGridViewCellStyle4;
-            this.MaKH.HeaderText = "Mã khách hàng";
-            this.MaKH.Name = "MaKH";
-            this.MaKH.ReadOnly = true;
-            this.MaKH.Width = 200;
-            // 
-            // NgayDat
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.NgayDat.DefaultCellStyle = dataGridViewCellStyle5;
-            this.NgayDat.HeaderText = "Ngày đặt";
-            this.NgayDat.Name = "NgayDat";
-            this.NgayDat.ReadOnly = true;
-            this.NgayDat.Width = 245;
-            // 
-            // NgayTra
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NgayTra.DefaultCellStyle = dataGridViewCellStyle6;
-            this.NgayTra.HeaderText = "Ngày trả";
-            this.NgayTra.Name = "NgayTra";
-            this.NgayTra.ReadOnly = true;
-            this.NgayTra.Width = 150;
+            //this.tableGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableGrid_CellContentClick);
             // 
             // panel14
             // 
@@ -193,6 +126,34 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(980, 60);
             this.panel14.TabIndex = 0;
+            // 
+            // btn_search
+            // 
+            this.btn_search.BackColor = System.Drawing.Color.White;
+            this.btn_search.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.search_icon_set_magnifying_symbol_collection_eps10_stock_free_vector;
+            this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_search.FlatAppearance.BorderSize = 0;
+            this.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_search.Location = new System.Drawing.Point(368, 12);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Padding = new System.Windows.Forms.Padding(10);
+            this.btn_search.Size = new System.Drawing.Size(29, 30);
+            this.btn_search.TabIndex = 14;
+            this.btn_search.UseVisualStyleBackColor = false;
+            // 
+            // InputText
+            // 
+            this.InputText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.InputText.Location = new System.Drawing.Point(36, 11);
+            this.InputText.Name = "InputText";
+            this.InputText.Size = new System.Drawing.Size(333, 32);
+            this.InputText.TabIndex = 13;
             // 
             // panel2
             // 
@@ -425,35 +386,6 @@
             this.label1.Size = new System.Drawing.Size(152, 47);
             this.label1.TabIndex = 2;
             this.label1.Text = "Trang chủ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btn_search
-            // 
-            this.btn_search.BackColor = System.Drawing.Color.White;
-            this.btn_search.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.search_icon_set_magnifying_symbol_collection_eps10_stock_free_vector;
-            this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_search.FlatAppearance.BorderSize = 0;
-            this.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_search.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_search.Location = new System.Drawing.Point(368, 12);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Padding = new System.Windows.Forms.Padding(10);
-            this.btn_search.Size = new System.Drawing.Size(29, 30);
-            this.btn_search.TabIndex = 14;
-            this.btn_search.UseVisualStyleBackColor = false;
-            // 
-            // InputText
-            // 
-            this.InputText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.InputText.Location = new System.Drawing.Point(36, 11);
-            this.InputText.Name = "InputText";
-            this.InputText.Size = new System.Drawing.Size(333, 32);
-            this.InputText.TabIndex = 13;
             // 
             // fReservationTickerList
             // 
@@ -498,11 +430,6 @@
         private Panel panel11;
         private Panel panel1;
         private Label label1;
-        private DataGridViewTextBoxColumn STT;
-        private DataGridViewTextBoxColumn MaPhieuDatPhong;
-        private DataGridViewTextBoxColumn MaKH;
-        private DataGridViewTextBoxColumn NgayDat;
-        private DataGridViewTextBoxColumn NgayTra;
         private Button btn_search;
         private TextBox InputText;
     }
