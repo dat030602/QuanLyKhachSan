@@ -1,24 +1,68 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Security.AccessControl;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 namespace QuanLyKhachSan
+
 {
+
+
     public partial class fDevideRoom : Form
     {
+        internal class Cons
+        {
+            public static int DayOfWeek = 7;
+            public static int DayOfColumn = 6;
+            public static int dateButtonWidth = 75;
+            public static int dateButtonHeight = 40;
+            public static int margin = 6;
+        }
+        private List<List<Button>> matrix;
+        //private List<Button> buttonList;
+        //private Button ylbutton = null;
+        private List<string> listYellow = null;
+        public List<List<Button>> Matrix
+        {
+            get { return matrix; }
+            set { matrix = value; }
+        }
+        string connString = fReservationTickerList.sqlConn;
+        SqlConnection sqlConnection = fReservationTickerList.conn;
         //private ArrayList label = new ArrayList(30);
-        List<Button> buttonList = new List<Button>();
+
         List<Button> disableButtonList = new List<Button>();
+        private string maPDP = "";
+        private string ngayDen = "";
+        private string ngayDi = "";
+        private List<string> listDivided;
+        Int32 SoLuong = -1;
         public fDevideRoom()
         {
             InitializeComponent();
-         
+            LoadMatrix();
+
+            //handleButton();
+
+
+        }
+        public fDevideRoom(string maPDP, string ngayDen, string ngayDi) : this()
+        {
+            lblReservationTicker.Text = "Mã PĐ: " + maPDP;
+            this.maPDP = maPDP;
+            this.ngayDen = ngayDen;
+            this.ngayDi = ngayDi;
+            //MessageBox.Show(ngayDi);
+
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -27,75 +71,152 @@ namespace QuanLyKhachSan
         }
         private void ButtonDynamic_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void fDevideRoom_Load(object sender, EventArgs e)
         {
-
-            /*List<Button> buttonList = new List<Button>();
-            for (int i = 0; i < 10; i++)
+            listYellow = new List<string>();
+            if (sqlConnection == null)
             {
-                Button newButton = new Button();
-                newButton.Text = "Button " + i;
-                newButton.Name = "button" + i;
-                newButton.Location = new Point(120*i, 10);
-                buttonList.Add(newButton);
-               
+                sqlConnection = new SqlConnection(connString);
+            }
+            if (sqlConnection.State != ConnectionState.Open)
+            {
+                sqlConnection.Open();
 
             }
-            foreach (Button button in buttonList)
+            DataTable dt = new DataTable();
+            string text = "SELECT TenLoaiPhong FROM PHIEUDATPHONG PD JOIN CTPHIEUDATPHONG CT ON CT.MaPhieuDat = PD.MaPhieuDat JOIN LOAIPHONG LP ON CT.MaLoaiPhong = LP.MaLoaiPhong WHERE PD.MaPhieuDat = '" + maPDP + "'";
+            SqlCommand cmd = new SqlCommand("SELECT TenLoaiPhong FROM PHIEUDATPHONG PD JOIN CTPHIEUDATPHONG CT ON CT.MaPhieuDat = PD.MaPhieuDat JOIN LOAIPHONG LP ON CT.MaLoaiPhong = LP.MaLoaiPhong WHERE PD.MaPhieuDat = '" + maPDP + "'", sqlConnection);
+            SqlDataReader reader = cmd.ExecuteReader();
+            dt.Load(reader);
+            cbbRoomType.DisplayMember = dt.Columns[0].ColumnName;
+            cbbRoomType.ValueMember = dt.Columns[0].ColumnName;
+            cbbRoomType.DataSource = dt;
+            cbbRoomType.SelectedIndex = 0;
+
+            //tableLayoutPanel1.ColumnCount = 
+            //MessageBox.Show(text);
+            if (Matrix.Count == 9)
             {
-                panel16.Controls.Add(button);
-            }*/
-            for (int i = 0; i < tableLayoutPanel1.RowCount; i++)
-            {
-                for (int j = 0; j < tableLayoutPanel1.ColumnCount; j++)
+                foreach (List<Button> temp in Matrix)
                 {
-                    if (j == 0)
+
+                    foreach (Button button in temp)
                     {
-                        Label newLable = new Label();
-                        newLable.Text = "Tầng " + (i + 1);
-                        newLable.Name = "lblFloor" + (i + 1);
-                        tableLayoutPanel1.Controls.Add(newLable, j, i);
-                    }
-                    else
-                    {
-                        Button newButton = new Button();
-                        newButton.Text = ((i+1) * 100 + j).ToString();
-                        newButton.Name = "button" + i + "_" + j;
-                        newButton.BackColor = Color.Green;
-                        buttonList.Add(newButton);
-                        tableLayoutPanel1.Controls.Add(newButton, j, i);
-                    }
-       
-                }
-            }
-            foreach (Button button in buttonList)
-            {
-                button.Click += (s, e) => {foreach (Button button2 in buttonList)
-                    {
-                        if (button2 != button && button2.BackColor != Color.Red)
+                        button.Click += (s, e) =>
                         {
-                            button2.BackColor = Color.Green;
-                        }
+
+                            /*btnDevideRoom.Click += (s, e) =>
+                            {
+                                button.BackColor = Color.Red;
+                            };*/
+                            if (button.BackColor == Color.Red)
+                            {
+                                btnDevideRoom.Enabled = false;
+                                btnDevideRoom.BackColor = Color.Gray;
+                            }
+                            else if (button.BackColor == Color.Green)
+                            {
+                                if (SoLuong > 0)
+                                {
+                                    btnDevideRoom.Enabled = true;
+                                    btnDevideRoom.BackColor = Color.FromArgb(255, 192, 192);
+                                    button.BackColor = Color.Yellow;
+                                    listYellow.Add(button.Text);
+                                    for (int k = 0; k < listYellow.Count; k++)
+                                    {
+                                        Console.Write(listYellow[k]);
+                                    }
+                                    SoLuong = SoLuong - 1;
+                                    lblQuantityRoomLeft.Text = "Số lượng còn lại: " + SoLuong.ToString();
+                                }
+
+                            }
+                            else if (button.BackColor == Color.Yellow)
+                            {
+                                btnDevideRoom.Enabled = true;
+                                btnDevideRoom.BackColor = Color.FromArgb(255, 192, 192);
+                                button.BackColor = Color.Green;
+                                listYellow.Remove(button.Text);
+                                for (int k = 0; k < listYellow.Count; k++)
+                                {
+                                    Console.Write(listYellow[k]);
+                                }
+                                SoLuong = SoLuong + 1;
+                                lblQuantityRoomLeft.Text = "Số lượng còn lại: " + SoLuong.ToString();
+                            }
+                        };
+
+
                     }
-                    
-                    btnDevideRoom.Click += (s, e) => {button.BackColor = Color.Red;
-                    };
-                    if (button.BackColor == Color.Red)
+
+                }
+
+            }
+            btnDevideRoom.Click += (s, e) => {
+
+
+                for (int m = 0; m < listDivided.Count; m++)
+                {
+                    if (!listYellow.Any(o => o == listDivided[m]))
                     {
-                        btnDevideRoom.Enabled = false;
-                        btnDevideRoom.BackColor = Color.Gray;
+                        SqlCommand cmd = new SqlCommand("DELETE FROM THONGTINVANCHUYENHANHLY WHERE MaPhieuDat = '" + maPDP + "' AND SoPhong = '" + listDivided[m] + "'", sqlConnection);
+                        cmd.ExecuteNonQuery();
+
+                        cmd = new SqlCommand("DELETE FROM CTHOSOKIEMTRAPHONG WHERE MaPhieuDat = '" + maPDP + "' AND SoPhong = '" + listDivided[m] + "'", sqlConnection);
+                        cmd.ExecuteNonQuery();
+                        cmd = new SqlCommand("DELETE FROM CTSUDUNGMINIBAR WHERE MaPhieuDat = '" + maPDP + "' AND SoPhong = '" + listDivided[m] + "'", sqlConnection);
+                        cmd.ExecuteNonQuery();
+                        cmd = new SqlCommand("DELETE FROM THONGTINDATPHONG WHERE MaPhieuDat = '" + maPDP + "' AND SoPhong = '" + listDivided[m] + "'", sqlConnection);
+                        cmd.ExecuteNonQuery();
                     }
-                    else
+                }
+                Console.Write("Ok");
+                for (int m = 0; m < listYellow.Count; m++)
+                {
+                    if (!listDivided.Any(o => o == listYellow[m]))
                     {
-                        btnDevideRoom.Enabled = true;
-                        btnDevideRoom.BackColor = Color.FromArgb(255, 192, 192);
-                        button.BackColor = Color.Yellow;
+                        SqlCommand cmd = new SqlCommand("INSERT INTO THONGTINDATPHONG VALUES ('" + maPDP + "', '" + listYellow[m] + "',NULL)", sqlConnection);
+                        cmd.ExecuteNonQuery();
                     }
-                };
-               
+                }
+                MessageBox.Show("Phân phòng thành công!", "Thông báo");
+            };
+
+        }
+
+        void LoadMatrix()
+        {
+
+            Matrix = new List<List<Button>>();
+            //List<Label> lbl = new List<Label>();
+            Button oldBtn = new Button() { Width = 0, Height = 0, Location = new Point(0, 0) };
+            int y = 13;
+            for (int i = 0; i < 9; i++)
+            {
+                Matrix.Add(new List<Button>());
+                Label lb = new Label() { Location = new Point(0, y) };
+                lb.Font = new Font("Arial", 13, FontStyle.Bold);
+                y = y + 44;
+                lb.Text = "Tầng " + (i + 1).ToString();
+                panel4.Controls.Add(lb);
+                for (int j = 0; j < 8; j++)
+                {
+                    Button btn = new Button() { Width = Cons.dateButtonWidth, Height = Cons.dateButtonHeight };
+                    btn.Location = new Point(oldBtn.Location.X + oldBtn.Width + Cons.margin, oldBtn.Location.Y);
+                    btn.Text = ((i + 1) * 100 + j + 1).ToString();
+                    btn.BackColor = Color.Green;
+                    //btn.Click += btn_Click;
+                    btn.FlatStyle = FlatStyle.Flat;
+                    btn.FlatAppearance.BorderSize = 0;
+                    panelFloor.Controls.Add(btn);
+                    oldBtn = btn;
+                    Matrix[i].Add(btn);
+                    //buttonList.Add(btn);
+                }
+                oldBtn = new Button() { Width = 0, Height = 0, Location = new Point(0, oldBtn.Location.Y + 4 + Cons.dateButtonHeight) };
             }
 
 
@@ -103,7 +224,7 @@ namespace QuanLyKhachSan
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void btnBackToReversationList_Click(object sender, EventArgs e)
@@ -113,6 +234,103 @@ namespace QuanLyKhachSan
             this.Hide();
         }
 
+        
+
+        private void cbbRoomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (sqlConnection == null)
+            {
+                sqlConnection = new SqlConnection(connString);
+            }
+            if (sqlConnection.State != ConnectionState.Open)
+            {
+                sqlConnection.Open();
+
+            }
+            if (cbbRoomType.SelectedIndex != -1)
+            {
+                for (int k = 0; k < listYellow.Count; k++)
+                {
+                    listYellow.Remove(listYellow[k]);
+                }
+                foreach (List<Button> tempB in Matrix)
+                {
+
+                    foreach (Button button in tempB)
+                    {
+                        if (button.BackColor == Color.Yellow)
+                        {
+
+                            listYellow.Remove(button.Text);
+
+                        }
+                    }
+
+                }
+                string temp = cbbRoomType.SelectedValue.ToString();
+
+                Console.WriteLine(temp);
+                SqlCommand cmd = new SqlCommand("SELECT SoPhong from PHONG JOIN LOAIPHONG on PHONG.MaLoaiPhong = LOAIPHONG.MaLoaiPhong where TenLoaiPhong = N'" + temp + "' and SoPhong not in (SELECT SoPhong FROM THONGTINDATPHONG JOIN PHIEUDATPHONG ON THONGTINDATPHONG.MaPhieuDat =  PHIEUDATPHONG.MaPhieuDat and ((PHIEUDATPHONG.NgayDen <='" + ngayDen + "' AND PHIEUDATPHONG.NgayDi >= '" + ngayDen + "') OR (PHIEUDATPHONG.NgayDen <='" + ngayDi + "' AND PHIEUDATPHONG.NgayDi >= '" + ngayDi + "')))", sqlConnection);
+                DataTable dt = new DataTable();
+                List<string> list = new List<string>();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                cmd = new SqlCommand("SELECT THONGTINDATPHONG.SoPhong FROM THONGTINDATPHONG JOIN PHONG ON PHONG.SoPhong = THONGTINDATPHONG.SoPhong JOIN LOAIPHONG ON LOAIPHONG.MaLoaiPhong = PHONG.MaLoaiPhong WHERE MaPhieuDat = '" + maPDP + "' AND TenLoaiPhong = N'" + temp + "'", sqlConnection);
+                DataTable dt2 = new DataTable();
+                listDivided = new List<string>();
+                SqlDataAdapter adapter2 = new SqlDataAdapter(cmd);
+                adapter2.Fill(dt2);
+                DataRow[] currentRows = dt.Select(null, null, DataViewRowState.CurrentRows);
+                DataRow[] currentRows2 = dt2.Select(null, null, DataViewRowState.CurrentRows);
+                cmd = new SqlCommand("SELECT SoLuong FROM CTPHIEUDATPHONG JOIN LOAIPHONG ON CTPHIEUDATPHONG.MaLoaiPhong = LOAIPHONG.MaLoaiPhong WHERE MaPhieuDat = '" + maPDP + "' AND TenLoaiPhong = N'" + temp + "'", sqlConnection);
+                SoLuong = (Int32)cmd.ExecuteScalar();
+                lblQuantityRoomLeft.Text = "Số lượng còn lại: " + SoLuong.ToString();
+                Console.WriteLine("So luong: " + SoLuong.ToString());
+                foreach (DataRow row in currentRows)
+                {
+                    foreach (DataColumn column in dt.Columns)
+                    {
+                        list.Add((row[column].ToString()));
+                        Console.Write("\t{0}", row[column]);
+                    }
+                }
+                foreach (DataRow row in currentRows2)
+                {
+                    foreach (DataColumn column in dt2.Columns)
+                    {
+                        listDivided.Add((row[column].ToString()));
+                        listYellow.Add((row[column].ToString()));
+                        Console.Write("\t{0}", row[column]);
+                        SoLuong = SoLuong - 1;
+                    }
+
+                }
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 8; j++)
+                    {
+                        if (!list.Any(o => o == Matrix[i][j].Text))
+                        {
+                            Matrix[i][j].BackColor = Color.Red;
+                        }
+                        else
+                        {
+                            Matrix[i][j].BackColor = Color.Green;
+
+                        }
+                        if (listDivided.Any(o => o == Matrix[i][j].Text))
+                        {
+                            Matrix[i][j].BackColor = Color.Yellow;
+                        }
+                    }
+                }
+
+
+            }
+
+
+        }
         private void label1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -120,5 +338,10 @@ namespace QuanLyKhachSan
             form.ShowDialog();
             this.Close();
         }
+        private void btnDevideRoom_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

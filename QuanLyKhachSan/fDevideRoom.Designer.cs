@@ -32,8 +32,9 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnBackToReversationList = new System.Windows.Forms.Button();
             this.btnDevideRoom = new System.Windows.Forms.Button();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelButtonList = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelFloor = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.cbbRoomType = new System.Windows.Forms.ComboBox();
             this.lblQuantityRoomLeft = new System.Windows.Forms.Label();
@@ -56,7 +57,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel13.SuspendLayout();
-            this.panel16.SuspendLayout();
+            this.panelButtonList.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,7 +68,7 @@
             this.panel13.BackColor = System.Drawing.Color.Transparent;
             this.panel13.Controls.Add(this.btnBackToReversationList);
             this.panel13.Controls.Add(this.btnDevideRoom);
-            this.panel13.Controls.Add(this.panel16);
+            this.panel13.Controls.Add(this.panelButtonList);
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Location = new System.Drawing.Point(277, 1);
             this.panel13.Name = "panel13";
@@ -96,41 +97,30 @@
             this.btnDevideRoom.TabIndex = 3;
             this.btnDevideRoom.Text = "Phân phòng";
             this.btnDevideRoom.UseVisualStyleBackColor = false;
+            this.btnDevideRoom.Click += new System.EventHandler(this.btnDevideRoom_Click);
             // 
-            // panel16
+            // panelButtonList
             // 
-            this.panel16.Controls.Add(this.tableLayoutPanel1);
-            this.panel16.Location = new System.Drawing.Point(3, 109);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(980, 500);
-            this.panel16.TabIndex = 1;
+            this.panelButtonList.Controls.Add(this.panel4);
+            this.panelButtonList.Controls.Add(this.panelFloor);
+            this.panelButtonList.Location = new System.Drawing.Point(3, 109);
+            this.panelButtonList.Name = "panelButtonList";
+            this.panelButtonList.Size = new System.Drawing.Size(980, 500);
+            this.panelButtonList.TabIndex = 1;
             // 
-            // tableLayoutPanel1
+            // panel4
             // 
-            this.tableLayoutPanel1.ColumnCount = 9;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(96, 24);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(798, 312);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.panel4.Location = new System.Drawing.Point(115, 33);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(104, 442);
+            this.panel4.TabIndex = 1;
+            // 
+            // panelFloor
+            // 
+            this.panelFloor.Location = new System.Drawing.Point(235, 33);
+            this.panelFloor.Name = "panelFloor";
+            this.panelFloor.Size = new System.Drawing.Size(686, 442);
+            this.panelFloor.TabIndex = 0;
             // 
             // panel14
             // 
@@ -151,6 +141,7 @@
             this.cbbRoomType.Name = "cbbRoomType";
             this.cbbRoomType.Size = new System.Drawing.Size(200, 23);
             this.cbbRoomType.TabIndex = 7;
+            this.cbbRoomType.SelectedIndexChanged += new System.EventHandler(this.cbbRoomType_SelectedIndexChanged);
             // 
             // lblQuantityRoomLeft
             // 
@@ -440,7 +431,7 @@
             this.Text = "fReservationTickerList";
             this.Load += new System.EventHandler(this.fDevideRoom_Load);
             this.panel13.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
+            this.panelButtonList.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -454,7 +445,7 @@
         #endregion
 
         private Panel panel13;
-        private Panel panel16;
+        private Panel panelButtonList;
         private Panel panel14;
         private Panel panel15;
         private Label label10;
@@ -463,7 +454,6 @@
         private Label lblReservationTicker;
         private Label lblQuantityRoomLeft;
         private ComboBox cbbRoomType;
-        private TableLayoutPanel tableLayoutPanel1;
         private Button btnBackToReversationList;
         private Panel panel2;
         private Button button11;
@@ -479,5 +469,7 @@
         private Panel panel11;
         private Panel panel1;
         private Label label1;
+        private Panel panel4;
+        private Panel panelFloor;
     }
 }
