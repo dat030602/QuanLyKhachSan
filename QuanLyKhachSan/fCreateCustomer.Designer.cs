@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.text_diachi = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.textNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.textGioiTinh = new System.Windows.Forms.ComboBox();
             this.textSofax = new System.Windows.Forms.TextBox();
@@ -44,7 +46,7 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_makh = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
@@ -57,6 +59,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.text_diachi);
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textNgaySinh);
             this.panel1.Controls.Add(this.textGioiTinh);
             this.panel1.Controls.Add(this.textSofax);
@@ -75,6 +79,26 @@
             this.panel1.Size = new System.Drawing.Size(1243, 340);
             this.panel1.TabIndex = 0;
             // 
+            // text_diachi
+            // 
+            this.text_diachi.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.text_diachi.Location = new System.Drawing.Point(193, 235);
+            this.text_diachi.Name = "text_diachi";
+            this.text_diachi.Size = new System.Drawing.Size(985, 32);
+            this.text_diachi.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(37, 238);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 25);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Địa chỉ";
+            // 
             // textNgaySinh
             // 
             this.textNgaySinh.CustomFormat = "dd/MM/yyyy";
@@ -91,8 +115,7 @@
             this.textGioiTinh.FormattingEnabled = true;
             this.textGioiTinh.Items.AddRange(new object[] {
             "Nam",
-            "Nữ",
-            "3 đê"});
+            "Nữ"});
             this.textGioiTinh.Location = new System.Drawing.Point(785, 97);
             this.textGioiTinh.Name = "textGioiTinh";
             this.textGioiTinh.Size = new System.Drawing.Size(393, 33);
@@ -169,6 +192,7 @@
             this.textDienThoai.Name = "textDienThoai";
             this.textDienThoai.Size = new System.Drawing.Size(393, 32);
             this.textDienThoai.TabIndex = 10;
+            this.textDienThoai.Text = " ";
             // 
             // label5
             // 
@@ -214,7 +238,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label_makh);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
@@ -233,17 +257,17 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Khách hàng";
             // 
-            // label4
+            // label_makh
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1078, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "35";
+            this.label_makh.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label_makh.AutoSize = true;
+            this.label_makh.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label_makh.ForeColor = System.Drawing.Color.Black;
+            this.label_makh.Location = new System.Drawing.Point(1078, 29);
+            this.label_makh.Name = "label_makh";
+            this.label_makh.Size = new System.Drawing.Size(32, 25);
+            this.label_makh.TabIndex = 6;
+            this.label_makh.Text = "35";
             // 
             // label3
             // 
@@ -333,7 +357,7 @@
         private Panel panel1;
         private Label label1;
         private Panel panel2;
-        private Label label4;
+        private Label label_makh;
         private Label label3;
         private TextBox textSofax;
         private Label label8;
@@ -352,5 +376,7 @@
         private Button btn_back;
         private Button btn_submit;
         private Button btn_edit;
+        private TextBox text_diachi;
+        private Label label10;
     }
 }

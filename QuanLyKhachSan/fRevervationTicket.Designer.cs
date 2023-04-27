@@ -46,8 +46,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -205,8 +203,6 @@
             this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label14);
@@ -267,7 +263,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(73, 265);
+            this.label25.Location = new System.Drawing.Point(73, 219);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(155, 25);
             this.label25.TabIndex = 42;
@@ -276,7 +272,7 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(235, 262);
+            this.textBox7.Location = new System.Drawing.Point(235, 216);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
@@ -304,27 +300,6 @@
             this.textBox5.Size = new System.Drawing.Size(393, 32);
             this.textBox5.TabIndex = 39;
             this.textBox5.Text = " ";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(26, 196);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(202, 25);
-            this.label24.TabIndex = 38;
-            this.label24.Text = "Hình thức thanh toán";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.Location = new System.Drawing.Point(235, 193);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(351, 32);
-            this.textBox6.TabIndex = 37;
             // 
             // label9
             // 
@@ -589,8 +564,6 @@
         private Label label20;
         private Label label25;
         private TextBox textBox7;
-        private Label label24;
-        private TextBox textBox6;
         private Label label9;
         private TextBox textBox3;
         private Label label14;

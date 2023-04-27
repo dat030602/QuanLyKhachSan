@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan
 {
-    partial class MainWindow
+    partial class fMainWindow
     {
         /// <summary>
         /// Required designer variable.

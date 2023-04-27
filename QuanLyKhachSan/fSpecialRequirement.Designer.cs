@@ -249,6 +249,7 @@
             this.btn_submit.TabIndex = 9;
             this.btn_submit.Text = "Lưu";
             this.btn_submit.UseVisualStyleBackColor = false;
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // fSpecialRequirement
             // 

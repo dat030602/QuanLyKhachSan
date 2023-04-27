@@ -35,11 +35,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textHinhThucThanhToan = new System.Windows.Forms.ComboBox();
             this.textSoLuong = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textTenKH = new System.Windows.Forms.TextBox();
             this.btn_YeuCauDacBiet = new System.Windows.Forms.Button();
             this.textTenDoan = new System.Windows.Forms.TextBox();
             this.textTenDoang = new System.Windows.Forms.Label();
@@ -150,34 +150,10 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Số thẻ";
             // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(37, 174);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(202, 25);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "Hình thức thanh toán";
-            // 
-            // textHinhThucThanhToan
-            // 
-            this.textHinhThucThanhToan.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textHinhThucThanhToan.FormattingEnabled = true;
-            this.textHinhThucThanhToan.Items.AddRange(new object[] {
-            "Trực tiếp",
-            "Qua thẻ"});
-            this.textHinhThucThanhToan.Location = new System.Drawing.Point(245, 170);
-            this.textHinhThucThanhToan.Name = "textHinhThucThanhToan";
-            this.textHinhThucThanhToan.Size = new System.Drawing.Size(393, 33);
-            this.textHinhThucThanhToan.TabIndex = 35;
-            // 
             // textSoLuong
             // 
             this.textSoLuong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textSoLuong.Location = new System.Drawing.Point(850, 232);
+            this.textSoLuong.Location = new System.Drawing.Point(850, 170);
             this.textSoLuong.Name = "textSoLuong";
             this.textSoLuong.Size = new System.Drawing.Size(312, 32);
             this.textSoLuong.TabIndex = 37;
@@ -189,7 +165,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(750, 236);
+            this.label10.Location = new System.Drawing.Point(750, 174);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 25);
             this.label10.TabIndex = 38;
@@ -197,14 +173,14 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textTenKH);
             this.panel1.Controls.Add(this.btn_YeuCauDacBiet);
             this.panel1.Controls.Add(this.textTenDoan);
             this.panel1.Controls.Add(this.textTenDoang);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textSoLuong);
             this.panel1.Controls.Add(this.btn_details);
-            this.panel1.Controls.Add(this.textHinhThucThanhToan);
-            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textNgaydi);
             this.panel1.Controls.Add(this.label9);
@@ -220,6 +196,27 @@
             this.panel1.Size = new System.Drawing.Size(1243, 499);
             this.panel1.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(694, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 25);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Tên khách hàng";
+            // 
+            // textTenKH
+            // 
+            this.textTenKH.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textTenKH.Location = new System.Drawing.Point(850, 26);
+            this.textTenKH.Name = "textTenKH";
+            this.textTenKH.ReadOnly = true;
+            this.textTenKH.Size = new System.Drawing.Size(312, 32);
+            this.textTenKH.TabIndex = 43;
+            // 
             // btn_YeuCauDacBiet
             // 
             this.btn_YeuCauDacBiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
@@ -228,7 +225,7 @@
             this.btn_YeuCauDacBiet.FlatAppearance.BorderSize = 0;
             this.btn_YeuCauDacBiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_YeuCauDacBiet.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_YeuCauDacBiet.Location = new System.Drawing.Point(245, 394);
+            this.btn_YeuCauDacBiet.Location = new System.Drawing.Point(245, 281);
             this.btn_YeuCauDacBiet.Name = "btn_YeuCauDacBiet";
             this.btn_YeuCauDacBiet.Size = new System.Drawing.Size(63, 48);
             this.btn_YeuCauDacBiet.TabIndex = 42;
@@ -238,7 +235,7 @@
             // textTenDoan
             // 
             this.textTenDoan.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textTenDoan.Location = new System.Drawing.Point(245, 236);
+            this.textTenDoan.Location = new System.Drawing.Point(245, 174);
             this.textTenDoan.Name = "textTenDoan";
             this.textTenDoan.Size = new System.Drawing.Size(393, 32);
             this.textTenDoan.TabIndex = 41;
@@ -249,7 +246,7 @@
             this.textTenDoang.AutoSize = true;
             this.textTenDoang.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textTenDoang.ForeColor = System.Drawing.Color.Black;
-            this.textTenDoang.Location = new System.Drawing.Point(141, 239);
+            this.textTenDoang.Location = new System.Drawing.Point(141, 177);
             this.textTenDoang.Name = "textTenDoang";
             this.textTenDoang.Size = new System.Drawing.Size(94, 25);
             this.textTenDoang.TabIndex = 39;
@@ -275,7 +272,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(763, 97);
+            this.label7.Location = new System.Drawing.Point(763, 101);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 25);
             this.label7.TabIndex = 30;
@@ -321,7 +318,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(61, 406);
+            this.label13.Location = new System.Drawing.Point(61, 293);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(155, 25);
             this.label13.TabIndex = 21;
@@ -447,8 +444,6 @@
         private Label label5;
         private Label label6;
         private Label label8;
-        private Label label15;
-        private ComboBox textHinhThucThanhToan;
         private TextBox textSoLuong;
         private Label label10;
         private Panel panel1;
@@ -469,5 +464,7 @@
         private Label label17;
         private Label maphieu;
         private Label label1;
+        private Label label2;
+        private TextBox textTenKH;
     }
 }
