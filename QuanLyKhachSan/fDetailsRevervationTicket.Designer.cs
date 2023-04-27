@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelPhieuPDP = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,20 +38,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.tableGrid = new System.Windows.Forms.DataGridView();
-            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
+            this.tableGrid = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -159,8 +151,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.tableGrid);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label11);
@@ -181,67 +173,6 @@
             this.label7.Size = new System.Drawing.Size(94, 25);
             this.label7.TabIndex = 47;
             this.label7.Text = "Số lượng";
-            // 
-            // tableGrid
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tableGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tableGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tableGrid.ColumnHeadersHeight = 32;
-            this.tableGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaKH,
-            this.LoaiPhong,
-            this.SoLuong});
-            this.tableGrid.Location = new System.Drawing.Point(378, 45);
-            this.tableGrid.Margin = new System.Windows.Forms.Padding(0);
-            this.tableGrid.MultiSelect = false;
-            this.tableGrid.Name = "tableGrid";
-            this.tableGrid.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.tableGrid.RowTemplate.Height = 32;
-            this.tableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableGrid.Size = new System.Drawing.Size(517, 262);
-            this.tableGrid.TabIndex = 44;
-            // 
-            // MaKH
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MaKH.DefaultCellStyle = dataGridViewCellStyle2;
-            this.MaKH.HeaderText = "STT";
-            this.MaKH.Name = "MaKH";
-            this.MaKH.ReadOnly = true;
-            this.MaKH.Width = 115;
-            // 
-            // LoaiPhong
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LoaiPhong.DefaultCellStyle = dataGridViewCellStyle3;
-            this.LoaiPhong.HeaderText = "Loại phòng";
-            this.LoaiPhong.Name = "LoaiPhong";
-            this.LoaiPhong.ReadOnly = true;
-            this.LoaiPhong.Width = 200;
-            // 
-            // SoLuong
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SoLuong.DefaultCellStyle = dataGridViewCellStyle4;
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            this.SoLuong.Width = 150;
             // 
             // label10
             // 
@@ -313,6 +244,15 @@
             this.btn_back.UseVisualStyleBackColor = false;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
+            // tableGrid
+            // 
+            this.tableGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableGrid.Location = new System.Drawing.Point(228, 50);
+            this.tableGrid.Name = "tableGrid";
+            this.tableGrid.RowTemplate.Height = 25;
+            this.tableGrid.Size = new System.Drawing.Size(624, 307);
+            this.tableGrid.TabIndex = 48;
+            // 
             // fDetailsRevervationTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -324,12 +264,13 @@
             this.Controls.Add(this.panel2);
             this.Name = "fDetailsRevervationTicket";
             this.Text = "fDetailsRevervationTicker";
+            this.Load += new System.EventHandler(this.fDetailsRevervationTicket_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,15 +287,12 @@
         private Label label2;
         private Panel panel1;
         private Label label7;
-        private DataGridView tableGrid;
-        private DataGridViewTextBoxColumn MaKH;
-        private DataGridViewTextBoxColumn LoaiPhong;
-        private DataGridViewTextBoxColumn SoLuong;
         private Label label10;
         private Label label8;
         private Label label11;
         private Label label12;
         private Panel panel3;
         private Button btn_back;
+        private DataGridView tableGrid;
     }
 }
