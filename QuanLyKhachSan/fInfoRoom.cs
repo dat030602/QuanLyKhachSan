@@ -7,17 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Collections;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanLyKhachSan
 {
     public partial class fInfoRoom : Form
     {
-
         public fInfoRoom()
         {
             InitializeComponent();
         }
-
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PR8IEJS;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True");
+        private static ArrayList ListFirstname = new ArrayList();
+        private static ArrayList ListLastname = new ArrayList();
+        private static ArrayList ListTelephone = new ArrayList();
+        private string mapd;
+        private string makh;
+        private string ngayden;
+        private string ngaydi;
         private void btn_link_khachhang_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -75,6 +85,55 @@ namespace QuanLyKhachSan
         {
             this.Hide();
             fMainWindow form = new fMainWindow();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void fInfoRoom_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("THONGTINPHONG", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@sophong", textBox1.Text);
+                SqlDataAdapter adt = new SqlDataAdapter(cmd);
+                adt.Fill(dt);
+                dt.Columns.Remove("MaPhieuDat");
+                dt.Columns.Remove("MaKH");
+                dt.Columns.Remove("NgayDen");
+                dt.Columns.Remove("HoTen");
+                dt.Columns.Remove("NgayDi");
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = dt;
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    textBox2.Text = reader[0].ToString();
+                    mapd = mapd + reader[0].ToString();
+                    makh = makh + reader[1].ToString(); 
+                    textBox3.Text = reader[2].ToString();
+                    textBox4.Text = reader[3].ToString();
+                    ngayden = ngayden + reader[3].ToString();   
+                    textBox5.Text = reader[4].ToString();
+                    ngaydi = ngaydi + reader[4].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void label12_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fInvoice form = new fInvoice(mapd, makh, ngayden, ngaydi);
             form.ShowDialog();
             this.Close();
         }
