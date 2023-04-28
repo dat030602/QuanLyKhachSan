@@ -39,9 +39,6 @@
             this.cbbRoomType = new System.Windows.Forms.ComboBox();
             this.lblQuantityRoomLeft = new System.Windows.Forms.Label();
             this.lblReservationTicker = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -59,7 +56,6 @@
             this.panel13.SuspendLayout();
             this.panelButtonList.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +74,8 @@
             // btnBackToReversationList
             // 
             this.btnBackToReversationList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBackToReversationList.FlatAppearance.BorderSize = 0;
+            this.btnBackToReversationList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackToReversationList.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBackToReversationList.Location = new System.Drawing.Point(99, 615);
             this.btnBackToReversationList.Name = "btnBackToReversationList";
@@ -90,6 +88,8 @@
             // btnDevideRoom
             // 
             this.btnDevideRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDevideRoom.FlatAppearance.BorderSize = 0;
+            this.btnDevideRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDevideRoom.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDevideRoom.Location = new System.Drawing.Point(826, 615);
             this.btnDevideRoom.Name = "btnDevideRoom";
@@ -127,8 +127,6 @@
             this.panel14.Controls.Add(this.cbbRoomType);
             this.panel14.Controls.Add(this.lblQuantityRoomLeft);
             this.panel14.Controls.Add(this.lblReservationTicker);
-            this.panel14.Controls.Add(this.panel15);
-            this.panel14.Controls.Add(this.textBoxSearch);
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(980, 100);
@@ -137,7 +135,7 @@
             // cbbRoomType
             // 
             this.cbbRoomType.FormattingEnabled = true;
-            this.cbbRoomType.Location = new System.Drawing.Point(746, 20);
+            this.cbbRoomType.Location = new System.Drawing.Point(673, 36);
             this.cbbRoomType.Name = "cbbRoomType";
             this.cbbRoomType.Size = new System.Drawing.Size(200, 23);
             this.cbbRoomType.TabIndex = 7;
@@ -146,9 +144,9 @@
             // lblQuantityRoomLeft
             // 
             this.lblQuantityRoomLeft.AutoSize = true;
-            this.lblQuantityRoomLeft.BackColor = System.Drawing.Color.DarkGray;
+            this.lblQuantityRoomLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.lblQuantityRoomLeft.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblQuantityRoomLeft.Location = new System.Drawing.Point(486, 60);
+            this.lblQuantityRoomLeft.Location = new System.Drawing.Point(356, 33);
             this.lblQuantityRoomLeft.Name = "lblQuantityRoomLeft";
             this.lblQuantityRoomLeft.Size = new System.Drawing.Size(158, 28);
             this.lblQuantityRoomLeft.TabIndex = 6;
@@ -157,41 +155,14 @@
             // lblReservationTicker
             // 
             this.lblReservationTicker.AutoSize = true;
-            this.lblReservationTicker.BackColor = System.Drawing.Color.DarkGray;
+            this.lblReservationTicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.lblReservationTicker.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblReservationTicker.Location = new System.Drawing.Point(486, 15);
+            this.lblReservationTicker.Location = new System.Drawing.Point(201, 33);
             this.lblReservationTicker.Name = "lblReservationTicker";
             this.lblReservationTicker.Size = new System.Drawing.Size(74, 28);
             this.lblReservationTicker.TabIndex = 5;
             this.lblReservationTicker.Text = "Mã PĐ:";
             this.lblReservationTicker.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.Controls.Add(this.label10);
-            this.panel15.Location = new System.Drawing.Point(417, 13);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(36, 30);
-            this.panel15.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(-6, -11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 46);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "";
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSearch.Location = new System.Drawing.Point(85, 12);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(333, 32);
-            this.textBoxSearch.TabIndex = 0;
             // 
             // panel2
             // 
@@ -434,8 +405,6 @@
             this.panelButtonList.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -447,10 +416,7 @@
         private Panel panel13;
         private Panel panelButtonList;
         private Panel panel14;
-        private Panel panel15;
-        private Label label10;
         private Button btnDevideRoom;
-        private TextBox textBoxSearch;
         private Label lblReservationTicker;
         private Label lblQuantityRoomLeft;
         private ComboBox cbbRoomType;

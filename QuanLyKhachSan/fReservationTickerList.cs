@@ -18,8 +18,8 @@ namespace QuanLyKhachSan
     
     public partial class fReservationTickerList : Form
     {
-        public static string sqlConn = @"Data Source=LANTRINH_ASUS;Initial Catalog = QUANLYKHACHSAN; Persist Security Info=True;User ID = trinhasustuf; Password=1234";
-        public static SqlConnection conn = null;
+        public static string sqlConn = DataConnection.sqlConn;
+        public static SqlConnection conn = DataConnection.conn;
         fRevervationTicket f = new fRevervationTicket();
         fDevideRoom f2 = new fDevideRoom();
  

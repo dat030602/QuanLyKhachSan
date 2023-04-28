@@ -17,8 +17,8 @@ namespace QuanLyKhachSan
     {
         private string maPDPfromList = "";
         private string maKHfromList = "";
-        public static string sqlConn = @"Data Source=LANTRINH_ASUS;Initial Catalog = QUANLYKHACHSAN; Persist Security Info=True;User ID = trinhasustuf; Password=1234";
-        public static SqlConnection conn = null;
+        public static string sqlConn = DataConnection.sqlConn;
+        public static SqlConnection conn = DataConnection.conn;
         public fRevervationTicket()
         {
 

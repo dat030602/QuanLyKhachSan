@@ -36,8 +36,8 @@ namespace QuanLyKhachSan
             get { return matrix; }
             set { matrix = value; }
         }
-        string connString = fReservationTickerList.sqlConn;
-        SqlConnection sqlConnection = fReservationTickerList.conn;
+        string connString = DataConnection.sqlConn;
+        SqlConnection sqlConnection = DataConnection.conn;
         //private ArrayList label = new ArrayList(30);
 
         List<Button> disableButtonList = new List<Button>();
@@ -285,7 +285,7 @@ namespace QuanLyKhachSan
                 DataRow[] currentRows2 = dt2.Select(null, null, DataViewRowState.CurrentRows);
                 cmd = new SqlCommand("SELECT SoLuong FROM CTPHIEUDATPHONG JOIN LOAIPHONG ON CTPHIEUDATPHONG.MaLoaiPhong = LOAIPHONG.MaLoaiPhong WHERE MaPhieuDat = '" + maPDP + "' AND TenLoaiPhong = N'" + temp + "'", sqlConnection);
                 SoLuong = (Int32)cmd.ExecuteScalar();
-                lblQuantityRoomLeft.Text = "Số lượng còn lại: " + SoLuong.ToString();
+                
                 Console.WriteLine("So luong: " + SoLuong.ToString());
                 foreach (DataRow row in currentRows)
                 {
@@ -306,6 +306,7 @@ namespace QuanLyKhachSan
                     }
 
                 }
+                lblQuantityRoomLeft.Text = "Số lượng còn lại: " + SoLuong.ToString();
                 for (int i = 0; i < 9; i++)
                 {
                     for (int j = 0; j < 8; j++)

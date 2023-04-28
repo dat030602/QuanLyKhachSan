@@ -71,7 +71,7 @@
             // 
             // btn_submit
             // 
-            this.btn_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.btn_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_submit.FlatAppearance.BorderSize = 0;
             this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_submit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -79,7 +79,7 @@
             this.btn_submit.Name = "btn_submit";
             this.btn_submit.Size = new System.Drawing.Size(163, 48);
             this.btn_submit.TabIndex = 4;
-            this.btn_submit.Text = "Phân công";
+            this.btn_submit.Text = "Phân phòng";
             this.btn_submit.UseVisualStyleBackColor = false;
             this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
@@ -116,7 +116,6 @@
             this.tableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableGrid.Size = new System.Drawing.Size(909, 529);
             this.tableGrid.TabIndex = 1;
-            //this.tableGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableGrid_CellContentClick);
             // 
             // panel14
             // 
