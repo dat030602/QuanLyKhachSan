@@ -37,10 +37,10 @@
             this.button12 = new System.Windows.Forms.Button();
             this.InputText = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableGrid = new System.Windows.Forms.DataGridView();
+            this.MaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_link_vanchuyenhanhly = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel14.SuspendLayout();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -102,28 +102,30 @@
             // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.dataGridView1);
+            this.panel16.Controls.Add(this.tableGrid);
             this.panel16.Location = new System.Drawing.Point(3, 66);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(980, 543);
             this.panel16.TabIndex = 1;
             // 
-            // dataGridView1
+            // tableGrid
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeight = 32;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.LoaiPhong,
-            this.TenDichVu});
-            this.dataGridView1.Location = new System.Drawing.Point(157, 7);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
+            this.tableGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tableGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tableGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tableGrid.ColumnHeadersHeight = 32;
+            this.tableGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaDichVu,
+            this.TenDichVu,
+            this.LoaiPhong});
+            this.tableGrid.Location = new System.Drawing.Point(157, 7);
+            this.tableGrid.Margin = new System.Windows.Forms.Padding(0);
+            this.tableGrid.MultiSelect = false;
+            this.tableGrid.Name = "tableGrid";
+            this.tableGrid.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -131,40 +133,41 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.RowTemplate.Height = 32;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(613, 529);
-            this.dataGridView1.TabIndex = 1;
+            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.tableGrid.RowTemplate.Height = 32;
+            this.tableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tableGrid.Size = new System.Drawing.Size(613, 529);
+            this.tableGrid.TabIndex = 1;
+            this.tableGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableGrid_Rows_Click);
             // 
-            // STT
+            // MaDichVu
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.STT.DefaultCellStyle = dataGridViewCellStyle2;
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 115;
+            this.MaDichVu.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MaDichVu.HeaderText = "Mã dịch vụ";
+            this.MaDichVu.Name = "MaDichVu";
+            this.MaDichVu.ReadOnly = true;
             // 
-            // LoaiPhong
+            // TenDichVu
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LoaiPhong.DefaultCellStyle = dataGridViewCellStyle3;
-            this.LoaiPhong.HeaderText = "Loại phòng";
-            this.LoaiPhong.Name = "LoaiPhong";
-            this.LoaiPhong.Width = 150;
+            this.TenDichVu.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TenDichVu.HeaderText = "Tên dịch vụ";
+            this.TenDichVu.Name = "TenDichVu";
+            this.TenDichVu.ReadOnly = true;
             // 
-            // TenDichVu
+            // LoaiPhong
             // 
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TenDichVu.DefaultCellStyle = dataGridViewCellStyle4;
-            this.TenDichVu.HeaderText = "Tên dịch vụ";
-            this.TenDichVu.Name = "TenDichVu";
-            this.TenDichVu.Width = 300;
+            this.LoaiPhong.DefaultCellStyle = dataGridViewCellStyle4;
+            this.LoaiPhong.HeaderText = "Loại phòng";
+            this.LoaiPhong.Name = "LoaiPhong";
+            this.LoaiPhong.ReadOnly = true;
             // 
             // panel13
             // 
@@ -423,7 +426,7 @@
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -435,10 +438,7 @@
         private Panel panel14;
         private Panel panel16;
         private Panel panel13;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn STT;
-        private DataGridViewTextBoxColumn LoaiPhong;
-        private DataGridViewTextBoxColumn TenDichVu;
+        private DataGridView tableGrid;
         private Button button12;
         private TextBox InputText;
         private Panel panel2;
@@ -455,5 +455,8 @@
         private Panel panel11;
         private Panel panel1;
         private Label label1;
+        private DataGridViewTextBoxColumn MaDichVu;
+        private DataGridViewTextBoxColumn TenDichVu;
+        private DataGridViewTextBoxColumn LoaiPhong;
     }
 }

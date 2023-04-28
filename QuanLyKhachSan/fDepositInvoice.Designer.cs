@@ -31,7 +31,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelKH = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_hoadon = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -47,9 +47,9 @@
             this.textNoiDung = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textTenKhachHang = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textHinhThucThanhToan = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textHinhThucThanhToan = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_submit = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             // 
             this.panel2.Controls.Add(this.labelKH);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label_hoadon);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label22);
@@ -101,17 +101,17 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Mã khách hàng:";
             // 
-            // label5
+            // label_hoadon
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(1100, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 25);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "35";
+            this.label_hoadon.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label_hoadon.AutoSize = true;
+            this.label_hoadon.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label_hoadon.ForeColor = System.Drawing.Color.Black;
+            this.label_hoadon.Location = new System.Drawing.Point(1100, 31);
+            this.label_hoadon.Name = "label_hoadon";
+            this.label_hoadon.Size = new System.Drawing.Size(32, 25);
+            this.label_hoadon.TabIndex = 16;
+            this.label_hoadon.Text = "35";
             // 
             // label6
             // 
@@ -284,33 +284,12 @@
             this.textTenKhachHang.Size = new System.Drawing.Size(616, 32);
             this.textTenKhachHang.TabIndex = 45;
             // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(188, 233);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(202, 25);
-            this.label7.TabIndex = 52;
-            this.label7.Text = "Hình thức thanh toán";
-            // 
-            // textHinhThucThanhToan
-            // 
-            this.textHinhThucThanhToan.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textHinhThucThanhToan.Location = new System.Drawing.Point(396, 230);
-            this.textHinhThucThanhToan.Name = "textHinhThucThanhToan";
-            this.textHinhThucThanhToan.ReadOnly = true;
-            this.textHinhThucThanhToan.Size = new System.Drawing.Size(616, 32);
-            this.textHinhThucThanhToan.TabIndex = 51;
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textTenKhachHang);
             this.panel1.Controls.Add(this.textHinhThucThanhToan);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.textTenKhachHang);
             this.panel1.Controls.Add(this.textNoiDung);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label14);
@@ -319,6 +298,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1240, 488);
             this.panel1.TabIndex = 53;
+            // 
+            // textHinhThucThanhToan
+            // 
+            this.textHinhThucThanhToan.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textHinhThucThanhToan.FormattingEnabled = true;
+            this.textHinhThucThanhToan.Items.AddRange(new object[] {
+            "Trực tiếp",
+            "Qua thẻ"});
+            this.textHinhThucThanhToan.Location = new System.Drawing.Point(396, 230);
+            this.textHinhThucThanhToan.Name = "textHinhThucThanhToan";
+            this.textHinhThucThanhToan.Size = new System.Drawing.Size(616, 33);
+            this.textHinhThucThanhToan.TabIndex = 56;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(188, 234);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(202, 25);
+            this.label15.TabIndex = 55;
+            this.label15.Text = "Hình thức thanh toán";
             // 
             // panel3
             // 
@@ -390,7 +393,7 @@
         private Label label3;
         private Label labelKH;
         private Label label2;
-        private Label label5;
+        private Label label_hoadon;
         private Label label6;
         private Label label10;
         private TextBox textTongTien;
@@ -398,11 +401,11 @@
         private TextBox textNoiDung;
         private Label label16;
         private TextBox textTenKhachHang;
-        private Label label7;
-        private TextBox textHinhThucThanhToan;
         private Panel panel1;
         private Panel panel3;
         private Button btn_back;
         private Button btn_submit;
+        private ComboBox textHinhThucThanhToan;
+        private Label label15;
     }
 }

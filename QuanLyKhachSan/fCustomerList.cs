@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,47 +15,46 @@ namespace QuanLyKhachSan
     public partial class fCustomerList : Form
     {
         private string maKH = "";
+        private string tenKH = "";
+        private string connetionString = "Data Source=DESKTOP-MMSPL40;Initial Catalog = QUANLYKHACHSAN; User ID = root; Password=root";
+        private List<string[]> listCustomer = new List<string[]>();
+        private int sizeListCustomer = 0;
+
+
+        private void GetListCustomer(string queryString)
+        {
+            SqlConnection cnn;
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+            SqlCommand cmd = new SqlCommand(queryString, cnn);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            //int i = 0;
+            while (reader.Read())
+            {
+                string[] numb;
+                numb = new string[reader.FieldCount];
+                for (int i = 0; i < reader.FieldCount; i++)
+                    numb[i] = reader[i].ToString();
+
+                listCustomer.Add(numb);
+                sizeListCustomer++;
+            }
+            cnn.Close();
+        }
 
 
         public fCustomerList()
         {
             InitializeComponent();
+            GetListCustomer("select * from dbo.KHACHHANG");
             add_data_datagridview();
         }
 
         void add_data_datagridview()
         {
-            this.tableGrid.Rows.Add("KH001","072202003355","Nguyễn Văn Đạt","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH002", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH003", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
-            this.tableGrid.Rows.Add("KH004", "072202003355", "Trần Anh Ngọc","TPHCM","01238012394196814");
+            foreach (var item in listCustomer)
+                tableGrid.Rows.Add(item[0], item[1], item[4], item[5], item[2], item[3]);
         }
 
         private void btn_link_datphong_Click(object sender, EventArgs e)
@@ -118,7 +119,11 @@ namespace QuanLyKhachSan
 
         private void onClick_DataGrid_Row(object sender, DataGridViewCellEventArgs e)
         {
-            maKH = tableGrid[0, rowIndex: e.RowIndex].Value.ToString();
+            if (e.RowIndex < sizeListCustomer)
+            {
+                maKH = tableGrid[0, rowIndex: e.RowIndex].Value.ToString();
+                tenKH = tableGrid[2, rowIndex: e.RowIndex].Value.ToString();
+            }
         }
 
         private void btn_submit_Click(object sender, EventArgs e)
@@ -126,7 +131,7 @@ namespace QuanLyKhachSan
             if (maKH != "")
             {
                 this.Hide();
-                fCreateReservationTicket form = new fCreateReservationTicket(maKH);
+                fCreateReservationTicket form = new fCreateReservationTicket(maKH, tenKH);
                 form.ShowDialog();
                 this.Show();
             }
@@ -143,7 +148,7 @@ namespace QuanLyKhachSan
         private void label1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainWindow form = new MainWindow();
+            fMainWindow form = new fMainWindow();
             form.ShowDialog();
             this.Close();
         }

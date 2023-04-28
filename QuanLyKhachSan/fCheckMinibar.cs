@@ -73,7 +73,7 @@ namespace QuanLyKhachSan
         private void label1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainWindow form = new MainWindow();
+            fMainWindow form = new fMainWindow();
             form.ShowDialog();
             this.Close();
         }

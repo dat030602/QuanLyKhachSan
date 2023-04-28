@@ -40,33 +40,33 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_detail = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblValue = new System.Windows.Forms.Label();
+            this.textBoxValue = new System.Windows.Forms.TextBox();
+            this.lblSpecialRequirement = new System.Windows.Forms.Label();
+            this.textBoxSpecialRequirement = new System.Windows.Forms.TextBox();
+            this.lblGroupName = new System.Windows.Forms.Label();
+            this.textBoxGroupName = new System.Windows.Forms.TextBox();
+            this.lblDayOut = new System.Windows.Forms.Label();
+            this.textBoxDateOut = new System.Windows.Forms.TextBox();
+            this.lblDayIn = new System.Windows.Forms.Label();
+            this.textBoxDateIn = new System.Windows.Forms.TextBox();
+            this.lblCustomerPhone = new System.Windows.Forms.Label();
+            this.textBoxPhoneNum = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblCustomerName = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerName = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_DatCoc = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_submit = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
+            this.lblBookedDate = new System.Windows.Forms.Label();
+            this.textBoxBookDate = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -198,29 +198,29 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblBookedDate);
+            this.panel1.Controls.Add(this.textBoxBookDate);
             this.panel1.Controls.Add(this.btn_detail);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.lblValue);
+            this.panel1.Controls.Add(this.textBoxValue);
+            this.panel1.Controls.Add(this.lblSpecialRequirement);
+            this.panel1.Controls.Add(this.textBoxSpecialRequirement);
+            this.panel1.Controls.Add(this.lblGroupName);
+            this.panel1.Controls.Add(this.textBoxGroupName);
+            this.panel1.Controls.Add(this.lblDayOut);
+            this.panel1.Controls.Add(this.textBoxDateOut);
+            this.panel1.Controls.Add(this.lblDayIn);
+            this.panel1.Controls.Add(this.textBoxDateIn);
+            this.panel1.Controls.Add(this.lblCustomerPhone);
+            this.panel1.Controls.Add(this.textBoxPhoneNum);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.lblCustomerName);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxCustomerName);
             this.panel1.Location = new System.Drawing.Point(11, 98);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1243, 499);
@@ -240,154 +240,133 @@
             this.btn_detail.UseVisualStyleBackColor = false;
             this.btn_detail.Click += new System.EventHandler(this.btn_detail_Click);
             // 
-            // label10
+            // lblValue
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(130, 140);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 25);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "Tổng tiền";
+            this.lblValue.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblValue.AutoSize = true;
+            this.lblValue.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblValue.ForeColor = System.Drawing.Color.Black;
+            this.lblValue.Location = new System.Drawing.Point(125, 221);
+            this.lblValue.Name = "lblValue";
+            this.lblValue.Size = new System.Drawing.Size(98, 25);
+            this.lblValue.TabIndex = 44;
+            this.lblValue.Text = "Tổng tiền";
             // 
-            // textBox8
+            // textBoxValue
             // 
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox8.Location = new System.Drawing.Point(235, 140);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(351, 32);
-            this.textBox8.TabIndex = 43;
+            this.textBoxValue.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxValue.Location = new System.Drawing.Point(230, 221);
+            this.textBoxValue.Name = "textBoxValue";
+            this.textBoxValue.ReadOnly = true;
+            this.textBoxValue.Size = new System.Drawing.Size(351, 32);
+            this.textBoxValue.TabIndex = 43;
             // 
-            // label25
+            // lblSpecialRequirement
             // 
-            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(73, 265);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(155, 25);
-            this.label25.TabIndex = 42;
-            this.label25.Text = "Yêu cầu đặc biệt";
+            this.lblSpecialRequirement.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblSpecialRequirement.AutoSize = true;
+            this.lblSpecialRequirement.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSpecialRequirement.ForeColor = System.Drawing.Color.Black;
+            this.lblSpecialRequirement.Location = new System.Drawing.Point(68, 262);
+            this.lblSpecialRequirement.Name = "lblSpecialRequirement";
+            this.lblSpecialRequirement.Size = new System.Drawing.Size(155, 25);
+            this.lblSpecialRequirement.TabIndex = 42;
+            this.lblSpecialRequirement.Text = "Yêu cầu đặc biệt";
             // 
-            // textBox7
+            // textBoxSpecialRequirement
             // 
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(235, 262);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(960, 224);
-            this.textBox7.TabIndex = 41;
+            this.textBoxSpecialRequirement.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSpecialRequirement.Location = new System.Drawing.Point(230, 259);
+            this.textBoxSpecialRequirement.Multiline = true;
+            this.textBoxSpecialRequirement.Name = "textBoxSpecialRequirement";
+            this.textBoxSpecialRequirement.ReadOnly = true;
+            this.textBoxSpecialRequirement.Size = new System.Drawing.Size(960, 224);
+            this.textBoxSpecialRequirement.TabIndex = 41;
             // 
-            // label15
+            // lblGroupName
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(690, 147);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 25);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Tên đoàn";
+            this.lblGroupName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblGroupName.AutoSize = true;
+            this.lblGroupName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGroupName.ForeColor = System.Drawing.Color.Black;
+            this.lblGroupName.Location = new System.Drawing.Point(690, 147);
+            this.lblGroupName.Name = "lblGroupName";
+            this.lblGroupName.Size = new System.Drawing.Size(94, 25);
+            this.lblGroupName.TabIndex = 40;
+            this.lblGroupName.Text = "Tên đoàn";
             // 
-            // textBox5
+            // textBoxGroupName
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(802, 147);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(393, 32);
-            this.textBox5.TabIndex = 39;
-            this.textBox5.Text = " ";
+            this.textBoxGroupName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxGroupName.Location = new System.Drawing.Point(802, 147);
+            this.textBoxGroupName.Name = "textBoxGroupName";
+            this.textBoxGroupName.ReadOnly = true;
+            this.textBoxGroupName.Size = new System.Drawing.Size(393, 32);
+            this.textBoxGroupName.TabIndex = 39;
+            this.textBoxGroupName.Text = " ";
             // 
-            // label24
+            // lblDayOut
             // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(26, 196);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(202, 25);
-            this.label24.TabIndex = 38;
-            this.label24.Text = "Hình thức thanh toán";
+            this.lblDayOut.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDayOut.AutoSize = true;
+            this.lblDayOut.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDayOut.ForeColor = System.Drawing.Color.Black;
+            this.lblDayOut.Location = new System.Drawing.Point(712, 88);
+            this.lblDayOut.Name = "lblDayOut";
+            this.lblDayOut.Size = new System.Drawing.Size(81, 25);
+            this.lblDayOut.TabIndex = 36;
+            this.lblDayOut.Text = "Ngày đi";
             // 
-            // textBox6
+            // textBoxDateOut
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.Location = new System.Drawing.Point(235, 193);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(351, 32);
-            this.textBox6.TabIndex = 37;
+            this.textBoxDateOut.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxDateOut.Location = new System.Drawing.Point(802, 83);
+            this.textBoxDateOut.Name = "textBoxDateOut";
+            this.textBoxDateOut.ReadOnly = true;
+            this.textBoxDateOut.Size = new System.Drawing.Size(393, 32);
+            this.textBoxDateOut.TabIndex = 35;
             // 
-            // label9
+            // lblDayIn
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(712, 88);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 25);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "Ngày đi";
+            this.lblDayIn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDayIn.AutoSize = true;
+            this.lblDayIn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDayIn.ForeColor = System.Drawing.Color.Black;
+            this.lblDayIn.Location = new System.Drawing.Point(131, 88);
+            this.lblDayIn.Name = "lblDayIn";
+            this.lblDayIn.Size = new System.Drawing.Size(98, 25);
+            this.lblDayIn.TabIndex = 34;
+            this.lblDayIn.Text = "Ngày đến";
             // 
-            // textBox3
+            // textBoxDateIn
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(802, 83);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(393, 32);
-            this.textBox3.TabIndex = 35;
+            this.textBoxDateIn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxDateIn.Location = new System.Drawing.Point(235, 83);
+            this.textBoxDateIn.Name = "textBoxDateIn";
+            this.textBoxDateIn.ReadOnly = true;
+            this.textBoxDateIn.Size = new System.Drawing.Size(351, 32);
+            this.textBoxDateIn.TabIndex = 33;
             // 
-            // label14
+            // lblCustomerPhone
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(131, 88);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 25);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Ngày đến";
+            this.lblCustomerPhone.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblCustomerPhone.AutoSize = true;
+            this.lblCustomerPhone.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCustomerPhone.ForeColor = System.Drawing.Color.Black;
+            this.lblCustomerPhone.Location = new System.Drawing.Point(690, 28);
+            this.lblCustomerPhone.Name = "lblCustomerPhone";
+            this.lblCustomerPhone.Size = new System.Drawing.Size(103, 25);
+            this.lblCustomerPhone.TabIndex = 32;
+            this.lblCustomerPhone.Text = "Điện thoại";
             // 
-            // textBox4
+            // textBoxPhoneNum
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(235, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(351, 32);
-            this.textBox4.TabIndex = 33;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(690, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 25);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Điện thoại";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(802, 23);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(393, 32);
-            this.textBox2.TabIndex = 31;
+            this.textBoxPhoneNum.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPhoneNum.Location = new System.Drawing.Point(802, 23);
+            this.textBoxPhoneNum.Name = "textBoxPhoneNum";
+            this.textBoxPhoneNum.ReadOnly = true;
+            this.textBoxPhoneNum.Size = new System.Drawing.Size(393, 32);
+            this.textBoxPhoneNum.TabIndex = 31;
             // 
             // label7
             // 
@@ -413,17 +392,17 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Số lượng";
             // 
-            // label16
+            // lblCustomerName
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(79, 26);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(150, 25);
-            this.label16.TabIndex = 23;
-            this.label16.Text = "Tên khách hàng";
+            this.lblCustomerName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCustomerName.ForeColor = System.Drawing.Color.Black;
+            this.lblCustomerName.Location = new System.Drawing.Point(79, 26);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(150, 25);
+            this.lblCustomerName.TabIndex = 23;
+            this.lblCustomerName.Text = "Tên khách hàng";
             // 
             // label13
             // 
@@ -473,14 +452,14 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Điện thoại";
             // 
-            // textBox1
+            // textBoxCustomerName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(235, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(351, 32);
-            this.textBox1.TabIndex = 8;
+            this.textBoxCustomerName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxCustomerName.Location = new System.Drawing.Point(235, 23);
+            this.textBoxCustomerName.Name = "textBoxCustomerName";
+            this.textBoxCustomerName.ReadOnly = true;
+            this.textBoxCustomerName.Size = new System.Drawing.Size(351, 32);
+            this.textBoxCustomerName.TabIndex = 8;
             // 
             // panel3
             // 
@@ -547,6 +526,28 @@
             this.btn_edit.Text = "Sửa";
             this.btn_edit.UseVisualStyleBackColor = false;
             // 
+            // lblBookedDate
+            // 
+            this.lblBookedDate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblBookedDate.AutoSize = true;
+            this.lblBookedDate.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblBookedDate.ForeColor = System.Drawing.Color.Black;
+            this.lblBookedDate.Location = new System.Drawing.Point(130, 147);
+            this.lblBookedDate.Name = "lblBookedDate";
+            this.lblBookedDate.Size = new System.Drawing.Size(93, 25);
+            this.lblBookedDate.TabIndex = 47;
+            this.lblBookedDate.Text = "Ngày đặt";
+            this.lblBookedDate.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // textBoxBookDate
+            // 
+            this.textBoxBookDate.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxBookDate.Location = new System.Drawing.Point(235, 147);
+            this.textBoxBookDate.Name = "textBoxBookDate";
+            this.textBoxBookDate.ReadOnly = true;
+            this.textBoxBookDate.Size = new System.Drawing.Size(351, 32);
+            this.textBoxBookDate.TabIndex = 46;
+            // 
             // fRevervationTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -558,6 +559,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "fRevervationTicket";
             this.Text = "fRevervationTicker";
+            this.Load += new System.EventHandler(this.fRevervationTicket_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -575,37 +577,37 @@
         private Panel panel1;
         private Label label7;
         private Label label1;
-        private Label label16;
+        private Label lblCustomerName;
         private Label label13;
         private Label label8;
         private Label label6;
         private Label label5;
-        private TextBox textBox1;
+        private TextBox textBoxCustomerName;
         private Label label21;
         private Label labelKh;
         private Label label23;
         private Label label18;
         private Label labelphieu;
         private Label label20;
-        private Label label25;
-        private TextBox textBox7;
-        private Label label24;
-        private TextBox textBox6;
-        private Label label9;
-        private TextBox textBox3;
-        private Label label14;
-        private TextBox textBox4;
-        private Label label2;
-        private TextBox textBox2;
-        private Label label10;
-        private TextBox textBox8;
+        private Label lblSpecialRequirement;
+        private TextBox textBoxSpecialRequirement;
+        private Label lblDayOut;
+        private TextBox textBoxDateOut;
+        private Label lblDayIn;
+        private TextBox textBoxDateIn;
+        private Label lblCustomerPhone;
+        private TextBox textBoxPhoneNum;
+        private Label lblValue;
+        private TextBox textBoxValue;
         private Panel panel3;
         private Button btn_DatCoc;
         private Button btn_back;
         private Button btn_submit;
         private Button btn_edit;
         private Button btn_detail;
-        private Label label15;
-        private TextBox textBox5;
+        private Label lblGroupName;
+        private TextBox textBoxGroupName;
+        private Label lblBookedDate;
+        private TextBox textBoxBookDate;
     }
 }

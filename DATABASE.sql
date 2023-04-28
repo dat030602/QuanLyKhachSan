@@ -1,4 +1,4 @@
-﻿USE MASTER 
+USE MASTER 
 GO
 
 if DB_ID('QUANLYKHACHSAN')is not null
@@ -55,6 +55,7 @@ go
 create table PHIEUDATPHONG(
 	MaPhieuDat char(6),
 	MaKH char(6),
+	NgayDat datetime,
 	NgayDen datetime,
 	NgayDi datetime,
 	TongTienPhong int constraint DF_PHIEUDATPHONG_TongTienPhong DEFAULT 0,
@@ -201,6 +202,14 @@ create table TTDANGKYTOUR(
 	constraint FK_TTDANGKYTOUR_HOADON foreign key (MaHD) references HOADON(MaHD),
 	constraint FK_TTDANGKYTOUR_TOUR foreign key (MaTour) references TOUR(MaTour),
 	constraint PK_TTDANGKYTOUR primary key(MaHD, Stt, MaTour)
+)
+go
+create table DVCUNGCAP(
+	MaDV char(6),
+	MaLoaiPhong char(6),
+	constraint FK_DVCUNGCAP_DICHVU foreign key (MaDV) references DICHVU(MaDV),
+	constraint FK_DVCUNGCAP_LOAIPHONG foreign key (MaLoaiPhong) references LOAIPHONG(MaLoaiPhong),
+	constraint PK_DVCUNGCAP primary key (MaDV, MaLoaiPhong)
 )
 go
 --Loại phòng
@@ -362,7 +371,7 @@ INSERT INTO THONGTINDOAN VALUES('KH0003', N'Support Thanh Tâm', 5)
 INSERT INTO PHIEUYEUCAU(MaKH, NoiDung) VALUES('KH0001', N'1 đôi 1 đơn') 
 
 --Phiếu đặt phòng/Chi tiết phiếu đặt
-INSERT INTO PHIEUDATPHONG VALUES('PD0001', 'KH0001', '2023-06-19 08:30:00', '2023-06-28 12:30:00', 0)
+INSERT INTO PHIEUDATPHONG VALUES('PD0001', 'KH0001', '2023-06-10 10:30:00', '2023-06-19 08:30:00', '2023-06-28 12:30:00', 0)
 INSERT INTO CTPHIEUDATPHONG VALUES('PD0001','LOAI01', 1)
 INSERT INTO CTPHIEUDATPHONG VALUES('PD0001','LOAI02', 1)
 
@@ -395,3 +404,6 @@ INSERT INTO CTSUDUNGMINIBAR VALUES('PD0001',101,'SP0001',2)
 INSERT INTO CTSUDUNGMINIBAR VALUES('PD0001',101,'SP0002',1)
 INSERT INTO CTSUDUNGMINIBAR VALUES('PD0001',103,'SP0001',2)
 INSERT INTO CTSUDUNGMINIBAR VALUES('PD0001',103,'SP0002',1)
+
+--Dịch vụ cung cấp
+INSERT INTO DVCUNGCAP VALUES ('DV0001', 'LOAI01'),('DV0001', 'LOAI02'), ('DV0001', 'LOAI03'), ('DV0002', 'LOAI03'), ('DV0003', 'LOAI02'), ('DV0003', 'LOAI03'), ('DV0004', 'LOAI01'), ('DV0004', 'LOAI02'), ('DV0004', 'LOAI03'), ('DV0005', 'LOAI03')

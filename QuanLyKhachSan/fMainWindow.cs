@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
-    public partial class MainWindow : Form
+    public partial class fMainWindow : Form
     {
-        public MainWindow()
+        public fMainWindow()
         {
             InitializeComponent();
         }
