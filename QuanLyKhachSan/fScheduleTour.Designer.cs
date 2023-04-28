@@ -36,8 +36,10 @@
             btn_xoa = new Button();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
             panel14 = new Panel();
             btn_add = new Button();
             textBoxSoLuong = new TextBox();
@@ -136,11 +138,14 @@
             btn_xoa.TabIndex = 9;
             btn_xoa.Text = "Xóa";
             btn_xoa.UseVisualStyleBackColor = false;
+            btn_xoa.Click += btn_xoa_Click;
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column5, Column2, Column3, Column4 });
             dataGridView1.Location = new Point(243, 29);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
@@ -148,27 +153,37 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(873, 361);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
-            Column1.HeaderText = "Column1";
+            Column1.HeaderText = "Tên tour";
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
-            Column1.Width = 125;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Dịch vụ";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
             // 
             // Column2
             // 
-            Column2.HeaderText = "Column2";
+            Column2.HeaderText = "Số lượng";
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
-            Column2.Width = 125;
             // 
             // Column3
             // 
-            Column3.HeaderText = "Column3";
+            Column3.HeaderText = "Thời gian khởi hành";
             Column3.MinimumWidth = 6;
             Column3.Name = "Column3";
-            Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Yêu cầu đặc biệt";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
             // 
             // panel14
             // 
@@ -205,6 +220,7 @@
             btn_add.TabIndex = 45;
             btn_add.Text = "Thêm";
             btn_add.UseVisualStyleBackColor = false;
+            btn_add.Click += btn_add_Click;
             // 
             // textBoxSoLuong
             // 
@@ -306,14 +322,17 @@
             comboBoxTour.Size = new Size(373, 39);
             comboBoxTour.TabIndex = 15;
             comboBoxTour.SelectedIndexChanged += comboBoxTour_SelectedIndexChanged;
+            comboBoxTour.TextChanged += comboBoxTour_TextChanged;
             // 
             // textBoxYcdb
             // 
             textBoxYcdb.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxYcdb.Location = new Point(243, 247);
             textBoxYcdb.Margin = new Padding(3, 4, 3, 4);
+            textBoxYcdb.Multiline = true;
             textBoxYcdb.Name = "textBoxYcdb";
-            textBoxYcdb.Size = new Size(373, 39);
+            textBoxYcdb.ScrollBars = ScrollBars.Vertical;
+            textBoxYcdb.Size = new Size(373, 89);
             textBoxYcdb.TabIndex = 13;
             // 
             // textBoxMaKH
@@ -350,12 +369,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.FromArgb(255, 241, 241);
             ClientSize = new Size(1445, 908);
             Controls.Add(panel13);
             Margin = new Padding(3, 4, 3, 4);
             Name = "fScheduleTour";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "fScheduleService";
+            Load += fScheduleTour_Load;
             panel13.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel16.ResumeLayout(false);
@@ -371,10 +393,6 @@
 
         private Panel panel13;
         private Panel panel16;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
         private Panel panel14;
         private Panel panel18;
         private Label label13;
@@ -382,7 +400,6 @@
         private TextBox textBoxYcdb;
         private Label label2;
         private Label label1;
-        private TextBox textBoxMaKH;
         private Label label18;
         private Label label4;
         private Label label6;
@@ -395,5 +412,12 @@
         private Button button_complete;
         private Button btn_add;
         private Button btn_back;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        public DataGridView dataGridView1;
+        public TextBox textBoxMaKH;
     }
 }
