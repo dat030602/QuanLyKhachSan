@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace QuanLyKhachSan
 {
     public partial class fTour : Form
     {
-
+        string connectionString = @"Data Source=LAPTOP-FLMRB1T8;Initial Catalog = QUANLYKHACHSAN; Persist Security Info=True;User ID = po; Password=1234";
+        SqlConnection sqlCon = null;
         public fTour()
         {
             InitializeComponent();
@@ -89,6 +92,31 @@ namespace QuanLyKhachSan
             this.Hide();
             fScheduleTour form = new fScheduleTour();
             form.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fTour_Load(object sender, EventArgs e)
+        {
+            sqlCon = new SqlConnection(connectionString);
+            sqlCon.Open();
+            DataTable dt = new DataTable();
+            try
+            {
+                string queryStr = "SELECT Main.MaTour AS \"Mã tour\",T.TenTour AS \"Tên Tour \", T.DonGia AS \"Đơn Giá\", LEFT(Main.LOTRINH, Len(Main.LOTRINH)-1) AS \"Lộ trình\", LEFT(Main.THOIGIAN, Len(Main.THOIGIAN)-1) AS \"Thời gian\"" + "FROM (SELECT DISTINCT ST2.MaTour, (SELECT ST1.TenLoTrinh + ' - ' AS [text()] FROM dbo.LOTRINHTOUR ST1 WHERE ST1.MaTour = ST2.MaTour ORDER BY ST1.MaTour FOR XML PATH (''), TYPE).value('text()[1]','nvarchar(max)') [LOTRINH],(SELECT convert(varchar, ST1.ThoiGian) + ' - ' AS [text()] FROM dbo.LOTRINHTOUR ST1 WHERE ST1.MaTour = ST2.MaTour ORDER BY ST1.MaTour FOR XML PATH (''), TYPE).value('text()[1]','nvarchar(max)') [THOIGIAN] FROM dbo.LOTRINHTOUR ST2) [Main] JOIN dbo.TOUR T ON Main.MaTour = T.MaTour;";
+                SqlCommand cmd = new SqlCommand(queryStr, sqlCon);
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            dataGridView1.DataSource = dt;
+            sqlCon.Close();
         }
     }
 }

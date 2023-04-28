@@ -32,9 +32,6 @@
             labelSearch = new Label();
             panel15 = new Panel();
             panel14 = new Panel();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
             dataGridView1 = new DataGridView();
             panel16 = new Panel();
             panel13 = new Panel();
@@ -53,6 +50,7 @@
             panel11 = new Panel();
             panel1 = new Panel();
             label1 = new Label();
+            buttonView = new Button();
             panel15.SuspendLayout();
             panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -101,31 +99,12 @@
             panel14.Size = new Size(1120, 80);
             panel14.TabIndex = 0;
             // 
-            // Column3
-            // 
-            Column3.HeaderText = "Column3";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Column2";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Column1";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 125;
-            // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.BackgroundColor = Color.FromArgb(255, 241, 241);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
             dataGridView1.Location = new Point(42, 4);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
@@ -133,6 +112,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(1039, 705);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // panel16
             // 
@@ -146,6 +126,7 @@
             // panel13
             // 
             panel13.BackColor = Color.Transparent;
+            panel13.Controls.Add(buttonView);
             panel13.Controls.Add(btn_add);
             panel13.Controls.Add(panel16);
             panel13.Controls.Add(panel14);
@@ -416,10 +397,26 @@
             label1.Text = "Trang chủ";
             label1.Click += label1_Click;
             // 
+            // buttonView
+            // 
+            buttonView.BackColor = Color.FromArgb(255, 230, 0);
+            buttonView.FlatAppearance.BorderSize = 0;
+            buttonView.FlatStyle = FlatStyle.Flat;
+            buttonView.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonView.ForeColor = SystemColors.ControlText;
+            buttonView.Location = new Point(645, 820);
+            buttonView.Margin = new Padding(3, 4, 3, 4);
+            buttonView.Name = "buttonView";
+            buttonView.Size = new Size(267, 64);
+            buttonView.TabIndex = 45;
+            buttonView.Text = "Xem danh sách khách";
+            buttonView.UseVisualStyleBackColor = false;
+            // 
             // fTour
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackgroundImage = Properties.Resources.R;
             ClientSize = new Size(1445, 908);
             Controls.Add(panel2);
@@ -427,7 +424,9 @@
             Cursor = Cursors.Hand;
             Margin = new Padding(3, 4, 3, 4);
             Name = "fTour";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "fTour";
+            Load += fTour_Load;
             panel15.ResumeLayout(false);
             panel15.PerformLayout();
             panel14.ResumeLayout(false);
@@ -445,9 +444,6 @@
         private Label labelSearch;
         private Panel panel15;
         private Panel panel14;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column1;
         private DataGridView dataGridView1;
         private Panel panel16;
         private Panel panel13;
@@ -466,5 +462,6 @@
         private Panel panel1;
         private Label label1;
         private Button btn_add;
+        private Button buttonView;
     }
 }
