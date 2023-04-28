@@ -16,6 +16,7 @@ namespace QuanLyKhachSan
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PR8IEJS;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True");
         private string mapd;
         private string mahd;
+        private string tonghd;
         public fInvoice()
         {
             InitializeComponent();
@@ -127,6 +128,7 @@ namespace QuanLyKhachSan
                 if (reader5.Read())
                 {
                     textBox6.Text = reader5[0].ToString();
+                    tonghd = tonghd + reader5[0].ToString();
                 }
                 con.Close();
             }
@@ -142,6 +144,38 @@ namespace QuanLyKhachSan
             fInfoRoom form = new fInfoRoom();
             form.ShowDialog();
             this.Close();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd6 = new SqlCommand("INSERT INTO LICHSUGIAODICH(MaHD, NoiDung, HinhThucThanhToan, DonGia) VALUES(@MaHD, N'Hóa đơn Check out', @HinhThucThanhToan, @DonGia)", con);
+                cmd6.Parameters.AddWithValue("@MaHD", mahd);
+                cmd6.Parameters.AddWithValue("@HinhThucThanhToan", comboBox1.Text.ToString());
+                cmd6.Parameters.AddWithValue("@DonGia", tonghd);
+                cmd6.ExecuteNonQuery();
+                MessageBox.Show("Thanh toán thành công");
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            //////
+            ///
+            try
+            {
+                con.Open();
+                SqlCommand cmd7 = new SqlCommand("UPDATE THONGTINDATPHONG SET TrangThai = N'Check out' WHERE MaPhieuDat = '" + mapd + "'", con);
+                cmd7.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

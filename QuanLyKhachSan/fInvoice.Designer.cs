@@ -70,6 +70,8 @@
             label11 = new Label();
             button1 = new Button();
             label13 = new Label();
+            label16 = new Label();
+            comboBox1 = new ComboBox();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
@@ -115,24 +117,25 @@
             // 
             // panel4
             // 
-            panel4.BackColor = Color.FromArgb(241, 146, 117);
+            panel4.BackColor = Color.Gold;
             panel4.Controls.Add(label14);
             panel4.Cursor = Cursors.Hand;
-            panel4.Location = new Point(1106, 8);
+            panel4.Location = new Point(1042, 8);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(105, 64);
+            panel4.Size = new Size(169, 64);
             panel4.TabIndex = 6;
             // 
             // label14
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(27, 15);
+            label14.Location = new Point(19, 15);
             label14.Name = "label14";
-            label14.Size = new Size(57, 32);
+            label14.Size = new Size(136, 32);
             label14.TabIndex = 0;
-            label14.Text = "Huỷ";
+            label14.Text = "Thanh toán";
+            label14.Click += label14_Click;
             // 
             // panel17
             // 
@@ -475,12 +478,33 @@
             label13.TabIndex = 39;
             label13.Text = "CHECK-OUT";
             // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.Location = new Point(1065, 313);
+            label16.Name = "label16";
+            label16.Size = new Size(236, 31);
+            label16.TabIndex = 40;
+            label16.Text = "Hình thức thanh toán:";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Tiền mặt", "Chuyển khoản" });
+            comboBox1.Location = new Point(1141, 347);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(160, 28);
+            comboBox1.TabIndex = 41;
+            // 
             // fInvoice
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 241, 241);
             ClientSize = new Size(1445, 767);
+            Controls.Add(comboBox1);
+            Controls.Add(label16);
             Controls.Add(label13);
             Controls.Add(button1);
             Controls.Add(label11);
@@ -567,5 +591,7 @@
         private DataGridViewTextBoxColumn Column10;
         private DataGridViewTextBoxColumn Column11;
         private DataGridViewTextBoxColumn Column12;
+        private Label label16;
+        private ComboBox comboBox1;
     }
 }
