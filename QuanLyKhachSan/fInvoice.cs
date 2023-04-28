@@ -41,7 +41,7 @@ namespace QuanLyKhachSan
                 if (reader.Read())
                 {
                     textBox1.Text = reader[0].ToString();
-                    mahd = mahd + reader[0].ToString();
+                    mahd = reader[0].ToString();
                 }
                 con.Close();
             }

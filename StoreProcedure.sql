@@ -78,3 +78,19 @@ begin
 	declare @total as int = @tienphong - (@tienphong*0.3) + @dichvu + @tour + @sp + @sp2 + @ktp
 	select @total
 end
+
+--Kiem tra trang thai phong
+drop proc KT_TRANGTHAIPHONG
+create proc KT_TRANGTHAIPHONG @sophong as int
+as
+begin
+	declare @check as nvarchar(20) = (select top 1 TrangThai from THONGTINDATPHONG where SoPhong = @sophong order by MaPhieuDat desc)
+	if @check = 'Check out' or @check is null
+		begin
+			select 1
+		end
+	else select top 1 MaPhieuDat 
+		from THONGTINDATPHONG 
+		where TrangThai = 'Check in' and SoPhong = @sophong 
+		order by MaPhieuDat desc
+end

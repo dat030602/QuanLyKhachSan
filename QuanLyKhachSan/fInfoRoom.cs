@@ -95,6 +95,10 @@ namespace QuanLyKhachSan
 
         private void button1_Click(object sender, EventArgs e)
         {
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
             try
             {
                 con.Open();
@@ -115,13 +119,13 @@ namespace QuanLyKhachSan
                 if (reader.Read())
                 {
                     textBox2.Text = reader[0].ToString();
-                    mapd = mapd + reader[0].ToString();
-                    makh = makh + reader[1].ToString(); 
+                    mapd = reader[0].ToString();
+                    makh = reader[1].ToString(); 
                     textBox3.Text = reader[2].ToString();
                     textBox4.Text = reader[3].ToString();
-                    ngayden = ngayden + reader[3].ToString();   
+                    ngayden = reader[3].ToString();   
                     textBox5.Text = reader[4].ToString();
-                    ngaydi = ngaydi + reader[4].ToString();
+                    ngaydi = reader[4].ToString();
                 }
                 con.Close();
             }
