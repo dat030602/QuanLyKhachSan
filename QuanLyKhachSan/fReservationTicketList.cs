@@ -16,14 +16,14 @@ using static System.Windows.Forms.DataFormats;
 namespace QuanLyKhachSan
 {
     
-    public partial class fReservationTickerList : Form
+    public partial class fReservationTicketList : Form
     {
         public static string sqlConn = DataConnection.sqlConn;
         public static SqlConnection conn = DataConnection.conn;
         fRevervationTicket f = new fRevervationTicket();
         fDevideRoom f2 = new fDevideRoom();
  
-        public fReservationTickerList()
+        public fReservationTicketList()
         {
             if (conn == null)
             {
@@ -195,7 +195,7 @@ namespace QuanLyKhachSan
                 this.Hide();
                 fDevideRoom f = new fDevideRoom(maPDP, ngayDen, ngayDi);
                 f.ShowDialog();
-
+                this.Show();
             }
         }
     }

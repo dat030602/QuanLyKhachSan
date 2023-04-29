@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan
 {
-    partial class fReservationTickerList
+    partial class fReservationTicketList
     {
         /// <summary>
         /// Required designer variable.

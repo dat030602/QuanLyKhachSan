@@ -148,10 +148,10 @@ namespace QuanLyKhachSan
                             "', 'LOAI01', " + soluong1 + ")");
                     if (soluong2 > 0)
                         ExecuteSql("INSERT INTO dbo.CTPHIEUDATPHONG VALUES ('" + maphieudatphong +
-                            "', 'LOAI02', " + soluong1 + ")");
+                            "', 'LOAI02', " + soluong2 + ")");
                     if (soluong3 > 0)
                         ExecuteSql("INSERT INTO dbo.CTPHIEUDATPHONG VALUES ('" + maphieudatphong +
-                            "', 'LOAI03', " + soluong1 + ")");
+                            "', 'LOAI03', " + soluong3 + ")");
                     this.Close();
                 }
                 else

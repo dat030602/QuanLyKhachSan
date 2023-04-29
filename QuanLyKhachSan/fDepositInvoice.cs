@@ -45,6 +45,8 @@ namespace QuanLyKhachSan
             textNoiDung.Text = noidung;
             textTenKhachHang.Text = tenKH;
 
+            sotien = (convertStringToInt(sotien) * 3 / 10).ToString();
+
             var builder = new StringBuilder();
             int count = 0;
             int sizeSoTien = sotien.Length;
@@ -150,8 +152,8 @@ namespace QuanLyKhachSan
             {
                 if (MessageBox.Show("Bạn chắc chưa?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    ExecuteSql("INSERT INTO DBO.LICHSUGIAODICH(MAHD,NOIDUNG, HINHTHUCTHANHTOAN, DONGIA) VALUES('" + maHD +
-                        "', N'" + noidung + "', N'" + textHinhThucThanhToan.Text + "', " + sotien + ")");
+                    ExecuteSql("INSERT INTO DBO.LICHSUGIAODICH(MAHD,NOIDUNG, HINHTHUCTHANHTOAN, DONGIA, NGAYTHANHTOAN) VALUES('" + maHD +
+                        "', N'" + noidung + "', N'" + textHinhThucThanhToan.Text + "', " + sotien + ",'"+ DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')");
 
                     this.Close();
                 }

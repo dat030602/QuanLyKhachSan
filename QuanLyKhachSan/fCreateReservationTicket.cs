@@ -19,9 +19,9 @@ namespace QuanLyKhachSan
 
         private string connetionString = DataConnection.sqlConn;
 
-        private string maKHfromCustomerList ="";
-        private string tenKHfromCustomerList ="";
-        private string maphieudatphong ="";
+        private string maKHfromCustomerList = "";
+        private string tenKHfromCustomerList = "";
+        private string maphieudatphong = "";
         public fCreateReservationTicket()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace QuanLyKhachSan
             maphieu.Text = maphieudatphong;
             text_maKhachHang.Text = maKHfromCustomerList;
             textTenKH.Text = tenKHfromCustomerList;
-            ExecuteSql("INSERT INTO DBO.PHIEUDATPHONG(MaPhieuDat) VALUES('" + maphieudatphong+"')");
+            ExecuteSql("INSERT INTO DBO.PHIEUDATPHONG(MaPhieuDat, ngaydat) VALUES('" + maphieudatphong + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
         }
 
         private void GetMaPhieuDat(string queryString)
@@ -137,7 +137,9 @@ namespace QuanLyKhachSan
             if (isCreateDetail == false)
                 MessageBox.Show("Bạn quên nhập chi tiết đặt phòng kìa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (isCreateRequired == false)
+            {
                 if (MessageBox.Show("Khách còn yêu cầu nào không?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel)
+                {
                     if (MessageBox.Show("Bạn có thật sự hoàn thành tạo phiếu đặt phòng?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                     {
                         string stringInput2 = textNgayDen.Text;
@@ -169,7 +171,42 @@ namespace QuanLyKhachSan
                         }
                         this.Close();
                     }
+                }
+            }
+            else if (isCreateRequired == true)
+            {
+                if (MessageBox.Show("Bạn có thật sự hoàn thành tạo phiếu đặt phòng?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    string stringInput2 = textNgayDen.Text;
+                    stringInput2 = formatDateYYYYMMDD(stringInput2);
 
+                    string stringInput3 = textNgaydi.Text;
+                    stringInput3 = formatDateYYYYMMDD(stringInput3);
+
+                    ExecuteSql("UPDATE dbo.PHIEUDATPHONG SET makh='" + maKHfromCustomerList +
+                        "' WHERE MaPhieuDat = '" + maphieudatphong + "'");
+
+                    ExecuteSql("UPDATE dbo.PHIEUDATPHONG SET NgayDen='" + stringInput2 +
+                        "' WHERE MaPhieuDat = '" + maphieudatphong + "'");
+
+                    ExecuteSql("UPDATE dbo.PHIEUDATPHONG SET NgayDi='" + stringInput3 +
+                        "' WHERE MaPhieuDat = '" + maphieudatphong + "'");
+
+                    string stringInput5 = textTenDoan.Text;
+                    if (stringInput5 != "")
+                    {
+                        string stringInput6 = textSoLuong.Text;
+                        if (stringInput6 != "")
+                        {
+                            ExecuteSql("INSERT INTO dbo.THONGTINDOAN VALUES ('" + maKHfromCustomerList + "',N'"
+                                + stringInput5 + "'," + stringInput6 + ")");
+                        }
+                        else
+                            MessageBox.Show("Chưa nhập số lượng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    this.Close();
+                }
+            }
         }
 
         private void SoLuong_KeyPress(object sender, KeyPressEventArgs e)
@@ -193,7 +230,7 @@ namespace QuanLyKhachSan
         private void btn_YeuCauDacBiet_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fSpecialRequirement form = new fSpecialRequirement(maphieudatphong,maKHfromCustomerList, tenKHfromCustomerList);
+            fSpecialRequirement form = new fSpecialRequirement(maphieudatphong, maKHfromCustomerList, tenKHfromCustomerList);
             form.ShowDialog();
             isCreateRequired = form.IsCreateRequired;
             this.Show();

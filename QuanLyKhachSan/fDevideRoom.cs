@@ -229,7 +229,7 @@ namespace QuanLyKhachSan
 
         private void btnBackToReversationList_Click(object sender, EventArgs e)
         {
-            fReservationTickerList f = new fReservationTickerList();
+            fReservationTicketList f = new fReservationTicketList();
             f.Show();
             this.Hide();
         }

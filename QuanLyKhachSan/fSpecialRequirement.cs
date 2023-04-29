@@ -46,7 +46,6 @@ namespace QuanLyKhachSan
             cnn.Open();
             SqlCommand cmd = new SqlCommand(queryString, cnn);
             int result = cmd.ExecuteNonQuery();
-            MessageBox.Show(result.ToString());
             cnn.Close();
         }
 
@@ -71,7 +70,7 @@ namespace QuanLyKhachSan
                     MessageBox.Show("Chưa chọn phòng nào cả", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-                MessageBox.Show("Bạn chưa nhập thông tin nào bả", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn chưa nhập thông tin nào cả", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 

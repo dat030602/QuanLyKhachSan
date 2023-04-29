@@ -17,6 +17,8 @@ namespace QuanLyKhachSan
     {
         private string maPDPfromList = "";
         private string maKHfromList = "";
+        private string tenKH = "";
+        private string sotien = "";
         public static string sqlConn = DataConnection.sqlConn;
         public static SqlConnection conn = DataConnection.conn;
         public fRevervationTicket()
@@ -59,10 +61,28 @@ namespace QuanLyKhachSan
                 textBoxCustomerName.Text = row["HoTen"].ToString();
                 textBoxDateIn.Text = row["NgayDen"].ToString();
                 textBoxDateOut.Text = row["NgayDi"].ToString();
-                textBoxValue.Text = row["TongTienPhong"].ToString();
+
+                sotien = row["TongTienPhong"].ToString();
+
+                var builder = new StringBuilder();
+                int count = 0;
+                int sizeSoTien = sotien.Length;
+                for (var i = 0; i < sotien.Length; i++)
+                {
+                    builder.Append(sotien[sizeSoTien - 1 - i]);
+                    if ((++count % 3) == 0)
+                        builder.Append('.');
+                }
+                char[] array = (builder.ToString()).ToCharArray();
+                Array.Reverse(array);
+
+                textBoxValue.Text = new String(array);
                 textBoxPhoneNum.Text = row["Sdt"].ToString();
                 textBoxGroupName.Text = row["TenDoan"].ToString();
                 textBoxSpecialRequirement.Text = row["NoiDung"].ToString();
+
+                tenKH = row["HoTen"].ToString();
+
                 /*foreach (DataColumn column in dt.Columns)
                 {
                     list.Add((row[column].ToString()));
@@ -70,7 +90,7 @@ namespace QuanLyKhachSan
                 }*/
             }
         }
-
+        
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -79,7 +99,7 @@ namespace QuanLyKhachSan
         private void btn_DatCoc_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fDepositInvoice form = new fDepositInvoice("PD0001", maKHfromList, "Tràn Anh Ngọc", "Đặt cọc", "30000000");
+            fDepositInvoice form = new fDepositInvoice(maPDPfromList, maKHfromList, textBoxCustomerName.Text, "Đặt cọc", "30000000");
             form.ShowDialog();
             this.Show();
         }

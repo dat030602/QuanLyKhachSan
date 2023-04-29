@@ -33,7 +33,7 @@ namespace QuanLyKhachSan
         private void btn_link_datphong_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fReservationTickerList form = new fReservationTickerList();
+            fReservationTicketList form = new fReservationTicketList();
             form.ShowDialog();
             this.Close();
         }
