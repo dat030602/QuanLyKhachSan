@@ -16,7 +16,7 @@ namespace QuanLyKhachSan
     {
         private string maKH = "";
         private string tenKH = "";
-        private string connetionString = "Data Source=DESKTOP-MMSPL40;Initial Catalog = QUANLYKHACHSAN; User ID = root; Password=root";
+        private string connetionString = DataConnection.sqlConn;
         private List<string[]> listCustomer = new List<string[]>();
         private int sizeListCustomer = 0;
 

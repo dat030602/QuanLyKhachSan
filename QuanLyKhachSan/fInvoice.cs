@@ -13,7 +13,7 @@ namespace QuanLyKhachSan
 {
     public partial class fInvoice : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PR8IEJS;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True");
+        SqlConnection con = new SqlConnection(DataConnection.sqlConn);
         private string mapd;
         private string mahd;
         private string tonghd;

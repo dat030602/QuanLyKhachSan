@@ -17,7 +17,7 @@ namespace QuanLyKhachSan
         private bool isCreateDetail = false;
         private bool isCreateRequired = false;
 
-        private string connetionString = "Data Source=DESKTOP-MMSPL40;Initial Catalog = QUANLYKHACHSAN; User ID = root; Password=root";
+        private string connetionString = DataConnection.sqlConn;
 
         private string maKHfromCustomerList ="";
         private string tenKHfromCustomerList ="";

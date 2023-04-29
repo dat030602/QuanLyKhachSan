@@ -13,7 +13,7 @@ namespace QuanLyKhachSan
 {
     public partial class fCreateCustomer : Form
     {
-        private string connetionString = "Data Source=DESKTOP-MMSPL40;Initial Catalog = QUANLYKHACHSAN; User ID = root; Password=root";
+        private string connetionString = DataConnection.sqlConn;
 
         private string maKH = "";
         public fCreateCustomer()

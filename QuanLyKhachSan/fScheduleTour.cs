@@ -15,7 +15,7 @@ namespace QuanLyKhachSan
 {
     public partial class fScheduleTour : Form
     {
-        string connectionString = @"Data Source=LAPTOP-FLMRB1T8;Initial Catalog = QUANLYKHACHSAN; Persist Security Info=True;User ID = po; Password=1234";
+        string connectionString = DataConnection.sqlConn;
         SqlConnection sqlCon = null;
         public fScheduleTour()
         {

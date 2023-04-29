@@ -13,7 +13,7 @@ namespace QuanLyKhachSan
 {
     public partial class fSpecialRequirement : Form
     {
-        private string connetionString = "Data Source=DESKTOP-MMSPL40;Initial Catalog = QUANLYKHACHSAN; User ID = root; Password=root";
+        private string connetionString = DataConnection.sqlConn;
 
         private string maphieudatphong = "";
         private string tenKH = "";

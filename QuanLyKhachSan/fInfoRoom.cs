@@ -20,7 +20,7 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PR8IEJS;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True");
+        SqlConnection con = new SqlConnection(DataConnection.sqlConn);
         private static ArrayList ListFirstname = new ArrayList();
         private static ArrayList ListLastname = new ArrayList();
         private static ArrayList ListTelephone = new ArrayList();

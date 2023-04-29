@@ -18,7 +18,7 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PR8IEJS;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True");
+        SqlConnection con = new SqlConnection(DataConnection.sqlConn);
         private string madp;
         private string sophong;
         private void btn_link_khachhang_Click(object sender, EventArgs e)
