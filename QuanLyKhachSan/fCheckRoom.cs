@@ -18,6 +18,7 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
         }
+
         SqlConnection con = new SqlConnection(DataConnection.sqlConn);
         private string madp;
         private string sophong;

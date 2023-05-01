@@ -21,8 +21,9 @@ namespace QuanLyKhachSan
             InitializeComponent();
 
         }
-        private string sqlConn = DataConnection.sqlConn;
-        private SqlConnection con = DataConnection.conn;
+        //private string sqlConn = DataConnection.sqlConn;
+        //private SqlConnection con = DataConnection.conn;
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PR8IEJS;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True");
         private static ArrayList ListFirstname = new ArrayList();
         private static ArrayList ListLastname = new ArrayList();
         private static ArrayList ListTelephone = new ArrayList();
@@ -122,10 +123,10 @@ namespace QuanLyKhachSan
                 {
                     textBox2.Text = reader[0].ToString();
                     mapd = reader[0].ToString();
-                    makh = reader[1].ToString(); 
+                    makh = reader[1].ToString();
                     textBox3.Text = reader[2].ToString();
                     textBox4.Text = reader[3].ToString();
-                    ngayden = reader[3].ToString();   
+                    ngayden = reader[3].ToString();
                     textBox5.Text = reader[4].ToString();
                     ngaydi = reader[4].ToString();
                 }
@@ -144,18 +145,18 @@ namespace QuanLyKhachSan
             this.Close();
         }
 
-        private void fInfoRoom_Load_1(object sender, EventArgs e)
-        {
-            if (con == null)
-            {
-                con = new SqlConnection(sqlConn);
-            }
-            if (con.State != ConnectionState.Open)
-            {
-                con.Open();
+        //private void fInfoRoom_Load_1(object sender, EventArgs e)
+        //{
+        //    if (con == null)
+        //    {
+        //        con = new SqlConnection(sqlConn);
+        //    }
+        //    if (con.State != ConnectionState.Open)
+        //    {
+        //        con.Open();
 
-            }
+        //    }
 
-        }
+        //}
     }
 }
