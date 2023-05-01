@@ -148,12 +148,12 @@ namespace QuanLyKhachSan
 
         private void btn_submit_Click(object sender, EventArgs e)
         {
-            if (textHinhThucThanhToan.Text != "")
+            if (cbbHinhThucThanhToan.Text != "")
             {
                 if (MessageBox.Show("Bạn chắc chưa?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     ExecuteSql("INSERT INTO DBO.LICHSUGIAODICH(MAHD,NOIDUNG, HINHTHUCTHANHTOAN, DONGIA, NGAYTHANHTOAN) VALUES('" + maHD +
-                        "', N'" + noidung + "', N'" + textHinhThucThanhToan.Text + "', " + sotien + ",'"+ DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')");
+                        "', N'" + noidung + "', N'" + cbbHinhThucThanhToan.Text + "', " + sotien + ",'"+ DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')");
 
                     this.Close();
                 }

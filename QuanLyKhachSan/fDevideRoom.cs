@@ -57,7 +57,7 @@ namespace QuanLyKhachSan
         }
         public fDevideRoom(string maPDP, string ngayDen, string ngayDi) : this()
         {
-            lblReservationTicker.Text = "Mã PĐ: " + maPDP;
+            lblMaPhieuDat.Text = "Mã PĐ: " + maPDP;
             this.maPDP = maPDP;
             this.ngayDen = ngayDen;
             this.ngayDi = ngayDi;
@@ -91,10 +91,10 @@ namespace QuanLyKhachSan
             SqlCommand cmd = new SqlCommand("SELECT TenLoaiPhong FROM PHIEUDATPHONG PD JOIN CTPHIEUDATPHONG CT ON CT.MaPhieuDat = PD.MaPhieuDat JOIN LOAIPHONG LP ON CT.MaLoaiPhong = LP.MaLoaiPhong WHERE PD.MaPhieuDat = '" + maPDP + "'", sqlConnection);
             SqlDataReader reader = cmd.ExecuteReader();
             dt.Load(reader);
-            cbbRoomType.DisplayMember = dt.Columns[0].ColumnName;
-            cbbRoomType.ValueMember = dt.Columns[0].ColumnName;
-            cbbRoomType.DataSource = dt;
-            cbbRoomType.SelectedIndex = 0;
+            cbbLoaiPhong.DisplayMember = dt.Columns[0].ColumnName;
+            cbbLoaiPhong.ValueMember = dt.Columns[0].ColumnName;
+            cbbLoaiPhong.DataSource = dt;
+            cbbLoaiPhong.SelectedIndex = 0;
 
             //tableLayoutPanel1.ColumnCount = 
             //MessageBox.Show(text);
@@ -114,15 +114,15 @@ namespace QuanLyKhachSan
                             };*/
                             if (button.BackColor == Color.Red)
                             {
-                                btnDevideRoom.Enabled = false;
-                                btnDevideRoom.BackColor = Color.Gray;
+                                btnXacNhanPhanPhong.Enabled = false;
+                                btnXacNhanPhanPhong.BackColor = Color.Gray;
                             }
                             else if (button.BackColor == Color.Green)
                             {
                                 if (SoLuong > 0)
                                 {
-                                    btnDevideRoom.Enabled = true;
-                                    btnDevideRoom.BackColor = Color.FromArgb(255, 192, 192);
+                                    btnXacNhanPhanPhong.Enabled = true;
+                                    btnXacNhanPhanPhong.BackColor = Color.FromArgb(255, 192, 192);
                                     button.BackColor = Color.Yellow;
                                     listYellow.Add(button.Text);
                                     for (int k = 0; k < listYellow.Count; k++)
@@ -130,14 +130,14 @@ namespace QuanLyKhachSan
                                         Console.Write(listYellow[k]);
                                     }
                                     SoLuong = SoLuong - 1;
-                                    lblQuantityRoomLeft.Text = "Số lượng còn lại: " + SoLuong.ToString();
+                                    lblSoLuongConLai.Text = "Số lượng còn lại: " + SoLuong.ToString();
                                 }
 
                             }
                             else if (button.BackColor == Color.Yellow)
                             {
-                                btnDevideRoom.Enabled = true;
-                                btnDevideRoom.BackColor = Color.FromArgb(255, 192, 192);
+                                btnXacNhanPhanPhong.Enabled = true;
+                                btnXacNhanPhanPhong.BackColor = Color.FromArgb(255, 192, 192);
                                 button.BackColor = Color.Green;
                                 listYellow.Remove(button.Text);
                                 for (int k = 0; k < listYellow.Count; k++)
@@ -145,7 +145,7 @@ namespace QuanLyKhachSan
                                     Console.Write(listYellow[k]);
                                 }
                                 SoLuong = SoLuong + 1;
-                                lblQuantityRoomLeft.Text = "Số lượng còn lại: " + SoLuong.ToString();
+                                lblSoLuongConLai.Text = "Số lượng còn lại: " + SoLuong.ToString();
                             }
                         };
 
@@ -155,7 +155,7 @@ namespace QuanLyKhachSan
                 }
 
             }
-            btnDevideRoom.Click += (s, e) => {
+            btnXacNhanPhanPhong.Click += (s, e) => {
 
 
                 for (int m = 0; m < listDivided.Count; m++)
@@ -211,7 +211,7 @@ namespace QuanLyKhachSan
                     //btn.Click += btn_Click;
                     btn.FlatStyle = FlatStyle.Flat;
                     btn.FlatAppearance.BorderSize = 0;
-                    panelFloor.Controls.Add(btn);
+                    panelDanhSachPhong.Controls.Add(btn);
                     oldBtn = btn;
                     Matrix[i].Add(btn);
                     //buttonList.Add(btn);
@@ -248,7 +248,7 @@ namespace QuanLyKhachSan
                 sqlConnection.Open();
 
             }
-            if (cbbRoomType.SelectedIndex != -1)
+            if (cbbLoaiPhong.SelectedIndex != -1)
             {
                 for (int k = 0; k < listYellow.Count; k++)
                 {
@@ -268,7 +268,7 @@ namespace QuanLyKhachSan
                     }
 
                 }
-                string temp = cbbRoomType.SelectedValue.ToString();
+                string temp = cbbLoaiPhong.SelectedValue.ToString();
 
                 Console.WriteLine(temp);
                 SqlCommand cmd = new SqlCommand("SELECT SoPhong from PHONG JOIN LOAIPHONG on PHONG.MaLoaiPhong = LOAIPHONG.MaLoaiPhong where TenLoaiPhong = N'" + temp + "' and SoPhong not in (SELECT SoPhong FROM THONGTINDATPHONG JOIN PHIEUDATPHONG ON THONGTINDATPHONG.MaPhieuDat =  PHIEUDATPHONG.MaPhieuDat and ((PHIEUDATPHONG.NgayDen <='" + ngayDen + "' AND PHIEUDATPHONG.NgayDi >= '" + ngayDen + "') OR (PHIEUDATPHONG.NgayDen <='" + ngayDi + "' AND PHIEUDATPHONG.NgayDi >= '" + ngayDi + "')))", sqlConnection);
@@ -306,7 +306,7 @@ namespace QuanLyKhachSan
                     }
 
                 }
-                lblQuantityRoomLeft.Text = "Số lượng còn lại: " + SoLuong.ToString();
+                lblSoLuongConLai.Text = "Số lượng còn lại: " + SoLuong.ToString();
                 for (int i = 0; i < 9; i++)
                 {
                     for (int j = 0; j < 8; j++)

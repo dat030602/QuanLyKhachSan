@@ -64,14 +64,14 @@ namespace QuanLyKhachSan
                 SqlDataReader reader = cmd.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(reader);
-                tableGrid.DataSource = dt;
+                dataGridPDP.DataSource = dt;
             }
-            tableGrid.RowHeaderMouseDoubleClick += (s, e) =>
+            dataGridPDP.RowHeaderMouseDoubleClick += (s, e) =>
             {
-                foreach (DataGridViewRow r in tableGrid.SelectedRows)
+                foreach (DataGridViewRow r in dataGridPDP.SelectedRows)
                 {
-                    string maPDP = (tableGrid[0, r.Index].Value.ToString());
-                    string maKH = (tableGrid[1, r.Index].Value.ToString());
+                    string maPDP = (dataGridPDP[0, r.Index].Value.ToString());
+                    string maKH = (dataGridPDP[1, r.Index].Value.ToString());
              
                     this.Hide();
                     fRevervationTicket form = new fRevervationTicket(maPDP, maKH, true);
@@ -92,18 +92,18 @@ namespace QuanLyKhachSan
             tableGrid.Rows.Add(4, "PDP2023", "KH003", "21/4/2023", "30/4/2023");
             tableGrid.Rows.Add(6, "PDP2023", "KH003", "21/4/2023", "30/4/2023");*/
             loadDataGrid(conn);
-            if (tableGrid.SelectedRows.Count <= 0)
+            if (dataGridPDP.SelectedRows.Count <= 0)
             {
-                btn_submit.Enabled = false;
+                btnPhanPhong.Enabled = false;
             }
             else
             {
-                foreach (DataGridViewRow r in tableGrid.SelectedRows)
+                foreach (DataGridViewRow r in dataGridPDP.SelectedRows)
                 {
-                    btn_submit.Enabled = true;
+                    btnPhanPhong.Enabled = true;
                 }
             }
-            tableGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dataGridPDP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
         private void btnAddReservationTicker_Click(object sender, EventArgs e)
         {
@@ -175,8 +175,8 @@ namespace QuanLyKhachSan
 
         private void tableGrid_DoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string maPDH = tableGrid[1, rowIndex: e.RowIndex].Value.ToString();
-            string maKH = tableGrid[2, rowIndex: e.RowIndex].Value.ToString();
+            string maPDH = dataGridPDP[1, rowIndex: e.RowIndex].Value.ToString();
+            string maKH = dataGridPDP[2, rowIndex: e.RowIndex].Value.ToString();
             this.Hide();
             fRevervationTicket form = new fRevervationTicket(maPDH, maKH);
             form.ShowDialog();
@@ -184,13 +184,13 @@ namespace QuanLyKhachSan
         }
         private void btn_submit_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow r in tableGrid.SelectedRows)
+            foreach (DataGridViewRow r in dataGridPDP.SelectedRows)
             {
-                string maPDP = (tableGrid[0, r.Index].Value.ToString());
-                string maKH = (tableGrid[1, r.Index].Value.ToString());
+                string maPDP = (dataGridPDP[0, r.Index].Value.ToString());
+                string maKH = (dataGridPDP[1, r.Index].Value.ToString());
                 //string ngayDat = (tableGrid[2, r.Index].Value.ToString());
-                string ngayDen = (tableGrid[3, r.Index].Value.ToString());
-                string ngayDi = (tableGrid[4, r.Index].Value.ToString());
+                string ngayDen = (dataGridPDP[3, r.Index].Value.ToString());
+                string ngayDi = (dataGridPDP[4, r.Index].Value.ToString());
                 //string tongTien = (tableGrid[5, r.Index].Value.ToString());
                 this.Hide();
                 fDevideRoom f = new fDevideRoom(maPDP, ngayDen, ngayDi);
