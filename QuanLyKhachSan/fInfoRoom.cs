@@ -141,5 +141,10 @@ namespace QuanLyKhachSan
             form.ShowDialog();
             this.Close();
         }
+
+        private void fInfoRoom_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

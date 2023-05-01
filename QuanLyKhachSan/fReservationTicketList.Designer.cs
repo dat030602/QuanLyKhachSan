@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btn_submit = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -45,7 +45,6 @@
             this.btn_link_dichvucungcap = new System.Windows.Forms.Button();
             this.btn_link_sanphan_dichvu = new System.Windows.Forms.Button();
             this.btn_link_thongtinphong = new System.Windows.Forms.Button();
-            this.btn_link_khachhangchodat = new System.Windows.Forms.Button();
             this.btn_link_datphong = new System.Windows.Forms.Button();
             this.btn_link_khachhang = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -93,9 +92,9 @@
             // 
             // tableGrid
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tableGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tableGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.tableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tableGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.tableGrid.ColumnHeadersHeight = 32;
@@ -104,14 +103,14 @@
             this.tableGrid.MultiSelect = false;
             this.tableGrid.Name = "tableGrid";
             this.tableGrid.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.tableGrid.RowTemplate.Height = 32;
             this.tableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableGrid.Size = new System.Drawing.Size(909, 529);
@@ -164,7 +163,6 @@
             this.panel2.Controls.Add(this.btn_link_dichvucungcap);
             this.panel2.Controls.Add(this.btn_link_sanphan_dichvu);
             this.panel2.Controls.Add(this.btn_link_thongtinphong);
-            this.panel2.Controls.Add(this.btn_link_khachhangchodat);
             this.panel2.Controls.Add(this.btn_link_datphong);
             this.panel2.Controls.Add(this.btn_link_khachhang);
             this.panel2.Controls.Add(this.panel11);
@@ -185,13 +183,14 @@
             this.btn_link_vanchuyenhanhly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_vanchuyenhanhly.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_vanchuyenhanhly.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_vanchuyenhanhly.Location = new System.Drawing.Point(11, 605);
+            this.btn_link_vanchuyenhanhly.Location = new System.Drawing.Point(13, 547);
             this.btn_link_vanchuyenhanhly.Name = "btn_link_vanchuyenhanhly";
             this.btn_link_vanchuyenhanhly.Size = new System.Drawing.Size(244, 52);
             this.btn_link_vanchuyenhanhly.TabIndex = 19;
             this.btn_link_vanchuyenhanhly.Text = "Vận chuyển hành lý";
             this.btn_link_vanchuyenhanhly.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_vanchuyenhanhly.UseVisualStyleBackColor = false;
+            this.btn_link_vanchuyenhanhly.Click += new System.EventHandler(this.btn_link_vanchuyenhanhly_Click);
             // 
             // btn_link_kiemtraminibar
             // 
@@ -203,7 +202,7 @@
             this.btn_link_kiemtraminibar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_kiemtraminibar.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_kiemtraminibar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_kiemtraminibar.Location = new System.Drawing.Point(11, 547);
+            this.btn_link_kiemtraminibar.Location = new System.Drawing.Point(13, 489);
             this.btn_link_kiemtraminibar.Name = "btn_link_kiemtraminibar";
             this.btn_link_kiemtraminibar.Size = new System.Drawing.Size(244, 52);
             this.btn_link_kiemtraminibar.TabIndex = 18;
@@ -222,7 +221,7 @@
             this.btn_link_kiemtraphong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_kiemtraphong.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_kiemtraphong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_kiemtraphong.Location = new System.Drawing.Point(11, 489);
+            this.btn_link_kiemtraphong.Location = new System.Drawing.Point(13, 431);
             this.btn_link_kiemtraphong.Name = "btn_link_kiemtraphong";
             this.btn_link_kiemtraphong.Size = new System.Drawing.Size(244, 52);
             this.btn_link_kiemtraphong.TabIndex = 17;
@@ -241,7 +240,7 @@
             this.btn_link_tour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_tour.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_tour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_tour.Location = new System.Drawing.Point(11, 431);
+            this.btn_link_tour.Location = new System.Drawing.Point(13, 373);
             this.btn_link_tour.Name = "btn_link_tour";
             this.btn_link_tour.Size = new System.Drawing.Size(244, 52);
             this.btn_link_tour.TabIndex = 16;
@@ -260,7 +259,7 @@
             this.btn_link_dichvucungcap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_dichvucungcap.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_dichvucungcap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_dichvucungcap.Location = new System.Drawing.Point(11, 373);
+            this.btn_link_dichvucungcap.Location = new System.Drawing.Point(13, 315);
             this.btn_link_dichvucungcap.Name = "btn_link_dichvucungcap";
             this.btn_link_dichvucungcap.Size = new System.Drawing.Size(244, 52);
             this.btn_link_dichvucungcap.TabIndex = 15;
@@ -279,7 +278,7 @@
             this.btn_link_sanphan_dichvu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_sanphan_dichvu.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_sanphan_dichvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_sanphan_dichvu.Location = new System.Drawing.Point(11, 315);
+            this.btn_link_sanphan_dichvu.Location = new System.Drawing.Point(13, 257);
             this.btn_link_sanphan_dichvu.Name = "btn_link_sanphan_dichvu";
             this.btn_link_sanphan_dichvu.Size = new System.Drawing.Size(244, 52);
             this.btn_link_sanphan_dichvu.TabIndex = 14;
@@ -297,7 +296,7 @@
             this.btn_link_thongtinphong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_thongtinphong.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_thongtinphong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_thongtinphong.Location = new System.Drawing.Point(11, 257);
+            this.btn_link_thongtinphong.Location = new System.Drawing.Point(13, 199);
             this.btn_link_thongtinphong.Name = "btn_link_thongtinphong";
             this.btn_link_thongtinphong.Size = new System.Drawing.Size(244, 52);
             this.btn_link_thongtinphong.TabIndex = 13;
@@ -305,25 +304,6 @@
             this.btn_link_thongtinphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_thongtinphong.UseVisualStyleBackColor = false;
             this.btn_link_thongtinphong.Click += new System.EventHandler(this.btn_link_thongtinphong_Click);
-            // 
-            // btn_link_khachhangchodat
-            // 
-            this.btn_link_khachhangchodat.BackColor = System.Drawing.Color.Transparent;
-            this.btn_link_khachhangchodat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_link_khachhangchodat.FlatAppearance.BorderSize = 0;
-            this.btn_link_khachhangchodat.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btn_link_khachhangchodat.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_link_khachhangchodat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_link_khachhangchodat.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_link_khachhangchodat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_khachhangchodat.Location = new System.Drawing.Point(11, 199);
-            this.btn_link_khachhangchodat.Name = "btn_link_khachhangchodat";
-            this.btn_link_khachhangchodat.Size = new System.Drawing.Size(244, 52);
-            this.btn_link_khachhangchodat.TabIndex = 12;
-            this.btn_link_khachhangchodat.Text = "Khách hàng chờ đặt";
-            this.btn_link_khachhangchodat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_link_khachhangchodat.UseVisualStyleBackColor = false;
-            this.btn_link_khachhangchodat.Click += new System.EventHandler(this.btn_link_khachhangchodat_Click);
             // 
             // btn_link_datphong
             // 
@@ -386,7 +366,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Trang chủ";
             // 
-            // fReservationTickerList
+            // fReservationTicketList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -394,7 +374,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel13);
-            this.Name = "fReservationTickerList";
+            this.Name = "fReservationTicketList";
             this.Text = "fReservationTickerList";
             this.Load += new System.EventHandler(this.fReservationTickerList_Load);
             this.panel13.ResumeLayout(false);
@@ -423,7 +403,6 @@
         private Button btn_link_dichvucungcap;
         private Button btn_link_sanphan_dichvu;
         private Button btn_link_thongtinphong;
-        private Button btn_link_khachhangchodat;
         private Button btn_link_datphong;
         private Button btn_link_khachhang;
         private Panel panel11;

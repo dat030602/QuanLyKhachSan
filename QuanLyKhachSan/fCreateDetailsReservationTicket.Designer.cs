@@ -45,7 +45,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_submit = new System.Windows.Forms.Button();
+            this.btn_HoanTat = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
@@ -233,19 +233,19 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Giới tính";
             // 
-            // btn_submit
+            // btn_HoanTat
             // 
-            this.btn_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
-            this.btn_submit.FlatAppearance.BorderSize = 0;
-            this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_submit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_submit.Location = new System.Drawing.Point(1060, 6);
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(130, 48);
-            this.btn_submit.TabIndex = 9;
-            this.btn_submit.Text = "Hoàn tất";
-            this.btn_submit.UseVisualStyleBackColor = false;
-            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+            this.btn_HoanTat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
+            this.btn_HoanTat.FlatAppearance.BorderSize = 0;
+            this.btn_HoanTat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoanTat.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_HoanTat.Location = new System.Drawing.Point(1060, 6);
+            this.btn_HoanTat.Name = "btn_HoanTat";
+            this.btn_HoanTat.Size = new System.Drawing.Size(130, 48);
+            this.btn_HoanTat.TabIndex = 9;
+            this.btn_HoanTat.Text = "Hoàn tất";
+            this.btn_HoanTat.UseVisualStyleBackColor = false;
+            this.btn_HoanTat.Click += new System.EventHandler(this.btn_HoanTat_Click);
             // 
             // label5
             // 
@@ -262,7 +262,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btn_back);
-            this.panel3.Controls.Add(this.btn_submit);
+            this.panel3.Controls.Add(this.btn_HoanTat);
             this.panel3.Location = new System.Drawing.Point(11, 611);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1243, 60);
@@ -420,7 +420,7 @@
         private Label label15;
         private Label label8;
         private Label label6;
-        private Button btn_submit;
+        private Button btn_HoanTat;
         private Label label5;
         private Panel panel3;
         private Button btn_back;

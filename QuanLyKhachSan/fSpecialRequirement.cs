@@ -54,16 +54,16 @@ namespace QuanLyKhachSan
             this.Close();
         }
 
-        private void btn_submit_Click(object sender, EventArgs e)
+        private void btn_HoanTat_Click(object sender, EventArgs e)
         {
-            if (textRequired.Text != "")
+            if (textNoidung.Text != "")
             {
                 if (MessageBox.Show("Bạn có chắc chắn với lựa chọn của mình chưa?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     ExecuteSql("INSERT INTO dbo.PHIEUYEUCAU(MaKH, NoiDung) VALUES ('" + maKh + "',N'" +
-                        textRequired.Text + "')");
+                        textNoidung.Text + "')");
                     isCreateRequired = true;
-                    textRequired.Text = "";
+                    textNoidung.Text = "";
                     this.Close();
                 }
                 else
@@ -73,6 +73,5 @@ namespace QuanLyKhachSan
                 MessageBox.Show("Bạn chưa nhập thông tin nào cả", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
-
     }
 }

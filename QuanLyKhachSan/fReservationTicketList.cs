@@ -198,5 +198,10 @@ namespace QuanLyKhachSan
                 this.Show();
             }
         }
+
+        private void btn_link_vanchuyenhanhly_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

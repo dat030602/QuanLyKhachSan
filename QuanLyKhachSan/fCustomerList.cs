@@ -109,7 +109,7 @@ namespace QuanLyKhachSan
             this.Close();
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
+        private void btn_them_Click(object sender, EventArgs e)
         {
             this.Hide();
             fCreateCustomer form = new fCreateCustomer();
@@ -126,7 +126,7 @@ namespace QuanLyKhachSan
             }
         }
 
-        private void btn_submit_Click(object sender, EventArgs e)
+        private void btn_LapPhieu_Click(object sender, EventArgs e)
         {
             if (maKH != "")
             {

@@ -40,11 +40,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.textRequired = new System.Windows.Forms.TextBox();
+            this.textNoidung = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
-            this.btn_submit = new System.Windows.Forms.Button();
+            this.btn_HoanTat = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -170,7 +170,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.textRequired);
+            this.panel1.Controls.Add(this.textNoidung);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label6);
@@ -193,14 +193,14 @@
             this.label16.TabIndex = 23;
             this.label16.Text = "Yêu cầu đặc biệt:";
             // 
-            // textRequired
+            // textNoidung
             // 
-            this.textRequired.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textRequired.Location = new System.Drawing.Point(203, 88);
-            this.textRequired.Multiline = true;
-            this.textRequired.Name = "textRequired";
-            this.textRequired.Size = new System.Drawing.Size(975, 407);
-            this.textRequired.TabIndex = 22;
+            this.textNoidung.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textNoidung.Location = new System.Drawing.Point(203, 88);
+            this.textNoidung.Multiline = true;
+            this.textNoidung.Name = "textNoidung";
+            this.textNoidung.Size = new System.Drawing.Size(975, 407);
+            this.textNoidung.TabIndex = 22;
             // 
             // label21
             // 
@@ -217,7 +217,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btn_back);
-            this.panel3.Controls.Add(this.btn_submit);
+            this.panel3.Controls.Add(this.btn_HoanTat);
             this.panel3.Location = new System.Drawing.Point(12, 614);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1243, 60);
@@ -237,19 +237,19 @@
             this.btn_back.UseVisualStyleBackColor = false;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // btn_submit
+            // btn_HoanTat
             // 
-            this.btn_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
-            this.btn_submit.FlatAppearance.BorderSize = 0;
-            this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_submit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_submit.Location = new System.Drawing.Point(1060, 6);
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(130, 48);
-            this.btn_submit.TabIndex = 9;
-            this.btn_submit.Text = "Lưu";
-            this.btn_submit.UseVisualStyleBackColor = false;
-            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+            this.btn_HoanTat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
+            this.btn_HoanTat.FlatAppearance.BorderSize = 0;
+            this.btn_HoanTat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoanTat.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_HoanTat.Location = new System.Drawing.Point(1060, 6);
+            this.btn_HoanTat.Name = "btn_HoanTat";
+            this.btn_HoanTat.Size = new System.Drawing.Size(130, 48);
+            this.btn_HoanTat.TabIndex = 9;
+            this.btn_HoanTat.Text = "Lưu";
+            this.btn_HoanTat.UseVisualStyleBackColor = false;
+            this.btn_HoanTat.Click += new System.EventHandler(this.btn_HoanTat_Click);
             // 
             // fSpecialRequirement
             // 
@@ -283,10 +283,10 @@
         private Label label13;
         private Label label21;
         private Label label16;
-        private TextBox textRequired;
+        private TextBox textNoidung;
         private Panel panel3;
         private Button btn_back;
-        private Button btn_submit;
+        private Button btn_HoanTat;
         private Label maphieu;
         private Label label1;
     }

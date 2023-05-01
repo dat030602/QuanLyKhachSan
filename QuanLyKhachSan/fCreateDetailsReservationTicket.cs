@@ -132,7 +132,7 @@ namespace QuanLyKhachSan
                 MessageBox.Show("Chưa chọn loại phòng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void btn_submit_Click(object sender, EventArgs e)
+        private void btn_HoanTat_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn với lựa chọn của mình chưa?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
