@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel14 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.InputText = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.tableGrid = new System.Windows.Forms.DataGridView();
-            this.MaDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_link_vanchuyenhanhly = new System.Windows.Forms.Button();
@@ -109,64 +101,15 @@
             // 
             // tableGrid
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tableGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tableGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tableGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tableGrid.ColumnHeadersHeight = 32;
-            this.tableGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaDichVu,
-            this.TenDichVu,
-            this.LoaiPhong});
-            this.tableGrid.Location = new System.Drawing.Point(157, 7);
-            this.tableGrid.Margin = new System.Windows.Forms.Padding(0);
-            this.tableGrid.MultiSelect = false;
+            this.tableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            this.tableGrid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.tableGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableGrid.Location = new System.Drawing.Point(179, 75);
             this.tableGrid.Name = "tableGrid";
-            this.tableGrid.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.tableGrid.RowTemplate.Height = 32;
-            this.tableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableGrid.Size = new System.Drawing.Size(613, 529);
-            this.tableGrid.TabIndex = 1;
-            this.tableGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableGrid_Rows_Click);
-            // 
-            // MaDichVu
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MaDichVu.DefaultCellStyle = dataGridViewCellStyle2;
-            this.MaDichVu.HeaderText = "Mã dịch vụ";
-            this.MaDichVu.Name = "MaDichVu";
-            this.MaDichVu.ReadOnly = true;
-            // 
-            // TenDichVu
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TenDichVu.DefaultCellStyle = dataGridViewCellStyle3;
-            this.TenDichVu.HeaderText = "Tên dịch vụ";
-            this.TenDichVu.Name = "TenDichVu";
-            this.TenDichVu.ReadOnly = true;
-            // 
-            // LoaiPhong
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Inter", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LoaiPhong.DefaultCellStyle = dataGridViewCellStyle4;
-            this.LoaiPhong.HeaderText = "Loại phòng";
-            this.LoaiPhong.Name = "LoaiPhong";
-            this.LoaiPhong.ReadOnly = true;
+            this.tableGrid.RowTemplate.Height = 25;
+            this.tableGrid.Size = new System.Drawing.Size(455, 290);
+            this.tableGrid.TabIndex = 0;
             // 
             // panel13
             // 
@@ -402,6 +345,7 @@
             this.Controls.Add(this.panel13);
             this.Name = "fServiceProvided";
             this.Text = "fServiceProduct";
+            this.Load += new System.EventHandler(this.fServiceProvided_Load);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel16.ResumeLayout(false);
@@ -417,7 +361,6 @@
         private Panel panel14;
         private Panel panel16;
         private Panel panel13;
-        private DataGridView tableGrid;
         private Button button12;
         private TextBox InputText;
         private Panel panel2;
@@ -433,8 +376,6 @@
         private Panel panel11;
         private Panel panel1;
         private Label label1;
-        private DataGridViewTextBoxColumn MaDichVu;
-        private DataGridViewTextBoxColumn TenDichVu;
-        private DataGridViewTextBoxColumn LoaiPhong;
+        private DataGridView tableGrid;
     }
 }

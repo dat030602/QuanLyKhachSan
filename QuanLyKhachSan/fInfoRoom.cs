@@ -19,8 +19,10 @@ namespace QuanLyKhachSan
         public fInfoRoom()
         {
             InitializeComponent();
+
         }
-        SqlConnection con = new SqlConnection(DataConnection.sqlConn);
+        private string sqlConn = DataConnection.sqlConn;
+        private SqlConnection con = DataConnection.conn;
         private static ArrayList ListFirstname = new ArrayList();
         private static ArrayList ListLastname = new ArrayList();
         private static ArrayList ListTelephone = new ArrayList();
@@ -144,6 +146,18 @@ namespace QuanLyKhachSan
 
         private void fInfoRoom_Load_1(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+            if (con == null)
+            {
+                con = new SqlConnection(sqlConn);
+            }
+            if (con.State != ConnectionState.Open)
+            {
+                con.Open();
+
+            }
+>>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
 
         }
     }

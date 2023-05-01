@@ -29,7 +29,7 @@ namespace QuanLyKhachSan
                 conn.Open();
 
             }
-            this.tableGrid.DefaultCellStyle.Font = new Font("Tahoma", 15);
+            this.dataGridViewCTPDP.DefaultCellStyle.Font = new Font("Tahoma", 15);
 
         }
         public fDetailsRevervationTicket(string Message) : this()
@@ -43,7 +43,7 @@ namespace QuanLyKhachSan
                 DataTable dt = new DataTable();
                 dt.Load(reader);
                
-                tableGrid.DataSource = dt;
+                dataGridViewCTPDP.DataSource = dt;
                
             }
         }

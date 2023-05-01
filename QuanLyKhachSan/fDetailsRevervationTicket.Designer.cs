@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tableGrid = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCTPDP = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.btn_back = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTPDP)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,7 +151,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.tableGrid);
+            this.panel1.Controls.Add(this.dataGridViewCTPDP);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label8);
@@ -162,16 +162,16 @@
             this.panel1.Size = new System.Drawing.Size(1243, 499);
             this.panel1.TabIndex = 9;
             // 
-            // tableGrid
+            // dataGridViewCTPDP
             // 
-            this.tableGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tableGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableGrid.Location = new System.Drawing.Point(228, 50);
-            this.tableGrid.Name = "tableGrid";
-            this.tableGrid.RowTemplate.Height = 25;
-            this.tableGrid.Size = new System.Drawing.Size(624, 307);
-            this.tableGrid.TabIndex = 48;
+            this.dataGridViewCTPDP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCTPDP.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewCTPDP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCTPDP.Location = new System.Drawing.Point(228, 50);
+            this.dataGridViewCTPDP.Name = "dataGridViewCTPDP";
+            this.dataGridViewCTPDP.RowTemplate.Height = 25;
+            this.dataGridViewCTPDP.Size = new System.Drawing.Size(624, 307);
+            this.dataGridViewCTPDP.TabIndex = 48;
             // 
             // label7
             // 
@@ -271,7 +271,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTPDP)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -295,6 +295,6 @@
         private Label label12;
         private Panel panel3;
         private Button btn_back;
-        private DataGridView tableGrid;
+        private DataGridView dataGridViewCTPDP;
     }
 }

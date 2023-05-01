@@ -200,6 +200,7 @@
             button_complete.TabIndex = 46;
             button_complete.Text = "Hoàn thành";
             button_complete.UseVisualStyleBackColor = false;
+            button_complete.Click += button_complete_Click;
             // 
             // fRegisteredTours
             // 

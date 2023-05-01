@@ -58,12 +58,19 @@
             this.btn_link_dichvucungcap = new System.Windows.Forms.Button();
             this.btn_link_sanphan_dichvu = new System.Windows.Forms.Button();
             this.btn_link_thongtinphong = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+=======
+            this.btn_link_khachhangchodat = new System.Windows.Forms.Button();
+>>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             this.btn_link_datphong = new System.Windows.Forms.Button();
             this.btn_link_khachhang = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.btn_link_khachhangchodat = new System.Windows.Forms.Button();
+=======
+>>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             this.panel17.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -446,6 +453,27 @@
             this.btn_link_thongtinphong.Text = "Thông tin phòng";
             this.btn_link_thongtinphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_thongtinphong.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
+=======
+            // 
+            // btn_link_khachhangchodat
+            // 
+            this.btn_link_khachhangchodat.BackColor = System.Drawing.Color.Transparent;
+            this.btn_link_khachhangchodat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_link_khachhangchodat.FlatAppearance.BorderSize = 0;
+            this.btn_link_khachhangchodat.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btn_link_khachhangchodat.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_link_khachhangchodat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_link_khachhangchodat.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_link_khachhangchodat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_link_khachhangchodat.Location = new System.Drawing.Point(11, 199);
+            this.btn_link_khachhangchodat.Name = "btn_link_khachhangchodat";
+            this.btn_link_khachhangchodat.Size = new System.Drawing.Size(244, 52);
+            this.btn_link_khachhangchodat.TabIndex = 12;
+            this.btn_link_khachhangchodat.Text = "Khách hàng chờ đặt";
+            this.btn_link_khachhangchodat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_link_khachhangchodat.UseVisualStyleBackColor = false;
+>>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             // 
             // btn_link_datphong
             // 
@@ -507,6 +535,7 @@
             this.label1.Size = new System.Drawing.Size(152, 47);
             this.label1.TabIndex = 2;
             this.label1.Text = "Trang chủ";
+<<<<<<< HEAD
             // 
             // btn_link_khachhangchodat
             // 
@@ -525,17 +554,27 @@
             this.btn_link_khachhangchodat.Text = "Khách hàng chờ đặt";
             this.btn_link_khachhangchodat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_khachhangchodat.UseVisualStyleBackColor = false;
+=======
+>>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             // 
             // fInfoRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.R;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1199, 562);
+=======
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+>>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel13);
             this.Name = "fInfoRoom";
             this.Text = "fInfoRoom";
+<<<<<<< HEAD
+=======
+            this.Load += new System.EventHandler(this.fInfoRoom_Load_1);
+>>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel13.ResumeLayout(false);

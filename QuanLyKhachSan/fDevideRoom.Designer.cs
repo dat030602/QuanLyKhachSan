@@ -30,15 +30,15 @@
 
         {
             this.panel13 = new System.Windows.Forms.Panel();
-            this.btnBackToReversationList = new System.Windows.Forms.Button();
-            this.btnDevideRoom = new System.Windows.Forms.Button();
+            this.btnQuayLai = new System.Windows.Forms.Button();
+            this.btnXacNhanPhanPhong = new System.Windows.Forms.Button();
             this.panelButtonList = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelFloor = new System.Windows.Forms.Panel();
+            this.panelDanhSachPhong = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.cbbRoomType = new System.Windows.Forms.ComboBox();
-            this.lblQuantityRoomLeft = new System.Windows.Forms.Label();
-            this.lblReservationTicker = new System.Windows.Forms.Label();
+            this.cbbLoaiPhong = new System.Windows.Forms.ComboBox();
+            this.lblSoLuongConLai = new System.Windows.Forms.Label();
+            this.lblMaPhieuDat = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -62,8 +62,8 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.Transparent;
-            this.panel13.Controls.Add(this.btnBackToReversationList);
-            this.panel13.Controls.Add(this.btnDevideRoom);
+            this.panel13.Controls.Add(this.btnQuayLai);
+            this.panel13.Controls.Add(this.btnXacNhanPhanPhong);
             this.panel13.Controls.Add(this.panelButtonList);
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Location = new System.Drawing.Point(277, 1);
@@ -71,38 +71,38 @@
             this.panel13.Size = new System.Drawing.Size(986, 678);
             this.panel13.TabIndex = 4;
             // 
-            // btnBackToReversationList
+            // btnQuayLai
             // 
-            this.btnBackToReversationList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnBackToReversationList.FlatAppearance.BorderSize = 0;
-            this.btnBackToReversationList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackToReversationList.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBackToReversationList.Location = new System.Drawing.Point(99, 615);
-            this.btnBackToReversationList.Name = "btnBackToReversationList";
-            this.btnBackToReversationList.Size = new System.Drawing.Size(123, 56);
-            this.btnBackToReversationList.TabIndex = 4;
-            this.btnBackToReversationList.Text = "Quay lại";
-            this.btnBackToReversationList.UseVisualStyleBackColor = false;
-            this.btnBackToReversationList.Click += new System.EventHandler(this.btnBackToReversationList_Click);
+            this.btnQuayLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnQuayLai.FlatAppearance.BorderSize = 0;
+            this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuayLai.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnQuayLai.Location = new System.Drawing.Point(99, 615);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(123, 56);
+            this.btnQuayLai.TabIndex = 4;
+            this.btnQuayLai.Text = "Quay lại";
+            this.btnQuayLai.UseVisualStyleBackColor = false;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnBackToReversationList_Click);
             // 
-            // btnDevideRoom
+            // btnXacNhanPhanPhong
             // 
-            this.btnDevideRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDevideRoom.FlatAppearance.BorderSize = 0;
-            this.btnDevideRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDevideRoom.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDevideRoom.Location = new System.Drawing.Point(826, 615);
-            this.btnDevideRoom.Name = "btnDevideRoom";
-            this.btnDevideRoom.Size = new System.Drawing.Size(123, 56);
-            this.btnDevideRoom.TabIndex = 3;
-            this.btnDevideRoom.Text = "Phân phòng";
-            this.btnDevideRoom.UseVisualStyleBackColor = false;
-            this.btnDevideRoom.Click += new System.EventHandler(this.btnDevideRoom_Click);
+            this.btnXacNhanPhanPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnXacNhanPhanPhong.FlatAppearance.BorderSize = 0;
+            this.btnXacNhanPhanPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXacNhanPhanPhong.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnXacNhanPhanPhong.Location = new System.Drawing.Point(826, 615);
+            this.btnXacNhanPhanPhong.Name = "btnXacNhanPhanPhong";
+            this.btnXacNhanPhanPhong.Size = new System.Drawing.Size(123, 56);
+            this.btnXacNhanPhanPhong.TabIndex = 3;
+            this.btnXacNhanPhanPhong.Text = "Phân phòng";
+            this.btnXacNhanPhanPhong.UseVisualStyleBackColor = false;
+            this.btnXacNhanPhanPhong.Click += new System.EventHandler(this.btnDevideRoom_Click);
             // 
             // panelButtonList
             // 
             this.panelButtonList.Controls.Add(this.panel4);
-            this.panelButtonList.Controls.Add(this.panelFloor);
+            this.panelButtonList.Controls.Add(this.panelDanhSachPhong);
             this.panelButtonList.Location = new System.Drawing.Point(3, 109);
             this.panelButtonList.Name = "panelButtonList";
             this.panelButtonList.Size = new System.Drawing.Size(980, 500);
@@ -115,54 +115,54 @@
             this.panel4.Size = new System.Drawing.Size(104, 442);
             this.panel4.TabIndex = 1;
             // 
-            // panelFloor
+            // panelDanhSachPhong
             // 
-            this.panelFloor.Location = new System.Drawing.Point(235, 33);
-            this.panelFloor.Name = "panelFloor";
-            this.panelFloor.Size = new System.Drawing.Size(686, 442);
-            this.panelFloor.TabIndex = 0;
+            this.panelDanhSachPhong.Location = new System.Drawing.Point(235, 33);
+            this.panelDanhSachPhong.Name = "panelDanhSachPhong";
+            this.panelDanhSachPhong.Size = new System.Drawing.Size(686, 442);
+            this.panelDanhSachPhong.TabIndex = 0;
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.cbbRoomType);
-            this.panel14.Controls.Add(this.lblQuantityRoomLeft);
-            this.panel14.Controls.Add(this.lblReservationTicker);
+            this.panel14.Controls.Add(this.cbbLoaiPhong);
+            this.panel14.Controls.Add(this.lblSoLuongConLai);
+            this.panel14.Controls.Add(this.lblMaPhieuDat);
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(980, 100);
             this.panel14.TabIndex = 0;
             // 
-            // cbbRoomType
+            // cbbLoaiPhong
             // 
-            this.cbbRoomType.FormattingEnabled = true;
-            this.cbbRoomType.Location = new System.Drawing.Point(673, 36);
-            this.cbbRoomType.Name = "cbbRoomType";
-            this.cbbRoomType.Size = new System.Drawing.Size(200, 23);
-            this.cbbRoomType.TabIndex = 7;
-            this.cbbRoomType.SelectedIndexChanged += new System.EventHandler(this.cbbRoomType_SelectedIndexChanged);
+            this.cbbLoaiPhong.FormattingEnabled = true;
+            this.cbbLoaiPhong.Location = new System.Drawing.Point(673, 36);
+            this.cbbLoaiPhong.Name = "cbbLoaiPhong";
+            this.cbbLoaiPhong.Size = new System.Drawing.Size(200, 23);
+            this.cbbLoaiPhong.TabIndex = 7;
+            this.cbbLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cbbRoomType_SelectedIndexChanged);
             // 
-            // lblQuantityRoomLeft
+            // lblSoLuongConLai
             // 
-            this.lblQuantityRoomLeft.AutoSize = true;
-            this.lblQuantityRoomLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lblQuantityRoomLeft.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblQuantityRoomLeft.Location = new System.Drawing.Point(356, 33);
-            this.lblQuantityRoomLeft.Name = "lblQuantityRoomLeft";
-            this.lblQuantityRoomLeft.Size = new System.Drawing.Size(158, 28);
-            this.lblQuantityRoomLeft.TabIndex = 6;
-            this.lblQuantityRoomLeft.Text = "Số lượng còn lại:";
+            this.lblSoLuongConLai.AutoSize = true;
+            this.lblSoLuongConLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblSoLuongConLai.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSoLuongConLai.Location = new System.Drawing.Point(356, 33);
+            this.lblSoLuongConLai.Name = "lblSoLuongConLai";
+            this.lblSoLuongConLai.Size = new System.Drawing.Size(158, 28);
+            this.lblSoLuongConLai.TabIndex = 6;
+            this.lblSoLuongConLai.Text = "Số lượng còn lại:";
             // 
-            // lblReservationTicker
+            // lblMaPhieuDat
             // 
-            this.lblReservationTicker.AutoSize = true;
-            this.lblReservationTicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lblReservationTicker.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblReservationTicker.Location = new System.Drawing.Point(201, 33);
-            this.lblReservationTicker.Name = "lblReservationTicker";
-            this.lblReservationTicker.Size = new System.Drawing.Size(74, 28);
-            this.lblReservationTicker.TabIndex = 5;
-            this.lblReservationTicker.Text = "Mã PĐ:";
-            this.lblReservationTicker.Click += new System.EventHandler(this.label11_Click);
+            this.lblMaPhieuDat.AutoSize = true;
+            this.lblMaPhieuDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblMaPhieuDat.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMaPhieuDat.Location = new System.Drawing.Point(201, 33);
+            this.lblMaPhieuDat.Name = "lblMaPhieuDat";
+            this.lblMaPhieuDat.Size = new System.Drawing.Size(74, 28);
+            this.lblMaPhieuDat.TabIndex = 5;
+            this.lblMaPhieuDat.Text = "Mã PĐ:";
+            this.lblMaPhieuDat.Click += new System.EventHandler(this.label11_Click);
             // 
             // panel2
             // 
@@ -416,11 +416,11 @@
         private Panel panel13;
         private Panel panelButtonList;
         private Panel panel14;
-        private Button btnDevideRoom;
-        private Label lblReservationTicker;
-        private Label lblQuantityRoomLeft;
-        private ComboBox cbbRoomType;
-        private Button btnBackToReversationList;
+        private Button btnXacNhanPhanPhong;
+        private Label lblMaPhieuDat;
+        private Label lblSoLuongConLai;
+        private ComboBox cbbLoaiPhong;
+        private Button btnQuayLai;
         private Panel panel2;
         private Button button11;
         private Button button7;
@@ -436,6 +436,6 @@
         private Panel panel1;
         private Label label1;
         private Panel panel4;
-        private Panel panelFloor;
+        private Panel panelDanhSachPhong;
     }
 }
