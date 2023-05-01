@@ -146,8 +146,6 @@ namespace QuanLyKhachSan
 
         private void fInfoRoom_Load_1(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
             if (con == null)
             {
                 con = new SqlConnection(sqlConn);
@@ -157,7 +155,6 @@ namespace QuanLyKhachSan
                 con.Open();
 
             }
->>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
 
         }
     }

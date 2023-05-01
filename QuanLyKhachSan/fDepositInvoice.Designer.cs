@@ -51,13 +51,8 @@
             this.cbbHinhThucThanhToan = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-            this.btn_back = new System.Windows.Forms.Button();
-            this.btn_HoanTat = new System.Windows.Forms.Button();
-=======
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnXuatPhieu = new System.Windows.Forms.Button();
->>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -330,13 +325,8 @@
             // 
             // panel3
             // 
-<<<<<<< HEAD
-            this.panel3.Controls.Add(this.btn_back);
-            this.panel3.Controls.Add(this.btn_HoanTat);
-=======
             this.panel3.Controls.Add(this.btnQuayLai);
             this.panel3.Controls.Add(this.btnXuatPhieu);
->>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             this.panel3.Location = new System.Drawing.Point(12, 609);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1243, 60);
@@ -356,21 +346,6 @@
             this.btnQuayLai.UseVisualStyleBackColor = false;
             this.btnQuayLai.Click += new System.EventHandler(this.btn_back_Click);
             // 
-<<<<<<< HEAD
-            // btn_HoanTat
-            // 
-            this.btn_HoanTat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
-            this.btn_HoanTat.FlatAppearance.BorderSize = 0;
-            this.btn_HoanTat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HoanTat.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_HoanTat.Location = new System.Drawing.Point(1047, 6);
-            this.btn_HoanTat.Name = "btn_HoanTat";
-            this.btn_HoanTat.Size = new System.Drawing.Size(143, 48);
-            this.btn_HoanTat.TabIndex = 9;
-            this.btn_HoanTat.Text = "Xuất phiếu";
-            this.btn_HoanTat.UseVisualStyleBackColor = false;
-            this.btn_HoanTat.Click += new System.EventHandler(this.btn_submit_Click);
-=======
             // btnXuatPhieu
             // 
             this.btnXuatPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
@@ -384,7 +359,6 @@
             this.btnXuatPhieu.Text = "Xuất phiếu";
             this.btnXuatPhieu.UseVisualStyleBackColor = false;
             this.btnXuatPhieu.Click += new System.EventHandler(this.btn_submit_Click);
->>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             // 
             // fDepositInvoice
             // 
@@ -429,15 +403,9 @@
         private TextBox textTenKhachHang;
         private Panel panel1;
         private Panel panel3;
-<<<<<<< HEAD
-        private Button btn_back;
-        private Button btn_HoanTat;
-        private ComboBox textHinhThucThanhToan;
-=======
         private Button btnQuayLai;
         private Button btnXuatPhieu;
         private ComboBox cbbHinhThucThanhToan;
->>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
         private Label label15;
     }
 }

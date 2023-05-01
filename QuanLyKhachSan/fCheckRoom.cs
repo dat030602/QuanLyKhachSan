@@ -37,11 +37,6 @@ namespace QuanLyKhachSan
             this.Close();
         }
 
-        private void btn_link_khachhangchodat_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_link_thongtinphong_Click(object sender, EventArgs e)
         {
             this.Hide();

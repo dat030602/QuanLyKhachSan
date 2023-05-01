@@ -94,17 +94,6 @@
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-<<<<<<< HEAD
-            this.tableGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.tableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tableGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tableGrid.ColumnHeadersHeight = 32;
-            this.tableGrid.Location = new System.Drawing.Point(36, 7);
-            this.tableGrid.Margin = new System.Windows.Forms.Padding(0);
-            this.tableGrid.MultiSelect = false;
-            this.tableGrid.Name = "tableGrid";
-            this.tableGrid.ReadOnly = true;
-=======
             this.dataGridPDP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridPDP.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridPDP.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -112,9 +101,8 @@
             this.dataGridPDP.Location = new System.Drawing.Point(36, 7);
             this.dataGridPDP.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridPDP.MultiSelect = false;
-            this.dataGridPDP.Name = "dataGridPDP";
+            this.dataGridPDP.Name = "tableGrid";
             this.dataGridPDP.ReadOnly = true;
->>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -122,19 +110,11 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-<<<<<<< HEAD
-            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.tableGrid.RowTemplate.Height = 32;
-            this.tableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableGrid.Size = new System.Drawing.Size(909, 529);
-            this.tableGrid.TabIndex = 1;
-=======
             this.dataGridPDP.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridPDP.RowTemplate.Height = 32;
             this.dataGridPDP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPDP.Size = new System.Drawing.Size(909, 529);
             this.dataGridPDP.TabIndex = 1;
->>>>>>> 5cb83d9f82956ae18a932942e209ef544347e146
             // 
             // panel14
             // 

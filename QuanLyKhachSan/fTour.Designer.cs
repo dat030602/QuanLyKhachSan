@@ -184,7 +184,7 @@
             this.btn_link_vanchuyenhanhly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_vanchuyenhanhly.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_vanchuyenhanhly.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_vanchuyenhanhly.Location = new System.Drawing.Point(11, 605);
+            this.btn_link_vanchuyenhanhly.Location = new System.Drawing.Point(12, 547);
             this.btn_link_vanchuyenhanhly.Name = "btn_link_vanchuyenhanhly";
             this.btn_link_vanchuyenhanhly.Size = new System.Drawing.Size(244, 52);
             this.btn_link_vanchuyenhanhly.TabIndex = 19;
@@ -202,13 +202,14 @@
             this.btn_link_kiemtraminibar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_kiemtraminibar.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_kiemtraminibar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_kiemtraminibar.Location = new System.Drawing.Point(11, 547);
+            this.btn_link_kiemtraminibar.Location = new System.Drawing.Point(12, 489);
             this.btn_link_kiemtraminibar.Name = "btn_link_kiemtraminibar";
             this.btn_link_kiemtraminibar.Size = new System.Drawing.Size(244, 52);
             this.btn_link_kiemtraminibar.TabIndex = 18;
             this.btn_link_kiemtraminibar.Text = "Kiểm tra minibar";
             this.btn_link_kiemtraminibar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_kiemtraminibar.UseVisualStyleBackColor = false;
+            this.btn_link_kiemtraminibar.Click += new System.EventHandler(this.btn_link_kiemtraminibar_Click);
             // 
             // btn_link_kiemtraphong
             // 
@@ -227,6 +228,7 @@
             this.btn_link_kiemtraphong.Text = "Kiểm tra phòng";
             this.btn_link_kiemtraphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_kiemtraphong.UseVisualStyleBackColor = false;
+            this.btn_link_kiemtraphong.Click += new System.EventHandler(this.btn_link_kiemtraphong_Click);
             // 
             // btn_link_tour
             // 
@@ -263,6 +265,7 @@
             this.btn_link_dichvucungcap.Text = "Dịch vụ cung cấp";
             this.btn_link_dichvucungcap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_dichvucungcap.UseVisualStyleBackColor = false;
+            this.btn_link_dichvucungcap.Click += new System.EventHandler(this.btn_link_dichvucungcap_Click);
             // 
             // btn_link_sanphan_dichvu
             // 
@@ -299,6 +302,7 @@
             this.btn_link_thongtinphong.Text = "Thông tin phòng";
             this.btn_link_thongtinphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_thongtinphong.UseVisualStyleBackColor = false;
+            this.btn_link_thongtinphong.Click += new System.EventHandler(this.btn_link_thongtinphong_Click);
             // 
             // btn_link_datphong
             // 
@@ -317,6 +321,7 @@
             this.btn_link_datphong.Text = "Phiếu đặt phòng";
             this.btn_link_datphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_datphong.UseVisualStyleBackColor = false;
+            this.btn_link_datphong.Click += new System.EventHandler(this.btn_link_datphong_Click);
             // 
             // btn_link_khachhang
             // 
@@ -334,6 +339,7 @@
             this.btn_link_khachhang.Text = "Khách hàng";
             this.btn_link_khachhang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_khachhang.UseVisualStyleBackColor = false;
+            this.btn_link_khachhang.Click += new System.EventHandler(this.btn_link_khachhang_Click);
             // 
             // panel11
             // 
@@ -366,7 +372,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.R;
-            this.ClientSize = new System.Drawing.Size(1199, 562);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel13);
             this.Cursor = System.Windows.Forms.Cursors.Hand;

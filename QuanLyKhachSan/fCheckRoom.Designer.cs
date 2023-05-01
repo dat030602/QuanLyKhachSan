@@ -36,7 +36,6 @@
             this.btn_link_dichvucungcap = new System.Windows.Forms.Button();
             this.btn_link_sanphan_dichvu = new System.Windows.Forms.Button();
             this.btn_link_thongtinphong = new System.Windows.Forms.Button();
-            this.btn_link_khachhangchodat = new System.Windows.Forms.Button();
             this.btn_link_datphong = new System.Windows.Forms.Button();
             this.btn_link_khachhang = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -74,7 +73,6 @@
             this.panel2.Controls.Add(this.btn_link_dichvucungcap);
             this.panel2.Controls.Add(this.btn_link_sanphan_dichvu);
             this.panel2.Controls.Add(this.btn_link_thongtinphong);
-            this.panel2.Controls.Add(this.btn_link_khachhangchodat);
             this.panel2.Controls.Add(this.btn_link_datphong);
             this.panel2.Controls.Add(this.btn_link_khachhang);
             this.panel2.Controls.Add(this.panel11);
@@ -95,7 +93,7 @@
             this.btn_link_vanchuyenhanhly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_vanchuyenhanhly.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_vanchuyenhanhly.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_vanchuyenhanhly.Location = new System.Drawing.Point(11, 605);
+            this.btn_link_vanchuyenhanhly.Location = new System.Drawing.Point(12, 547);
             this.btn_link_vanchuyenhanhly.Name = "btn_link_vanchuyenhanhly";
             this.btn_link_vanchuyenhanhly.Size = new System.Drawing.Size(244, 52);
             this.btn_link_vanchuyenhanhly.TabIndex = 19;
@@ -113,13 +111,14 @@
             this.btn_link_kiemtraminibar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_kiemtraminibar.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_kiemtraminibar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_kiemtraminibar.Location = new System.Drawing.Point(11, 547);
+            this.btn_link_kiemtraminibar.Location = new System.Drawing.Point(12, 489);
             this.btn_link_kiemtraminibar.Name = "btn_link_kiemtraminibar";
             this.btn_link_kiemtraminibar.Size = new System.Drawing.Size(244, 52);
             this.btn_link_kiemtraminibar.TabIndex = 18;
             this.btn_link_kiemtraminibar.Text = "Kiểm tra minibar";
             this.btn_link_kiemtraminibar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_kiemtraminibar.UseVisualStyleBackColor = false;
+            this.btn_link_kiemtraminibar.Click += new System.EventHandler(this.btn_link_kiemtraminibar_Click);
             // 
             // btn_link_kiemtraphong
             // 
@@ -131,7 +130,7 @@
             this.btn_link_kiemtraphong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_kiemtraphong.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_kiemtraphong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(61)))));
-            this.btn_link_kiemtraphong.Location = new System.Drawing.Point(11, 489);
+            this.btn_link_kiemtraphong.Location = new System.Drawing.Point(12, 431);
             this.btn_link_kiemtraphong.Name = "btn_link_kiemtraphong";
             this.btn_link_kiemtraphong.Size = new System.Drawing.Size(244, 52);
             this.btn_link_kiemtraphong.TabIndex = 17;
@@ -149,13 +148,14 @@
             this.btn_link_tour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_tour.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_tour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_tour.Location = new System.Drawing.Point(11, 431);
+            this.btn_link_tour.Location = new System.Drawing.Point(12, 373);
             this.btn_link_tour.Name = "btn_link_tour";
             this.btn_link_tour.Size = new System.Drawing.Size(244, 52);
             this.btn_link_tour.TabIndex = 16;
             this.btn_link_tour.Text = "Tour";
             this.btn_link_tour.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_tour.UseVisualStyleBackColor = false;
+            this.btn_link_tour.Click += new System.EventHandler(this.btn_link_tour_Click);
             // 
             // btn_link_dichvucungcap
             // 
@@ -167,13 +167,14 @@
             this.btn_link_dichvucungcap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_dichvucungcap.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_dichvucungcap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_dichvucungcap.Location = new System.Drawing.Point(11, 373);
+            this.btn_link_dichvucungcap.Location = new System.Drawing.Point(12, 315);
             this.btn_link_dichvucungcap.Name = "btn_link_dichvucungcap";
             this.btn_link_dichvucungcap.Size = new System.Drawing.Size(244, 52);
             this.btn_link_dichvucungcap.TabIndex = 15;
             this.btn_link_dichvucungcap.Text = "Dịch vụ cung cấp";
             this.btn_link_dichvucungcap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_dichvucungcap.UseVisualStyleBackColor = false;
+            this.btn_link_dichvucungcap.Click += new System.EventHandler(this.btn_link_dichvucungcap_Click);
             // 
             // btn_link_sanphan_dichvu
             // 
@@ -185,7 +186,7 @@
             this.btn_link_sanphan_dichvu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_sanphan_dichvu.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_sanphan_dichvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_sanphan_dichvu.Location = new System.Drawing.Point(11, 315);
+            this.btn_link_sanphan_dichvu.Location = new System.Drawing.Point(12, 257);
             this.btn_link_sanphan_dichvu.Name = "btn_link_sanphan_dichvu";
             this.btn_link_sanphan_dichvu.Size = new System.Drawing.Size(244, 52);
             this.btn_link_sanphan_dichvu.TabIndex = 14;
@@ -203,31 +204,14 @@
             this.btn_link_thongtinphong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_thongtinphong.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_thongtinphong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_thongtinphong.Location = new System.Drawing.Point(11, 257);
+            this.btn_link_thongtinphong.Location = new System.Drawing.Point(12, 199);
             this.btn_link_thongtinphong.Name = "btn_link_thongtinphong";
             this.btn_link_thongtinphong.Size = new System.Drawing.Size(244, 52);
             this.btn_link_thongtinphong.TabIndex = 13;
             this.btn_link_thongtinphong.Text = "Thông tin phòng";
             this.btn_link_thongtinphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_thongtinphong.UseVisualStyleBackColor = false;
-            // 
-            // btn_link_khachhangchodat
-            // 
-            this.btn_link_khachhangchodat.BackColor = System.Drawing.Color.Transparent;
-            this.btn_link_khachhangchodat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_link_khachhangchodat.FlatAppearance.BorderSize = 0;
-            this.btn_link_khachhangchodat.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btn_link_khachhangchodat.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_link_khachhangchodat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_link_khachhangchodat.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_link_khachhangchodat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_khachhangchodat.Location = new System.Drawing.Point(11, 199);
-            this.btn_link_khachhangchodat.Name = "btn_link_khachhangchodat";
-            this.btn_link_khachhangchodat.Size = new System.Drawing.Size(244, 52);
-            this.btn_link_khachhangchodat.TabIndex = 12;
-            this.btn_link_khachhangchodat.Text = "Khách hàng chờ đặt";
-            this.btn_link_khachhangchodat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_link_khachhangchodat.UseVisualStyleBackColor = false;
+            this.btn_link_thongtinphong.Click += new System.EventHandler(this.btn_link_thongtinphong_Click);
             // 
             // btn_link_datphong
             // 
@@ -246,6 +230,7 @@
             this.btn_link_datphong.Text = "Phiếu đặt phòng";
             this.btn_link_datphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_datphong.UseVisualStyleBackColor = false;
+            this.btn_link_datphong.Click += new System.EventHandler(this.btn_link_datphong_Click);
             // 
             // btn_link_khachhang
             // 
@@ -263,6 +248,7 @@
             this.btn_link_khachhang.Text = "Khách hàng";
             this.btn_link_khachhang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_khachhang.UseVisualStyleBackColor = false;
+            this.btn_link_khachhang.Click += new System.EventHandler(this.btn_link_khachhang_Click);
             // 
             // panel11
             // 
@@ -289,6 +275,7 @@
             this.label1.Size = new System.Drawing.Size(152, 47);
             this.label1.TabIndex = 2;
             this.label1.Text = "Trang chủ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -304,7 +291,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(966, 52);
+            this.label3.Location = new System.Drawing.Point(967, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 25);
             this.label3.TabIndex = 5;
@@ -312,7 +299,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1103, 52);
+            this.textBox1.Location = new System.Drawing.Point(1104, 75);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -341,6 +328,8 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.PaleGreen;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(654, 90);
@@ -392,6 +381,8 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(1093, 148);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -461,7 +452,9 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(780, 430);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -477,7 +470,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.R;
-            this.ClientSize = new System.Drawing.Size(1199, 562);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label7);
@@ -514,7 +507,6 @@
         private Button btn_link_dichvucungcap;
         private Button btn_link_sanphan_dichvu;
         private Button btn_link_thongtinphong;
-        private Button btn_link_khachhangchodat;
         private Button btn_link_datphong;
         private Button btn_link_khachhang;
         private Panel panel11;
