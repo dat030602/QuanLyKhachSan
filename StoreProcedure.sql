@@ -94,3 +94,29 @@ begin
 		where TrangThai = 'Check in' and SoPhong = @sophong 
 		order by MaPhieuDat desc
 end
+-- Dat
+CREATE
+--DROP
+FUNCTION f_TienPhong (@MaPhieuDat char(6))
+RETURNS INT
+BEGIN
+    DECLARE @tong int;
+    SELECT @tong = SUM(CT.SoLuong*LP.DonGia)
+            FROM CTPHIEUDATPHONG CT JOIN LOAIPHONG LP ON CT.MaLoaiPhong = LP.MaLoaiPhong
+            WHERE @MaPhieuDat = CT.MaPhieuDat
+    RETURN @tong;
+END
+
+go
+CREATE 
+--DROP
+TRIGGER TG_CTPHIEUDATPHONG ON CTPHIEUDATPHONG
+AFTER INSERT, UPDATE
+AS 
+  BEGIN
+    DECLARE @MaPhieuDat char(6);
+    SELECT @MaPhieuDat = INSERTED.MaPhieuDat FROM INSERTED;
+    UPDATE PHIEUDATPHONG SET TongTienPhong=DBO.f_TienPhong(@MaPhieuDat) where @MaPhieuDat = MaPhieuDat;
+  END
+
+go
