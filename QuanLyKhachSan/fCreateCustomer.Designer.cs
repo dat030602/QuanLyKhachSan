@@ -32,11 +32,9 @@
             this.text_diachi = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.textGioiTinh = new System.Windows.Forms.ComboBox();
             this.textSofax = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.textCMND = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textDienThoai = new System.Windows.Forms.TextBox();
@@ -50,7 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
-            this.btn_submit = new System.Windows.Forms.Button();
+            this.btn_HoanTat = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -62,11 +60,9 @@
             this.panel1.Controls.Add(this.text_diachi);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textNgaySinh);
-            this.panel1.Controls.Add(this.textGioiTinh);
             this.panel1.Controls.Add(this.textSofax);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textCMND);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textDienThoai);
@@ -104,27 +100,15 @@
             this.textNgaySinh.CustomFormat = "dd/MM/yyyy";
             this.textNgaySinh.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.textNgaySinh.Location = new System.Drawing.Point(193, 167);
+            this.textNgaySinh.Location = new System.Drawing.Point(785, 94);
             this.textNgaySinh.Name = "textNgaySinh";
             this.textNgaySinh.Size = new System.Drawing.Size(393, 32);
             this.textNgaySinh.TabIndex = 20;
             // 
-            // textGioiTinh
-            // 
-            this.textGioiTinh.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textGioiTinh.FormattingEnabled = true;
-            this.textGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.textGioiTinh.Location = new System.Drawing.Point(785, 97);
-            this.textGioiTinh.Name = "textGioiTinh";
-            this.textGioiTinh.Size = new System.Drawing.Size(393, 33);
-            this.textGioiTinh.TabIndex = 19;
-            // 
             // textSofax
             // 
             this.textSofax.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textSofax.Location = new System.Drawing.Point(785, 170);
+            this.textSofax.Location = new System.Drawing.Point(193, 164);
             this.textSofax.Name = "textSofax";
             this.textSofax.Size = new System.Drawing.Size(393, 32);
             this.textSofax.TabIndex = 18;
@@ -135,7 +119,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(663, 174);
+            this.label8.Location = new System.Drawing.Point(37, 167);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 25);
             this.label8.TabIndex = 17;
@@ -147,23 +131,11 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(37, 173);
+            this.label9.Location = new System.Drawing.Point(663, 100);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 25);
             this.label9.TabIndex = 15;
             this.label9.Text = "Ngày sinh";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(663, 102);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 25);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Giới tính";
             // 
             // textCMND
             // 
@@ -284,7 +256,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btn_back);
-            this.panel3.Controls.Add(this.btn_submit);
+            this.panel3.Controls.Add(this.btn_HoanTat);
             this.panel3.Controls.Add(this.btn_edit);
             this.panel3.Location = new System.Drawing.Point(12, 619);
             this.panel3.Name = "panel3";
@@ -305,19 +277,19 @@
             this.btn_back.UseVisualStyleBackColor = false;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // btn_submit
+            // btn_HoanTat
             // 
-            this.btn_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
-            this.btn_submit.FlatAppearance.BorderSize = 0;
-            this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_submit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_submit.Location = new System.Drawing.Point(1098, 6);
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(92, 48);
-            this.btn_submit.TabIndex = 9;
-            this.btn_submit.Text = "Lưu";
-            this.btn_submit.UseVisualStyleBackColor = false;
-            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+            this.btn_HoanTat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
+            this.btn_HoanTat.FlatAppearance.BorderSize = 0;
+            this.btn_HoanTat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoanTat.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_HoanTat.Location = new System.Drawing.Point(1098, 6);
+            this.btn_HoanTat.Name = "btn_HoanTat";
+            this.btn_HoanTat.Size = new System.Drawing.Size(92, 48);
+            this.btn_HoanTat.TabIndex = 9;
+            this.btn_HoanTat.Text = "Lưu";
+            this.btn_HoanTat.UseVisualStyleBackColor = false;
+            this.btn_HoanTat.Click += new System.EventHandler(this.btn_HoanTat_Click);
             // 
             // btn_edit
             // 
@@ -362,7 +334,6 @@
         private TextBox textSofax;
         private Label label8;
         private Label label9;
-        private Label label6;
         private TextBox textCMND;
         private Label label7;
         private TextBox textDienThoai;
@@ -371,10 +342,9 @@
         private Label label2;
         private Panel panel3;
         private DateTimePicker textNgaySinh;
-        private ComboBox textGioiTinh;
         private Button btn_delete;
         private Button btn_back;
-        private Button btn_submit;
+        private Button btn_HoanTat;
         private Button btn_edit;
         private TextBox text_diachi;
         private Label label10;

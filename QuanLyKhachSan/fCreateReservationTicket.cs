@@ -132,7 +132,7 @@ namespace QuanLyKhachSan
             this.Close();
         }
 
-        private void btn_submit_Click(object sender, EventArgs e)
+        private void btn_HoanTat_Click(object sender, EventArgs e)
         {
             if (isCreateDetail == false)
                 MessageBox.Show("Bạn quên nhập chi tiết đặt phòng kìa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -218,7 +218,7 @@ namespace QuanLyKhachSan
 
         }
 
-        private void btn_details_Click(object sender, EventArgs e)
+        private void btn_chitiet_Click(object sender, EventArgs e)
         {
             this.Hide();
             fCreateDetailsReservationTicket form = new fCreateDetailsReservationTicket(maphieudatphong);

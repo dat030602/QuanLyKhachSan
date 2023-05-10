@@ -19,7 +19,10 @@ namespace QuanLyKhachSan
         public fInfoRoom()
         {
             InitializeComponent();
+
         }
+        //private string sqlConn = DataConnection.sqlConn;
+        //private SqlConnection con = DataConnection.conn;
         SqlConnection con = new SqlConnection(DataConnection.sqlConn);
         private static ArrayList ListFirstname = new ArrayList();
         private static ArrayList ListLastname = new ArrayList();
@@ -120,10 +123,10 @@ namespace QuanLyKhachSan
                 {
                     textBox2.Text = reader[0].ToString();
                     mapd = reader[0].ToString();
-                    makh = reader[1].ToString(); 
+                    makh = reader[1].ToString();
                     textBox3.Text = reader[2].ToString();
                     textBox4.Text = reader[3].ToString();
-                    ngayden = reader[3].ToString();   
+                    ngayden = reader[3].ToString();
                     textBox5.Text = reader[4].ToString();
                     ngaydi = reader[4].ToString();
                 }

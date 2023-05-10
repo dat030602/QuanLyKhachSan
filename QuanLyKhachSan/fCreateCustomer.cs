@@ -116,13 +116,12 @@ namespace QuanLyKhachSan
             this.Close();
         }
 
-        private void btn_submit_Click(object sender, EventArgs e)
+        private void btn_HoanTat_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có thật sự hoàn thành tạo phiếu đặt phòng?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 if (textTenKhachHang.Text != "" && textDienThoai.Text != "" && textCMND.Text != "" &&
-                    textGioiTinh.Text != "" && textNgaySinh.Text != "" && textSofax.Text != "" &&
-                    text_diachi.Text != "")
+                    textNgaySinh.Text != "" && textSofax.Text != "" && text_diachi.Text != "")
                 {
                     ExecuteSql("INSERT INTO dbo.KHACHHANG VALUES ('" + maKH + "','" +
                         textCMND.Text + "','" + textDienThoai.Text + "','" + textSofax.Text

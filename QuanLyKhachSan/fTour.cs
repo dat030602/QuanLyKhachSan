@@ -118,5 +118,40 @@ namespace QuanLyKhachSan
             dataGridView1.DataSource = dt;
             sqlCon.Close();
         }
+        string maTour = "";
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                maTour = row.Cells[0].Value.ToString();
+
+            }
+        }
+
+        private void buttonView_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fListCustomerEachTour form = new fListCustomerEachTour();
+            form.textBoxMaTour.Text = maTour;
+            sqlCon = new SqlConnection(connectionString);
+            sqlCon.Open();
+            DataTable dt = new DataTable();
+            try
+            {
+                string queryStr = "select DISTINCT KH.MaKH, KH.HoTen, KH.CMND, KH.DiaChi, KH.Sdt, KH.SoFax from KHACHHANG KH, PHIEUDATPHONG, HOADON, TTDANGKYTOUR where KH.MaKH = PHIEUDATPHONG.MaKH AND PHIEUDATPHONG.MaPhieuDat = HOADON.MaPhieuDat AND HOADON.MaHD = TTDANGKYTOUR.MaHD AND TTDANGKYTOUR.MaTour = '"+maTour+"'";
+                SqlCommand cmd = new SqlCommand(queryStr, sqlCon);
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            form.dataGridView1.DataSource = dt;
+            sqlCon.Close();
+            form.ShowDialog();
+
+        }
     }
 }

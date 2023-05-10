@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.btn_submit = new System.Windows.Forms.Button();
+            this.btnPhanPhong = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.tableGrid = new System.Windows.Forms.DataGridView();
+            this.dataGridPDP = new System.Windows.Forms.DataGridView();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.btn_search = new System.Windows.Forms.Button();
-            this.InputText = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_link_vanchuyenhanhly = new System.Windows.Forms.Button();
             this.btn_link_kiemtraminibar = new System.Windows.Forms.Button();
@@ -45,7 +45,6 @@
             this.btn_link_dichvucungcap = new System.Windows.Forms.Button();
             this.btn_link_sanphan_dichvu = new System.Windows.Forms.Button();
             this.btn_link_thongtinphong = new System.Windows.Forms.Button();
-            this.btn_link_khachhangchodat = new System.Windows.Forms.Button();
             this.btn_link_datphong = new System.Windows.Forms.Button();
             this.btn_link_khachhang = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -53,7 +52,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel13.SuspendLayout();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPDP)).BeginInit();
             this.panel14.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +60,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.Transparent;
-            this.panel13.Controls.Add(this.btn_submit);
+            this.panel13.Controls.Add(this.btnPhanPhong);
             this.panel13.Controls.Add(this.panel16);
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Location = new System.Drawing.Point(277, 1);
@@ -69,90 +68,90 @@
             this.panel13.Size = new System.Drawing.Size(986, 678);
             this.panel13.TabIndex = 4;
             // 
-            // btn_submit
+            // btnPhanPhong
             // 
-            this.btn_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_submit.FlatAppearance.BorderSize = 0;
-            this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_submit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_submit.Location = new System.Drawing.Point(785, 620);
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(163, 48);
-            this.btn_submit.TabIndex = 4;
-            this.btn_submit.Text = "Phân phòng";
-            this.btn_submit.UseVisualStyleBackColor = false;
-            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+            this.btnPhanPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPhanPhong.FlatAppearance.BorderSize = 0;
+            this.btnPhanPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhanPhong.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPhanPhong.Location = new System.Drawing.Point(785, 620);
+            this.btnPhanPhong.Name = "btnPhanPhong";
+            this.btnPhanPhong.Size = new System.Drawing.Size(163, 48);
+            this.btnPhanPhong.TabIndex = 4;
+            this.btnPhanPhong.Text = "Phân phòng";
+            this.btnPhanPhong.UseVisualStyleBackColor = false;
+            this.btnPhanPhong.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.tableGrid);
+            this.panel16.Controls.Add(this.dataGridPDP);
             this.panel16.Location = new System.Drawing.Point(3, 66);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(980, 543);
             this.panel16.TabIndex = 1;
             // 
-            // tableGrid
+            // dataGridPDP
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tableGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tableGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tableGrid.ColumnHeadersHeight = 32;
-            this.tableGrid.Location = new System.Drawing.Point(36, 7);
-            this.tableGrid.Margin = new System.Windows.Forms.Padding(0);
-            this.tableGrid.MultiSelect = false;
-            this.tableGrid.Name = "tableGrid";
-            this.tableGrid.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tableGrid.RowTemplate.Height = 32;
-            this.tableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableGrid.Size = new System.Drawing.Size(909, 529);
-            this.tableGrid.TabIndex = 1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataGridPDP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridPDP.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridPDP.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridPDP.ColumnHeadersHeight = 32;
+            this.dataGridPDP.Location = new System.Drawing.Point(36, 7);
+            this.dataGridPDP.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridPDP.MultiSelect = false;
+            this.dataGridPDP.Name = "tableGrid";
+            this.dataGridPDP.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridPDP.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridPDP.RowTemplate.Height = 32;
+            this.dataGridPDP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridPDP.Size = new System.Drawing.Size(909, 529);
+            this.dataGridPDP.TabIndex = 1;
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.btn_search);
-            this.panel14.Controls.Add(this.InputText);
+            this.panel14.Controls.Add(this.btnSearch);
+            this.panel14.Controls.Add(this.textBoxSearch);
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(980, 60);
             this.panel14.TabIndex = 0;
             // 
-            // btn_search
+            // btnSearch
             // 
-            this.btn_search.BackColor = System.Drawing.Color.White;
-            this.btn_search.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.search_icon_set_magnifying_symbol_collection_eps10_stock_free_vector;
-            this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_search.FlatAppearance.BorderSize = 0;
-            this.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_search.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_search.Location = new System.Drawing.Point(368, 12);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Padding = new System.Windows.Forms.Padding(10);
-            this.btn_search.Size = new System.Drawing.Size(29, 30);
-            this.btn_search.TabIndex = 14;
-            this.btn_search.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.search_icon_set_magnifying_symbol_collection_eps10_stock_free_vector;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSearch.Location = new System.Drawing.Point(368, 12);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(10);
+            this.btnSearch.Size = new System.Drawing.Size(29, 30);
+            this.btnSearch.TabIndex = 14;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // InputText
+            // textBoxSearch
             // 
-            this.InputText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.InputText.Location = new System.Drawing.Point(36, 11);
-            this.InputText.Name = "InputText";
-            this.InputText.Size = new System.Drawing.Size(333, 32);
-            this.InputText.TabIndex = 13;
+            this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSearch.Location = new System.Drawing.Point(36, 11);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(333, 32);
+            this.textBoxSearch.TabIndex = 13;
             // 
             // panel2
             // 
@@ -164,7 +163,6 @@
             this.panel2.Controls.Add(this.btn_link_dichvucungcap);
             this.panel2.Controls.Add(this.btn_link_sanphan_dichvu);
             this.panel2.Controls.Add(this.btn_link_thongtinphong);
-            this.panel2.Controls.Add(this.btn_link_khachhangchodat);
             this.panel2.Controls.Add(this.btn_link_datphong);
             this.panel2.Controls.Add(this.btn_link_khachhang);
             this.panel2.Controls.Add(this.panel11);
@@ -185,13 +183,14 @@
             this.btn_link_vanchuyenhanhly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_vanchuyenhanhly.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_vanchuyenhanhly.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_vanchuyenhanhly.Location = new System.Drawing.Point(11, 605);
+            this.btn_link_vanchuyenhanhly.Location = new System.Drawing.Point(13, 547);
             this.btn_link_vanchuyenhanhly.Name = "btn_link_vanchuyenhanhly";
             this.btn_link_vanchuyenhanhly.Size = new System.Drawing.Size(244, 52);
             this.btn_link_vanchuyenhanhly.TabIndex = 19;
             this.btn_link_vanchuyenhanhly.Text = "Vận chuyển hành lý";
             this.btn_link_vanchuyenhanhly.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_vanchuyenhanhly.UseVisualStyleBackColor = false;
+            this.btn_link_vanchuyenhanhly.Click += new System.EventHandler(this.btn_link_vanchuyenhanhly_Click);
             // 
             // btn_link_kiemtraminibar
             // 
@@ -203,7 +202,7 @@
             this.btn_link_kiemtraminibar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_kiemtraminibar.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_kiemtraminibar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_kiemtraminibar.Location = new System.Drawing.Point(11, 547);
+            this.btn_link_kiemtraminibar.Location = new System.Drawing.Point(13, 489);
             this.btn_link_kiemtraminibar.Name = "btn_link_kiemtraminibar";
             this.btn_link_kiemtraminibar.Size = new System.Drawing.Size(244, 52);
             this.btn_link_kiemtraminibar.TabIndex = 18;
@@ -222,7 +221,7 @@
             this.btn_link_kiemtraphong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_kiemtraphong.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_kiemtraphong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_kiemtraphong.Location = new System.Drawing.Point(11, 489);
+            this.btn_link_kiemtraphong.Location = new System.Drawing.Point(13, 431);
             this.btn_link_kiemtraphong.Name = "btn_link_kiemtraphong";
             this.btn_link_kiemtraphong.Size = new System.Drawing.Size(244, 52);
             this.btn_link_kiemtraphong.TabIndex = 17;
@@ -241,7 +240,7 @@
             this.btn_link_tour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_tour.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_tour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_tour.Location = new System.Drawing.Point(11, 431);
+            this.btn_link_tour.Location = new System.Drawing.Point(13, 373);
             this.btn_link_tour.Name = "btn_link_tour";
             this.btn_link_tour.Size = new System.Drawing.Size(244, 52);
             this.btn_link_tour.TabIndex = 16;
@@ -260,7 +259,7 @@
             this.btn_link_dichvucungcap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_dichvucungcap.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_dichvucungcap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_dichvucungcap.Location = new System.Drawing.Point(11, 373);
+            this.btn_link_dichvucungcap.Location = new System.Drawing.Point(13, 315);
             this.btn_link_dichvucungcap.Name = "btn_link_dichvucungcap";
             this.btn_link_dichvucungcap.Size = new System.Drawing.Size(244, 52);
             this.btn_link_dichvucungcap.TabIndex = 15;
@@ -279,7 +278,7 @@
             this.btn_link_sanphan_dichvu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_sanphan_dichvu.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_sanphan_dichvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_sanphan_dichvu.Location = new System.Drawing.Point(11, 315);
+            this.btn_link_sanphan_dichvu.Location = new System.Drawing.Point(13, 257);
             this.btn_link_sanphan_dichvu.Name = "btn_link_sanphan_dichvu";
             this.btn_link_sanphan_dichvu.Size = new System.Drawing.Size(244, 52);
             this.btn_link_sanphan_dichvu.TabIndex = 14;
@@ -297,7 +296,7 @@
             this.btn_link_thongtinphong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_link_thongtinphong.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_link_thongtinphong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_thongtinphong.Location = new System.Drawing.Point(11, 257);
+            this.btn_link_thongtinphong.Location = new System.Drawing.Point(13, 199);
             this.btn_link_thongtinphong.Name = "btn_link_thongtinphong";
             this.btn_link_thongtinphong.Size = new System.Drawing.Size(244, 52);
             this.btn_link_thongtinphong.TabIndex = 13;
@@ -305,25 +304,6 @@
             this.btn_link_thongtinphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_link_thongtinphong.UseVisualStyleBackColor = false;
             this.btn_link_thongtinphong.Click += new System.EventHandler(this.btn_link_thongtinphong_Click);
-            // 
-            // btn_link_khachhangchodat
-            // 
-            this.btn_link_khachhangchodat.BackColor = System.Drawing.Color.Transparent;
-            this.btn_link_khachhangchodat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_link_khachhangchodat.FlatAppearance.BorderSize = 0;
-            this.btn_link_khachhangchodat.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btn_link_khachhangchodat.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_link_khachhangchodat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_link_khachhangchodat.Font = new System.Drawing.Font("Sitka Banner", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_link_khachhangchodat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_link_khachhangchodat.Location = new System.Drawing.Point(11, 199);
-            this.btn_link_khachhangchodat.Name = "btn_link_khachhangchodat";
-            this.btn_link_khachhangchodat.Size = new System.Drawing.Size(244, 52);
-            this.btn_link_khachhangchodat.TabIndex = 12;
-            this.btn_link_khachhangchodat.Text = "Khách hàng chờ đặt";
-            this.btn_link_khachhangchodat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_link_khachhangchodat.UseVisualStyleBackColor = false;
-            this.btn_link_khachhangchodat.Click += new System.EventHandler(this.btn_link_khachhangchodat_Click);
             // 
             // btn_link_datphong
             // 
@@ -386,7 +366,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Trang chủ";
             // 
-            // fReservationTickerList
+            // fReservationTicketList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -394,12 +374,12 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel13);
-            this.Name = "fReservationTickerList";
+            this.Name = "fReservationTicketList";
             this.Text = "fReservationTickerList";
             this.Load += new System.EventHandler(this.fReservationTickerList_Load);
             this.panel13.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tableGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPDP)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -413,8 +393,8 @@
         private Panel panel13;
         private Panel panel16;
         private Panel panel14;
-        private DataGridView tableGrid;
-        private Button btn_submit;
+        private DataGridView dataGridPDP;
+        private Button btnPhanPhong;
         private Panel panel2;
         private Button btn_link_vanchuyenhanhly;
         private Button btn_link_kiemtraminibar;
@@ -423,13 +403,12 @@
         private Button btn_link_dichvucungcap;
         private Button btn_link_sanphan_dichvu;
         private Button btn_link_thongtinphong;
-        private Button btn_link_khachhangchodat;
         private Button btn_link_datphong;
         private Button btn_link_khachhang;
         private Panel panel11;
         private Panel panel1;
         private Label label1;
-        private Button btn_search;
-        private TextBox InputText;
+        private Button btnSearch;
+        private TextBox textBoxSearch;
     }
 }

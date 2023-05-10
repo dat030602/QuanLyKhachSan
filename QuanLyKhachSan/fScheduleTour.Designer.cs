@@ -361,9 +361,9 @@
             label13.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             label13.Location = new Point(28, 3);
             label13.Name = "label13";
-            label13.Size = new Size(86, 32);
+            label13.Size = new Size(98, 32);
             label13.TabIndex = 0;
-            label13.Text = "Mã KH";
+            label13.Text = "Mã PDP";
             // 
             // fScheduleTour
             // 

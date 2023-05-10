@@ -58,7 +58,6 @@
             btn_link_dichvucungcap = new Button();
             btn_link_sanphan_dichvu = new Button();
             btn_link_thongtinphong = new Button();
-            btn_link_khachhangchodat = new Button();
             btn_link_datphong = new Button();
             btn_link_khachhang = new Button();
             panel11 = new Panel();
@@ -87,7 +86,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(15, 6);
+            label12.Location = new Point(15, 5);
             label12.Name = "label12";
             label12.Size = new Size(148, 32);
             label12.TabIndex = 0;
@@ -131,25 +130,25 @@
             textBox5.Location = new Point(337, 188);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(192, 34);
+            textBox5.Size = new Size(191, 33);
             textBox5.TabIndex = 0;
             textBox5.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(337, 142);
+            textBox4.Location = new Point(337, 141);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(192, 34);
+            textBox4.Size = new Size(191, 33);
             textBox4.TabIndex = 0;
             textBox4.TextAlign = HorizontalAlignment.Right;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(337, 90);
+            textBox3.Location = new Point(337, 91);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(192, 34);
+            textBox3.Size = new Size(191, 33);
             textBox3.TabIndex = 0;
             textBox3.TextAlign = HorizontalAlignment.Right;
             // 
@@ -158,7 +157,7 @@
             textBox2.Location = new Point(337, 35);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(192, 34);
+            textBox2.Size = new Size(191, 33);
             textBox2.TabIndex = 0;
             textBox2.TextAlign = HorizontalAlignment.Center;
             // 
@@ -170,7 +169,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(654, 166);
+            dataGridView1.Size = new Size(654, 165);
             dataGridView1.TabIndex = 8;
             // 
             // Column1
@@ -200,67 +199,67 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Font = new Font("Segoe UI", 19.8F, FontStyle.Regular, GraphicsUnit.Point);
             label8.Location = new Point(208, 129);
             label8.Name = "label8";
-            label8.Size = new Size(0, 46);
+            label8.Size = new Size(0, 45);
             label8.TabIndex = 6;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(48, 182);
+            label7.Font = new Font("Segoe UI", 19.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(48, 181);
             label7.Name = "label7";
-            label7.Size = new Size(142, 46);
+            label7.Size = new Size(140, 45);
             label7.TabIndex = 5;
             label7.Text = "Ngày đi:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Font = new Font("Segoe UI", 19.8F, FontStyle.Regular, GraphicsUnit.Point);
             label6.Location = new Point(48, 129);
             label6.Name = "label6";
-            label6.Size = new Size(171, 46);
+            label6.Size = new Size(168, 45);
             label6.TabIndex = 4;
             label6.Text = "Ngày đến:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(300, 83);
+            label5.Font = new Font("Segoe UI", 19.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(299, 83);
             label5.Name = "label5";
-            label5.Size = new Size(0, 46);
+            label5.Size = new Size(0, 45);
             label5.TabIndex = 3;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI", 19.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(48, 83);
             label4.Name = "label4";
-            label4.Size = new Size(260, 46);
+            label4.Size = new Size(255, 45);
             label4.TabIndex = 2;
             label4.Text = "Tên khách hàng:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(268, 28);
+            label3.Font = new Font("Segoe UI", 19.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(267, 28);
             label3.Name = "label3";
-            label3.Size = new Size(0, 46);
+            label3.Size = new Size(0, 45);
             label3.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 19.8F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(48, 28);
             label2.Name = "label2";
-            label2.Size = new Size(226, 46);
+            label2.Size = new Size(221, 45);
             label2.TabIndex = 0;
             label2.Text = "Mã phiếu đặt:";
             // 
@@ -280,7 +279,7 @@
             button1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(550, 12);
             button1.Name = "button1";
-            button1.Size = new Size(124, 50);
+            button1.Size = new Size(123, 51);
             button1.TabIndex = 1;
             button1.Text = "Tìm";
             button1.UseVisualStyleBackColor = false;
@@ -292,7 +291,7 @@
             textBox1.Location = new Point(394, 12);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 50);
+            textBox1.Size = new Size(150, 49);
             textBox1.TabIndex = 0;
             textBox1.TextAlign = HorizontalAlignment.Center;
             // 
@@ -306,7 +305,6 @@
             panel2.Controls.Add(btn_link_dichvucungcap);
             panel2.Controls.Add(btn_link_sanphan_dichvu);
             panel2.Controls.Add(btn_link_thongtinphong);
-            panel2.Controls.Add(btn_link_khachhangchodat);
             panel2.Controls.Add(btn_link_datphong);
             panel2.Controls.Add(btn_link_khachhang);
             panel2.Controls.Add(panel11);
@@ -328,7 +326,7 @@
             btn_link_vanchuyenhanhly.FlatStyle = FlatStyle.Flat;
             btn_link_vanchuyenhanhly.Font = new Font("Sitka Banner", 16F, FontStyle.Bold, GraphicsUnit.Point);
             btn_link_vanchuyenhanhly.ForeColor = Color.FromArgb(0, 0, 0, 0);
-            btn_link_vanchuyenhanhly.Location = new Point(13, 807);
+            btn_link_vanchuyenhanhly.Location = new Point(13, 729);
             btn_link_vanchuyenhanhly.Margin = new Padding(3, 4, 3, 4);
             btn_link_vanchuyenhanhly.Name = "btn_link_vanchuyenhanhly";
             btn_link_vanchuyenhanhly.Size = new Size(279, 69);
@@ -347,7 +345,7 @@
             btn_link_kiemtraminibar.FlatStyle = FlatStyle.Flat;
             btn_link_kiemtraminibar.Font = new Font("Sitka Banner", 16F, FontStyle.Bold, GraphicsUnit.Point);
             btn_link_kiemtraminibar.ForeColor = Color.FromArgb(0, 0, 0, 0);
-            btn_link_kiemtraminibar.Location = new Point(13, 729);
+            btn_link_kiemtraminibar.Location = new Point(13, 652);
             btn_link_kiemtraminibar.Margin = new Padding(3, 4, 3, 4);
             btn_link_kiemtraminibar.Name = "btn_link_kiemtraminibar";
             btn_link_kiemtraminibar.Size = new Size(279, 69);
@@ -367,7 +365,7 @@
             btn_link_kiemtraphong.FlatStyle = FlatStyle.Flat;
             btn_link_kiemtraphong.Font = new Font("Sitka Banner", 16F, FontStyle.Bold, GraphicsUnit.Point);
             btn_link_kiemtraphong.ForeColor = Color.FromArgb(0, 0, 0, 0);
-            btn_link_kiemtraphong.Location = new Point(13, 652);
+            btn_link_kiemtraphong.Location = new Point(13, 575);
             btn_link_kiemtraphong.Margin = new Padding(3, 4, 3, 4);
             btn_link_kiemtraphong.Name = "btn_link_kiemtraphong";
             btn_link_kiemtraphong.Size = new Size(279, 69);
@@ -387,7 +385,7 @@
             btn_link_tour.FlatStyle = FlatStyle.Flat;
             btn_link_tour.Font = new Font("Sitka Banner", 16F, FontStyle.Bold, GraphicsUnit.Point);
             btn_link_tour.ForeColor = Color.FromArgb(0, 0, 0, 0);
-            btn_link_tour.Location = new Point(13, 575);
+            btn_link_tour.Location = new Point(13, 497);
             btn_link_tour.Margin = new Padding(3, 4, 3, 4);
             btn_link_tour.Name = "btn_link_tour";
             btn_link_tour.Size = new Size(279, 69);
@@ -407,7 +405,7 @@
             btn_link_dichvucungcap.FlatStyle = FlatStyle.Flat;
             btn_link_dichvucungcap.Font = new Font("Sitka Banner", 16F, FontStyle.Bold, GraphicsUnit.Point);
             btn_link_dichvucungcap.ForeColor = Color.FromArgb(0, 0, 0, 0);
-            btn_link_dichvucungcap.Location = new Point(13, 497);
+            btn_link_dichvucungcap.Location = new Point(13, 420);
             btn_link_dichvucungcap.Margin = new Padding(3, 4, 3, 4);
             btn_link_dichvucungcap.Name = "btn_link_dichvucungcap";
             btn_link_dichvucungcap.Size = new Size(279, 69);
@@ -427,7 +425,7 @@
             btn_link_sanphan_dichvu.FlatStyle = FlatStyle.Flat;
             btn_link_sanphan_dichvu.Font = new Font("Sitka Banner", 16F, FontStyle.Bold, GraphicsUnit.Point);
             btn_link_sanphan_dichvu.ForeColor = Color.FromArgb(0, 0, 0, 0);
-            btn_link_sanphan_dichvu.Location = new Point(13, 420);
+            btn_link_sanphan_dichvu.Location = new Point(13, 343);
             btn_link_sanphan_dichvu.Margin = new Padding(3, 4, 3, 4);
             btn_link_sanphan_dichvu.Name = "btn_link_sanphan_dichvu";
             btn_link_sanphan_dichvu.Size = new Size(279, 69);
@@ -446,7 +444,7 @@
             btn_link_thongtinphong.FlatStyle = FlatStyle.Flat;
             btn_link_thongtinphong.Font = new Font("Sitka Banner", 16F, FontStyle.Bold, GraphicsUnit.Point);
             btn_link_thongtinphong.ForeColor = Color.FromArgb(255, 0, 61);
-            btn_link_thongtinphong.Location = new Point(13, 343);
+            btn_link_thongtinphong.Location = new Point(13, 265);
             btn_link_thongtinphong.Margin = new Padding(3, 4, 3, 4);
             btn_link_thongtinphong.Name = "btn_link_thongtinphong";
             btn_link_thongtinphong.Size = new Size(279, 69);
@@ -454,26 +452,6 @@
             btn_link_thongtinphong.Text = "Thông tin phòng";
             btn_link_thongtinphong.TextAlign = ContentAlignment.MiddleLeft;
             btn_link_thongtinphong.UseVisualStyleBackColor = false;
-            // 
-            // btn_link_khachhangchodat
-            // 
-            btn_link_khachhangchodat.BackColor = Color.Transparent;
-            btn_link_khachhangchodat.Cursor = Cursors.Hand;
-            btn_link_khachhangchodat.FlatAppearance.BorderSize = 0;
-            btn_link_khachhangchodat.FlatAppearance.MouseDownBackColor = SystemColors.AppWorkspace;
-            btn_link_khachhangchodat.FlatAppearance.MouseOverBackColor = SystemColors.ButtonFace;
-            btn_link_khachhangchodat.FlatStyle = FlatStyle.Flat;
-            btn_link_khachhangchodat.Font = new Font("Sitka Banner", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_link_khachhangchodat.ForeColor = Color.FromArgb(0, 0, 0, 0);
-            btn_link_khachhangchodat.Location = new Point(13, 265);
-            btn_link_khachhangchodat.Margin = new Padding(3, 4, 3, 4);
-            btn_link_khachhangchodat.Name = "btn_link_khachhangchodat";
-            btn_link_khachhangchodat.Size = new Size(279, 69);
-            btn_link_khachhangchodat.TabIndex = 12;
-            btn_link_khachhangchodat.Text = "Khách hàng chờ đặt";
-            btn_link_khachhangchodat.TextAlign = ContentAlignment.MiddleLeft;
-            btn_link_khachhangchodat.UseVisualStyleBackColor = false;
-            btn_link_khachhangchodat.Click += btn_link_khachhangchodat_Click;
             // 
             // btn_link_datphong
             // 
@@ -541,7 +519,6 @@
             label1.Size = new Size(189, 58);
             label1.TabIndex = 2;
             label1.Text = "Trang chủ";
-            label1.Click += label1_Click;
             // 
             // fInfoRoom
             // 
@@ -554,7 +531,6 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "fInfoRoom";
             Text = "fInfoRoom";
-            Load += fInfoRoom_Load;
             panel17.ResumeLayout(false);
             panel17.PerformLayout();
             panel13.ResumeLayout(false);
@@ -583,7 +559,6 @@
         private Button btn_link_dichvucungcap;
         private Button btn_link_sanphan_dichvu;
         private Button btn_link_thongtinphong;
-        private Button btn_link_khachhangchodat;
         private Button btn_link_datphong;
         private Button btn_link_khachhang;
         private Panel panel11;

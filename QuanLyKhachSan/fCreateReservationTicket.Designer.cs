@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_submit = new System.Windows.Forms.Button();
+            this.btn_HoanTat = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_huy = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@
             this.btn_YeuCauDacBiet = new System.Windows.Forms.Button();
             this.textTenDoan = new System.Windows.Forms.TextBox();
             this.textTenDoang = new System.Windows.Forms.Label();
-            this.btn_details = new System.Windows.Forms.Button();
+            this.btn_chitiet = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textNgaydi = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,19 +62,19 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_submit
+            // btn_HoanTat
             // 
-            this.btn_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
-            this.btn_submit.FlatAppearance.BorderSize = 0;
-            this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_submit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_submit.Location = new System.Drawing.Point(1060, 6);
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(130, 48);
-            this.btn_submit.TabIndex = 9;
-            this.btn_submit.Text = "Hoàn tất";
-            this.btn_submit.UseVisualStyleBackColor = false;
-            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+            this.btn_HoanTat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
+            this.btn_HoanTat.FlatAppearance.BorderSize = 0;
+            this.btn_HoanTat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoanTat.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_HoanTat.Location = new System.Drawing.Point(1060, 6);
+            this.btn_HoanTat.Name = "btn_HoanTat";
+            this.btn_HoanTat.Size = new System.Drawing.Size(130, 48);
+            this.btn_HoanTat.TabIndex = 9;
+            this.btn_HoanTat.Text = "Hoàn tất";
+            this.btn_HoanTat.UseVisualStyleBackColor = false;
+            this.btn_HoanTat.Click += new System.EventHandler(this.btn_HoanTat_Click);
             // 
             // btn_back
             // 
@@ -93,7 +93,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btn_back);
-            this.panel3.Controls.Add(this.btn_submit);
+            this.panel3.Controls.Add(this.btn_HoanTat);
             this.panel3.Controls.Add(this.btn_huy);
             this.panel3.Location = new System.Drawing.Point(12, 609);
             this.panel3.Name = "panel3";
@@ -180,7 +180,7 @@
             this.panel1.Controls.Add(this.textTenDoang);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textSoLuong);
-            this.panel1.Controls.Add(this.btn_details);
+            this.panel1.Controls.Add(this.btn_chitiet);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textNgaydi);
             this.panel1.Controls.Add(this.label9);
@@ -252,19 +252,19 @@
             this.textTenDoang.TabIndex = 39;
             this.textTenDoang.Text = "Tên đoàn";
             // 
-            // btn_details
+            // btn_chitiet
             // 
-            this.btn_details.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
-            this.btn_details.FlatAppearance.BorderSize = 0;
-            this.btn_details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_details.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_details.Location = new System.Drawing.Point(1032, 290);
-            this.btn_details.Name = "btn_details";
-            this.btn_details.Size = new System.Drawing.Size(130, 48);
-            this.btn_details.TabIndex = 36;
-            this.btn_details.Text = "Chi tiết";
-            this.btn_details.UseVisualStyleBackColor = false;
-            this.btn_details.Click += new System.EventHandler(this.btn_details_Click);
+            this.btn_chitiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
+            this.btn_chitiet.FlatAppearance.BorderSize = 0;
+            this.btn_chitiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_chitiet.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_chitiet.Location = new System.Drawing.Point(1032, 290);
+            this.btn_chitiet.Name = "btn_chitiet";
+            this.btn_chitiet.Size = new System.Drawing.Size(130, 48);
+            this.btn_chitiet.TabIndex = 36;
+            this.btn_chitiet.Text = "Chi tiết";
+            this.btn_chitiet.UseVisualStyleBackColor = false;
+            this.btn_chitiet.Click += new System.EventHandler(this.btn_chitiet_Click);
             // 
             // label7
             // 
@@ -437,7 +437,7 @@
 
         #endregion
 
-        private Button btn_submit;
+        private Button btn_HoanTat;
         private Button btn_back;
         private Panel panel3;
         private Button btn_huy;
@@ -450,7 +450,7 @@
         private Button btn_YeuCauDacBiet;
         private TextBox textTenDoan;
         private Label textTenDoang;
-        private Button btn_details;
+        private Button btn_chitiet;
         private Label label7;
         private DateTimePicker textNgaydi;
         private Label label9;

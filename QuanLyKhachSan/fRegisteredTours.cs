@@ -46,6 +46,7 @@ namespace QuanLyKhachSan
             string maTour = "";
             string STT = "";
             int soLuong = 0;
+            string tongTien = "";
             for (int i = 0; i< (dataGridView1.Rows.Count - 1); i++)
             {
                 //get data from datagrid view
@@ -86,8 +87,16 @@ namespace QuanLyKhachSan
                     STT = reader3[0].ToString();
                 }
                 reader3.Close();
+                //get tongTien
+                SqlCommand cmd7 = new SqlCommand("select DonGia from TOUR where TOUR.MaTour = '" + maTour + "'", sqlCon);
+                SqlDataReader reader7 = cmd7.ExecuteReader();
+                while (reader7.Read())
+                {
+                    tongTien = reader7[0].ToString();
+                }
+                reader7.Close();
                 //insert data to database
-                string queryStr = "INSERT INTO TTDANGKYTOUR(MaHD, Stt, MaTour, ThoiGianBatDau, ThoiGianKetThuc, YeuCau, SoLuong, TongTien, HinhThucDiChuyen, ThoiGianDangKy) VALUES('" + maHD + "'," + (Convert.ToInt32(STT)+1) + "," + "'" + maTour + "'," + "'" + DateTime.Parse(thoiGianBD) + "'," + "'" + DateTime.Parse(thoiGianKT) + "'," + "N'" + ycdb + "'," + "'" + soLuong + "'," + "100000," + "N'" + dichVu + "'," + "'"+DateTime.Today+"')";
+                string queryStr = "INSERT INTO TTDANGKYTOUR(MaHD, Stt, MaTour, ThoiGianBatDau, ThoiGianKetThuc, YeuCau, SoLuong, TongTien, HinhThucDiChuyen, ThoiGianDangKy) VALUES('" + maHD + "'," + (Convert.ToInt32(STT)+1) + "," + "'" + maTour + "'," + "'" + DateTime.Parse(thoiGianBD) + "'," + "'" + DateTime.Parse(thoiGianKT) + "'," + "N'" + ycdb + "'," + "'" + soLuong + "'," + Convert.ToInt32(tongTien) +"," + "N'" + dichVu + "'," + "'"+DateTime.Today+"')";
                 SqlCommand cmd4 = new SqlCommand("SET IDENTITY_INSERT TTDANGKYTOUR ON", sqlCon);
                 SqlCommand cmd5 = new SqlCommand(queryStr, sqlCon);
                 cmd4.ExecuteNonQuery();

@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label18 = new Label();
             panel18 = new Panel();
             label13 = new Label();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
             btn_back = new Button();
-            textBoxMaKH = new TextBox();
+            textBoxMaTour = new TextBox();
             panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -81,37 +78,22 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Cornsilk;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.Location = new Point(162, 236);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(1120, 436);
             dataGridView1.TabIndex = 21;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Column1";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Column2";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Column3";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Column4";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btn_back
             // 
@@ -127,15 +109,16 @@
             btn_back.TabIndex = 47;
             btn_back.Text = "< Quay lại";
             btn_back.UseVisualStyleBackColor = false;
+            btn_back.Click += btn_back_Click;
             // 
-            // textBoxMaKH
+            // textBoxMaTour
             // 
-            textBoxMaKH.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxMaKH.Location = new Point(721, 37);
-            textBoxMaKH.Margin = new Padding(3, 4, 3, 4);
-            textBoxMaKH.Name = "textBoxMaKH";
-            textBoxMaKH.Size = new Size(211, 39);
-            textBoxMaKH.TabIndex = 20;
+            textBoxMaTour.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxMaTour.Location = new Point(721, 37);
+            textBoxMaTour.Margin = new Padding(3, 4, 3, 4);
+            textBoxMaTour.Name = "textBoxMaTour";
+            textBoxMaTour.Size = new Size(211, 39);
+            textBoxMaTour.TabIndex = 20;
             // 
             // fListCustomerEachTour
             // 
@@ -145,7 +128,7 @@
             ClientSize = new Size(1445, 908);
             Controls.Add(btn_back);
             Controls.Add(dataGridView1);
-            Controls.Add(textBoxMaKH);
+            Controls.Add(textBoxMaTour);
             Controls.Add(panel18);
             Controls.Add(label18);
             ForeColor = Color.Cornsilk;
@@ -153,6 +136,7 @@
             Name = "fListCustomerEachTour";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "fListCustomerEachTour";
+            Load += fListCustomerEachTour_Load;
             panel18.ResumeLayout(false);
             panel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -166,11 +150,7 @@
         private Panel panel18;
         private Label label13;
         public DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
         private Button btn_back;
-        private TextBox textBoxMaKH;
+        public TextBox textBoxMaTour;
     }
 }

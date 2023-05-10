@@ -18,6 +18,7 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
         }
+
         SqlConnection con = new SqlConnection(DataConnection.sqlConn);
         private string madp;
         private string sophong;
@@ -35,11 +36,6 @@ namespace QuanLyKhachSan
             fReservationTicketList form = new fReservationTicketList();
             form.ShowDialog();
             this.Close();
-        }
-
-        private void btn_link_khachhangchodat_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_link_thongtinphong_Click(object sender, EventArgs e)

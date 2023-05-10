@@ -48,11 +48,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textTenKhachHang = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textHinhThucThanhToan = new System.Windows.Forms.ComboBox();
+            this.cbbHinhThucThanhToan = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_back = new System.Windows.Forms.Button();
-            this.btn_submit = new System.Windows.Forms.Button();
+            this.btnQuayLai = new System.Windows.Forms.Button();
+            this.btnXuatPhieu = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -286,7 +286,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textHinhThucThanhToan);
+            this.panel1.Controls.Add(this.cbbHinhThucThanhToan);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.textTenKhachHang);
@@ -299,17 +299,17 @@
             this.panel1.Size = new System.Drawing.Size(1240, 488);
             this.panel1.TabIndex = 53;
             // 
-            // textHinhThucThanhToan
+            // cbbHinhThucThanhToan
             // 
-            this.textHinhThucThanhToan.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textHinhThucThanhToan.FormattingEnabled = true;
-            this.textHinhThucThanhToan.Items.AddRange(new object[] {
+            this.cbbHinhThucThanhToan.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbbHinhThucThanhToan.FormattingEnabled = true;
+            this.cbbHinhThucThanhToan.Items.AddRange(new object[] {
             "Trực tiếp",
             "Qua thẻ"});
-            this.textHinhThucThanhToan.Location = new System.Drawing.Point(396, 230);
-            this.textHinhThucThanhToan.Name = "textHinhThucThanhToan";
-            this.textHinhThucThanhToan.Size = new System.Drawing.Size(616, 33);
-            this.textHinhThucThanhToan.TabIndex = 56;
+            this.cbbHinhThucThanhToan.Location = new System.Drawing.Point(396, 230);
+            this.cbbHinhThucThanhToan.Name = "cbbHinhThucThanhToan";
+            this.cbbHinhThucThanhToan.Size = new System.Drawing.Size(616, 33);
+            this.cbbHinhThucThanhToan.TabIndex = 56;
             // 
             // label15
             // 
@@ -325,40 +325,40 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btn_back);
-            this.panel3.Controls.Add(this.btn_submit);
+            this.panel3.Controls.Add(this.btnQuayLai);
+            this.panel3.Controls.Add(this.btnXuatPhieu);
             this.panel3.Location = new System.Drawing.Point(12, 609);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1243, 60);
             this.panel3.TabIndex = 54;
             // 
-            // btn_back
+            // btnQuayLai
             // 
-            this.btn_back.BackColor = System.Drawing.Color.Transparent;
-            this.btn_back.FlatAppearance.BorderSize = 0;
-            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_back.Location = new System.Drawing.Point(37, 6);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(123, 48);
-            this.btn_back.TabIndex = 10;
-            this.btn_back.Text = "< Quay lại";
-            this.btn_back.UseVisualStyleBackColor = false;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            this.btnQuayLai.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuayLai.FlatAppearance.BorderSize = 0;
+            this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuayLai.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnQuayLai.Location = new System.Drawing.Point(37, 6);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(123, 48);
+            this.btnQuayLai.TabIndex = 10;
+            this.btnQuayLai.Text = "< Quay lại";
+            this.btnQuayLai.UseVisualStyleBackColor = false;
+            this.btnQuayLai.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // btn_submit
+            // btnXuatPhieu
             // 
-            this.btn_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
-            this.btn_submit.FlatAppearance.BorderSize = 0;
-            this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_submit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_submit.Location = new System.Drawing.Point(1047, 6);
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(143, 48);
-            this.btn_submit.TabIndex = 9;
-            this.btn_submit.Text = "Xuất phiếu";
-            this.btn_submit.UseVisualStyleBackColor = false;
-            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+            this.btnXuatPhieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(209)))), ((int)(((byte)(147)))));
+            this.btnXuatPhieu.FlatAppearance.BorderSize = 0;
+            this.btnXuatPhieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatPhieu.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnXuatPhieu.Location = new System.Drawing.Point(1047, 6);
+            this.btnXuatPhieu.Name = "btnXuatPhieu";
+            this.btnXuatPhieu.Size = new System.Drawing.Size(143, 48);
+            this.btnXuatPhieu.TabIndex = 9;
+            this.btnXuatPhieu.Text = "Xuất phiếu";
+            this.btnXuatPhieu.UseVisualStyleBackColor = false;
+            this.btnXuatPhieu.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // fDepositInvoice
             // 
@@ -403,9 +403,9 @@
         private TextBox textTenKhachHang;
         private Panel panel1;
         private Panel panel3;
-        private Button btn_back;
-        private Button btn_submit;
-        private ComboBox textHinhThucThanhToan;
+        private Button btnQuayLai;
+        private Button btnXuatPhieu;
+        private ComboBox cbbHinhThucThanhToan;
         private Label label15;
     }
 }

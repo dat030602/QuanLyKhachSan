@@ -23,8 +23,8 @@ namespace QuanLyKhachSan
         public fServiceProvided()
         {
             InitializeComponent();
-            GetListService("select DV.MADV, DV.TENDV, DVCC.MALOAIPHONG from dbo.DICHVU DV JOIN DBO.DVCUNGCAP DVCC ON DV.MADV=DVCC.MADV");
-            add_data_datagridview();
+            GetListService("select DV.MADV as N'Mã dịch vụ', DV.TENDV as N'Tên dịch vụ', DVCC.MALOAIPHONG as N'Mã loại phòng' from dbo.DICHVU DV JOIN DBO.DVCUNGCAP DVCC ON DV.MADV=DVCC.MADV");
+            //add_data_datagridview();
         }
 
         private void GetListService(string queryString)
@@ -36,24 +36,18 @@ namespace QuanLyKhachSan
             SqlDataReader reader = cmd.ExecuteReader();
 
             //int i = 0;
-            while (reader.Read())
-            {
-                string[] numb;
-                numb = new string[reader.FieldCount];
-                for (int i = 0; i < reader.FieldCount; i++)
-                    numb[i] = reader[i].ToString();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
 
-                listService.Add(numb);
-                sizeListSerive++;
-            }
+            tableGrid.DataSource = dt;
             cnn.Close();
         }
 
-        void add_data_datagridview()
+       /* void add_data_datagridview()
         {
             foreach (var item in listService)
                 tableGrid.Rows.Add(item[0], item[1], item[2]);
-        }
+        }*/
 
         private void btn_link_khachhang_Click(object sender, EventArgs e)
         {
@@ -147,6 +141,11 @@ namespace QuanLyKhachSan
             //    }
 
             //}
+        }
+
+        private void fServiceProvided_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
